@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #0D111A;
+    height: 100vh;
+    width: 100%;
+}
+
+.ticket-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    margin: 100px;
+    padding: 50px;
+}
+
+.ticket-info{
+    margin-left: 10px;
+}
+
+.ticket-info .ticket-title{
+    font-size: 20.77px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #EFC26D;
+}
+
+.ticket-info .ticket-detail{
+    color: white;
+    font-size: 14px;
+    font-weight: lighter;
+    margin-bottom: 5px;
+}
+
+.ticket-info .sum{
+    color: white;
+    font-size: 20.77px;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+
+.ticket-container .movie-image{
+    margin-right: 10px;
+}
+
+.movie-image .movie-img{
+    border-radius: 8px;
+    width: 200px;
+}

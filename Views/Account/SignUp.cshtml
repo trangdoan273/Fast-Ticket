@@ -1,0 +1,43 @@
+@model TICKETBOX.Models.SignUpModel
+
+@{
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký - Fast Ticket</title>
+    <link rel="stylesheet" href="~/css/SignUp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="sign-up-container">
+        <div class="form-container sign-up">
+            <form asp-controller="Account" asp-action="SignUp" method="post">
+                <p>Đăng Ký</p>
+                <input type="text" placeholder="Tên đăng nhập" asp-for="UserName">
+                <span asp-validation-for="UserName" class="warning"></span>
+                <input type="email" placeholder="Email" asp-for="UserEmail">
+                <span asp-validation-for="UserEmail" class="warning"></span>
+                <input type="password" placeholder="Mật khẩu" asp-for="UserPassword">
+                <span asp-validation-for="UserPassword" class="warning"></span>
+                <button type="submit">Đăng ký</button>
+                <span class="had-acc">Bạn đã có tài khoản?
+                    <a asp-controller="Account" asp-action="SignIn" class="sign-in-link">Đăng
+                        Nhập
+                    </a>
+                </span>
+            </form>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+
+</html>

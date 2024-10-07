@@ -1,0 +1,91 @@
+﻿@model IEnumerable<TICKETBOX.Models.Tables.Movie>
+@{
+    ViewData["Title"] = "Trang chủ";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-----------Navigation Menu------------>
+    <main>
+        <!-----------Main Slider----------->
+        <div class="container swiper">
+            <div class="slide">
+                <div class="list-slider swiper-wrapper">
+                    @foreach (var movie in Model)
+                    {
+                        <div class="item-slider swiper-slide">
+                            <a href="#">
+                                <img src="@movie.MoviePoster">
+                            </a>
+                        </div>
+                    }
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="btn-arrow swiper-button-prev"></div>
+                <div class="btn-arrow swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="my-ticket">
+            <a href="#" class="my-ticket-link">
+                <p class="my-ticket-label">Vé của tôi</p>
+            </a>
+        </div>
+        <!-----------Movie Slider------------>
+        <div class="movie">
+            <div class="movie-container swiper">
+                <div class="slide-movie">
+                    <div class="movie-wrapper swiper-wrapper">
+                        @foreach (var movie in Model)
+                        {
+                            <div class="movie-list swiper-slide">
+                                <div class="movie-image">
+                                    <a href="#" class="movie-image-link">
+                                        <img src="@movie.MovieImage" class="movie-img">
+                                    </a>
+                                </div>
+
+                                <div class="movie-content">
+                                    <p class="movie-label">@movie.MovieLabel</p>
+                                    <p class="movie-language">@movie.Language</p>
+                                    <p class="movie-format">@movie.MovieFormat</p>
+                                </div>
+
+                                <div class="movie-title">
+                                    <a href="#" class="movie-title-link">
+                                        <p class="movie-name" title="@movie.MovieName">@movie.MovieName</p>
+                                        <p class="movie-type">Thể loại: @movie.MovieGenre</p>
+                                    </a>
+                                </div>
+
+                                <a asp-controller="Ticket" asp-action="SelectShowtimes" asp-route-id="@movie.MovieId" class="buy-ticket-link">
+                                    <button class="buy-ticket">
+                                        <i class="fa-solid fa-ticket"></i>
+                                        Mua vé
+                                    </button>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                    
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-btn swiper-button-prev"></div>
+                    <div class="swiper-btn swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/HomeClient.js"></script>
+</body>
+
+</html>

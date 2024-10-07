@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "Vé";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="~/css/Ticket.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <div class="ticket-container">
+            <div class="ticket-info">
+                <p class="ticket-title">@ViewBag.TicketInfo.MovieName
+                </p>
+                <p class="ticket-detail">@ViewBag.TicketInfo.ShowDates</p>
+                <p class="ticket-detail">@ViewBag.TicketInfo.Time</p>
+                <p class="ticket-detail">Ghế @ViewBag.TicketInfo.SeatName</p>
+                <p class="sum">Tổng Tiền: @ViewBag.TicketInfo.Price VND</p>
+            </div>
+            <div class="movie-image">
+                <img src="@ViewBag.TicketInfo.MovieImage" class="movie-img">
+            </div>
+        </div>
+
+</body>
+
+</html>

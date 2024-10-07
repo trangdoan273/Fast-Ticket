@@ -1,0 +1,138 @@
+/* _content/TICKETBOX/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+*[b-l31d7c1km0]{
+  font-family: 'Nunito', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.nunito[b-l31d7c1km0] {
+  font-family: "Nunito", system-ui;
+  font-optical-sizing: auto;
+}
+
+header .nav-menu[b-l31d7c1km0]{
+  width: 100%;
+  background-color: #0D111A;
+  padding: 15px 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .menu-logo[b-l31d7c1km0]{
+  display: flex;
+  font-size: 17.79px;
+  font-weight: bold;
+}
+
+header .menu-logo .logo[b-l31d7c1km0]{
+  margin-right: 40px;
+}
+
+header .menu-logo .list-menu[b-l31d7c1km0] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu-logo .list-menu a[b-l31d7c1km0]{
+  margin-right: 40px;
+  color: #EFC26D;
+}
+
+header .menu-logo .list-menu a:hover[b-l31d7c1km0]{
+  color: #A1331C;
+}
+
+header .nav-menu .user-info[b-l31d7c1km0]{
+  display: flex;
+  font-size: 15px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+header .user-info .avatar[b-l31d7c1km0]{
+  border-radius: 50%;
+  border: 3px solid #EFC26D; 
+}
+
+header .user-info .avatar:hover[b-l31d7c1km0]{
+  border-color: #A1331C; 
+}
+
+header .user-info .username[b-l31d7c1km0]{
+  color: white;
+  margin-left: 10px;
+}
+
+#log-out-link[b-l31d7c1km0]{
+  text-decoration: none;
+}
+
+#log-out-link .log-out[b-l31d7c1km0]{
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+#log-out-link .log-out:hover[b-l31d7c1km0]{
+  color:#A1331C;
+}
+
+header .user-info .username:hover[b-l31d7c1km0]{
+  color:#A1331C;
+}
+
+/*----------Footer----------*/
+footer[b-l31d7c1km0]{
+  background-color:black;
+  width: 100%;
+  bottom: 0;
+  padding: 20px 4%;
+  position: relative;
+}
+
+footer>.container[b-l31d7c1km0]{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .footer-content .head[b-l31d7c1km0]{
+  font-size: 22.77px;
+  font-weight: bolder;
+  color: white;
+  margin-bottom: 15px;
+}
+
+footer .footer-content p[b-l31d7c1km0]{
+  color: white;
+  font-size: 13.34px;
+  line-height: 20px;
+}
+
+footer .footer-content .footer-social-icon[b-l31d7c1km0]{
+  text-align: center;
+}
+
+footer .footer-content .footer-icon[b-l31d7c1km0]{
+  display: inline-block;
+}
+
+footer .footer-content .footer-icon a i[b-l31d7c1km0]{
+  color: #A1331C;
+  font-size: 25px;
+  padding: 0 5px;
+}
+
+footer .footer-content .footer-icon a i:hover[b-l31d7c1km0]{
+  color:#EFC26D;
+}
+

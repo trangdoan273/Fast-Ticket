@@ -1,0 +1,55 @@
+@model TICKETBOX.Models.Tables.User
+@{
+    ViewData["Title"] = "Trang Cá Nhân";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="~/css/UserProfile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="user-profile-container">
+        <div class="user-select">
+            <a href="#" class="general-info-link">
+                <button class="general-info-btn">Thông tin chung</button>
+            </a>
+
+            <a href="/User/UserDetailProfile" class="general-info-link">
+                <button class="detail-info-btn">Chi tiết tài khoản</button>
+            </a>
+
+            <a href="#" class="general-info-link">
+                <button class="payment-history-btn">Lịch sử giao dịch</button>
+            </a>
+        </div>
+        <div class="user-profile">
+            <div class="big-avatar-image">
+                <img src="../assets/avatar-trang-4.jpg" alt="#" class="big-avatar">
+            </div>
+
+            <p class="account-info-label">Thông tin tài khoản</p>
+
+            <div class="account-info">
+                <p class="user-name">Tên: @Model.UserName</p>
+
+                <p class="user-email">Email: @Model.UserEmail</p>
+
+                <p class="user-tel">Điện thoại: @Model.UserPhoneNumber</p>
+                
+                <a asp-controller="User" asp-action="UserDetailProfile" asp-route-id="@Model.UserId" class="change-link">
+                    <button class="change-btn">Thay đổi</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

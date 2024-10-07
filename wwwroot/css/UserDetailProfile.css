@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #0D111A;
+    height: 100vh;
+    width: 100%;
+}
+ .user-profile-container{
+    display: flex;
+    color: #EFC26D;
+ }
+ 
+ .user-profile-container .user-select{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 10px;
+ }
+
+ .general-info-link{
+    margin-right: 20px;
+    margin-left: 20px;
+ }
+
+.general-info-link .general-info-btn{
+    color: #A1331C;
+    background-color: #EFC26D;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+ }
+
+ .detail-info-btn{
+    color: #EFC26D;
+    background-color: #A1331C;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+ }
+
+ .payment-history-btn{
+    color: #A1331C;
+    background-color: #EFC26D;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+ }
+
+ .general-info-link .general-info-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+ } 
+
+ .payment-history-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+ }
+
+.user-info-wrap{
+    width: 70%;
+    margin: 0 30px;
+}
+
+.user-info-wrap p{
+    margin-top: 10px;
+} 
+
+.user-info-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+p{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.user-address{
+    margin-right: 20px;
+}
+
+input{
+    width: 400px;
+    outline: none;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+.change-pw-link .change-pw-btn{
+    font-size: 18px;
+    font-weight: bold;
+    color: #A1331C;
+    background-color: #EFC26D;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.change-pw-link .change-pw-btn:hover{
+    color:#EFC26D;
+    background-color: #A1331C;
+}
+
+.save-link .save-btn{
+    font-size: 18px;
+    font-weight: bold;
+    color: #A1331C;
+    background-color: #EFC26D;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+
+.save-link .save-btn:hover{
+    color:#EFC26D;
+    background-color: #A1331C;
+} 

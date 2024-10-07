@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Fast Ticket</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TICKETBOX.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="nav-menu">
+            <div class="menu-logo">
+                <a href="#" class="logo">
+                    <img src="../assets/logo.png">
+                </a>
+
+                <ul class="list-menu">
+                    <li class="list-item"><a href="#">Rạp</a></li>
+                    <li class="list-item"><a href="#">Giá</a></li>
+                    <li class="list-item"><a href="#">Thông Tin</a></li>
+                    <li class="list-item"><a href="#">Cửa hàng</a></li>
+                </ul>
+            </div>
+            <div class="user-info">
+                <a href="/User/UserProfile">
+                    <img src="../assets/avatar.jpg" class="avatar">
+                </a>
+                <a href="/User/UserProfile" id="userNameLink">
+                    <p class="username">@User.Identity.Name</p>
+                </a>
+
+                <a href="/Home/LogOut" id="log-out-link">
+                    <p class="log-out">/Thoát</p>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <img src="../assets/logo(2).png" class="footer-logo">
+            </div>
+
+            <div class="footer-content">
+                <p class="head">Chăm sóc khách hàng</p>
+
+                <p>Hotline: 0378659061</p>
+
+                <p>Email: doantrang273@gmail.com</p>
+            </div>
+
+            <div class="footer-content">
+                <p class="head">Mạng xã hội</p>
+
+                <ul class="footer-social-icon">
+                    <li class="footer-icon"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li class="footer-icon"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

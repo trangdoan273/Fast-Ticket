@@ -1,0 +1,136 @@
+@model IEnumerable<TICKETBOX.Models.Tables.Movie>
+@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Fast Ticket</title>
+    <link rel="stylesheet" href="~/css/HomeClient.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-----------Navigation Menu------------>
+    <header>
+        <div class="nav-menu">
+            <div>
+                <a href="#" class="logo">
+                    <img src="../assets/logo.png">
+                </a>
+            </div>
+
+            <ul class="list-menu">
+                <li class="list-item"><a href="/Account/SignIn">Lịch chiếu</a></li>
+                <li class="list-item"><a href="/Account/SignIn">Rạp</a></li>
+                <li class="list-item"><a href="/Account/SignIn">Giá</a></li>
+                <li class="list-item"><a href="/Account/SignIn">Ưu đãi</a></li>
+                <li class="list-item"><a href="/Account/SignIn">Cửa hàng</a></li>
+
+                <a asp-controller="Account" asp-action="SignIn"><button class="btn-sign-in">Đăng nhập</button></a>
+                <a asp-controller="Account" asp-action="SignUp"><button class="btn-sign-up">Đăng ký</button></a>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <!-----------Main Slider----------->
+        <div class="container swiper">
+            <div class="slide">
+                <div class="list-slider swiper-wrapper">
+                    @foreach (var movie in Model)
+                    {
+                        <div class="item-slider swiper-slide">
+                            <a href="/Account/SignIn">
+                                <img src="@movie.MoviePoster">
+                            </a>
+                        </div>
+                    }
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="btn-arrow swiper-button-prev"></div>
+                <div class="btn-arrow swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="my-ticket">
+            <a href="/Account/SignIn">
+                <p class="my-ticket-link">Vé của tôi</p>
+            </a>
+        </div>
+        <!-----------Movie Slider------------>
+        <div class="movie">
+            <div class="movie-container swiper">
+                <div class="slide-movie">
+                    <div class="movie-wrapper swiper-wrapper">
+                        @foreach (var movie in Model)
+                        {
+                            <div class="movie-list swiper-slide">
+                                <div class="movie-image">
+                                    <a href="/Account/SignIn" class="movie-image-link">
+                                        <img src="@movie.MovieImage" class="movie-img">
+                                    </a>
+                                </div>
+
+                                <div class="movie-content">
+                                    <p class="movie-label">@movie.MovieLabel</p>
+                                    <p class="movie-language">@movie.Language</p>
+                                    <p class="movie-format">@movie.MovieFormat</p>
+                                </div>
+
+                                <div class="movie-title">
+                                    <a href="/Account/SignIn" class="movie-title-link">
+                                        <p class="movie-name">@movie.MovieName</p>
+                                        <p class="movie-type">@movie.MovieGenre</p>
+                                    </a>
+                                </div>
+
+                                <a href="/Account/SignIn" class="buy-ticket-link">
+                                    <button class="buy-ticket">
+                                        <i class="fa-solid fa-ticket"></i>
+                                        Mua vé
+                                    </button>
+                                </a>
+                            </div>
+                        }
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-btn swiper-button-prev"></div>
+                    <div class="swiper-btn swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-----------Footer----------->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <img src="../assets/logo(2).png" class="footer-logo">
+            </div>
+
+            <div class="footer-content">
+                <p class="head">Chăm sóc khách hàng</p>
+                <p>Hotline: 0378659061</p>
+                <p>Email: doantrang273@gmail.com</p>
+            </div>
+
+            <div class="footer-content">
+                <p class="head">Mạng xã hội</p>
+
+                <ul class="footer-social-icon">
+                    <li class="footer-icon"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li class="footer-icon"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/HomeClient.js"></script>
+</body>
+
+</html>
