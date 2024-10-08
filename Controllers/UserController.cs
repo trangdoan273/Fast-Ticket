@@ -89,19 +89,27 @@ namespace TICKETBOX.UserController
             }
             return RedirectToAction("UserDetailProfile", new { id = viewModel.UserId });
         }
+
         [Authorize(Roles = "User")]
         public IActionResult ChangePassword(int id)
         {
-            // var currentUserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            // if (currentUserId != id.ToString())
-            // {
-            //     return RedirectToAction("AccessDenied", "Home");
-            // }
+            var currentUserId = User.Identity.Name;
+
+            using (var db = new FastticketContext())
+            {
+                var user = db.Users.FirstOrDefault(u => u.UserId == id);
+
+                if (user == null || user.UserName != currentUserId)
+                {
+                    return RedirectToAction("AccessDenied", "Home");
+                }
+            }
 
             var model = new ChangePasswordModel
             {
                 UserId = id
             };
+
             return View(model);
         }
         [Authorize(Roles = "User")]
@@ -126,6 +134,7 @@ namespace TICKETBOX.UserController
 
             return View(model);
         }
+
     }
 }
 

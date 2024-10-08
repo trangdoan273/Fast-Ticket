@@ -37,8 +37,8 @@
       "PackagePath": "staticwebassets\\css\\Index.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\SelectShowtimes.css",
-      "PackagePath": "staticwebassets\\css\\SelectShowtimes.css"
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\SelectSeat.css",
+      "PackagePath": "staticwebassets\\css\\SelectSeat.css"
     },
     {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\SignIn.css",
@@ -73,12 +73,8 @@
       "PackagePath": "staticwebassets\\js\\HomeClient.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\SelectSeat.js",
-      "PackagePath": "staticwebassets\\js\\SelectSeat.js"
-    },
-    {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\SelectShowtimes.js",
-      "PackagePath": "staticwebassets\\js\\SelectShowtimes.js"
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\SelectSeat,js",
+      "PackagePath": "staticwebassets\\js"
     },
     {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\site.js",

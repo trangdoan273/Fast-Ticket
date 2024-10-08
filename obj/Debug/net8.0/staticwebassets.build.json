@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "l3/C3R4cfFUbBGY24ryu9dzk/9wo17WYmmkCM68WO6k=",
+  "Hash": "JUlZk5jV+vqR1kQ7YuTo1GeaU2312bbZ0VriV7HBr5k=",
   "Source": "TICKETBOX",
   "BasePath": "_content/TICKETBOX",
   "Mode": "Default",
@@ -207,12 +207,12 @@
       "OriginalItemSpec": "wwwroot\\css\\Index.css"
     },
     {
-      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\SelectShowtimes.css",
+      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\SelectSeat.css",
       "SourceId": "TICKETBOX",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Trang\\TICKETBOX\\wwwroot\\",
       "BasePath": "_content/TICKETBOX",
-      "RelativePath": "css/SelectShowtimes.css",
+      "RelativePath": "css/SelectSeat.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -223,7 +223,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\SelectShowtimes.css"
+      "OriginalItemSpec": "wwwroot\\css\\SelectSeat.css"
     },
     {
       "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\SignIn.css",
@@ -378,12 +378,12 @@
       "OriginalItemSpec": "wwwroot\\js\\HomeClient.js"
     },
     {
-      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\SelectSeat.js",
+      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\SelectSeat,js",
       "SourceId": "TICKETBOX",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Trang\\TICKETBOX\\wwwroot\\",
       "BasePath": "_content/TICKETBOX",
-      "RelativePath": "js/SelectSeat.js",
+      "RelativePath": "js/SelectSeat,js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -394,26 +394,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\SelectSeat.js"
-    },
-    {
-      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\SelectShowtimes.js",
-      "SourceId": "TICKETBOX",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Trang\\TICKETBOX\\wwwroot\\",
-      "BasePath": "_content/TICKETBOX",
-      "RelativePath": "js/SelectShowtimes.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\SelectShowtimes.js"
+      "OriginalItemSpec": "wwwroot\\js\\SelectSeat,js"
     },
     {
       "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\site.js",

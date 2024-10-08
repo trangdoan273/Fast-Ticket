@@ -160,3 +160,4 @@ D:\Trang\TICKETBOX\obj\Debug\net8.0\refint\TICKETBOX.dll
 D:\Trang\TICKETBOX\obj\Debug\net8.0\TICKETBOX.pdb
 D:\Trang\TICKETBOX\obj\Debug\net8.0\TICKETBOX.genruntimeconfig.cache
 D:\Trang\TICKETBOX\obj\Debug\net8.0\ref\TICKETBOX.dll
+D:\Trang\TICKETBOX\obj\Debug\net8.0\TICKETBOX.sourcelink.json

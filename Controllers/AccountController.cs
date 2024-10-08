@@ -61,6 +61,7 @@ namespace TICKETBOX.Controllers
                 if (dbUser != null)
                 {
                     List<Claim> claims = new List<Claim>(){
+                         new Claim(ClaimTypes.NameIdentifier, dbUser.UserId.ToString()),
                         new Claim(ClaimTypes.Name, dbUser.UserName),
                         new Claim(ClaimTypes.Role, dbUser.Role)
                     };

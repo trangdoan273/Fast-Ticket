@@ -73,15 +73,15 @@
                     </div>
                 </div>
                     <div>
-                        <a href="#"  class="change-pw-link">
-                        <button type="submit" class="change-pw-btn">Đổi mật khẩu</button>
+                        <a href="@Url.Action("ChangePassword", "User", new { id = Model.UserId })"  class="change-pw-link">
+                        <button type="button" class="change-pw-btn">Đổi mật khẩu</button>
                         </a>
                         
-                        <a href="#" class="save-link">
-                        <button type="submit" class="save-btn">Lưu lại</button>
+                        <a  class="save-link">
+                        <button  type="submit"  class="save-btn">Lưu lại</button>
                         </a>
                     </div>
-            </form>
+            </form> 
         </div>
     </div>
     </div>

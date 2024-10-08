@@ -123,10 +123,7 @@ body{
     background-color: #A1331C;
 }
 
-.selected {
-    background-color: #A1331C; 
-    color: #EFC26D;
-}
+
 
 .select-seat{
     margin: 20px 30px;
@@ -204,5 +201,8 @@ body{
     font-weight: bolder;
 }
 
-
+.selected {
+    background-color: #A1331C; 
+    color: #EFC26D;
+}
 

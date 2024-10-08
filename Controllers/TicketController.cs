@@ -1,11 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using TICKETBOX.Models.Tables;
 using TICKETBOX.Models;
-using Org.BouncyCastle.Crypto.Agreement.Srp;
-using ZstdSharp.Unsafe;
-using System.Globalization;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using Newtonsoft.Json;
 
 
 
@@ -20,18 +18,21 @@ namespace PROJECT.Models
         }
 
         [Authorize(Roles = "User")]
-        public IActionResult SelectShowtimes(int id)
+        public IActionResult SelectSeat(int id)
         {
             using (var db = new FastticketContext())
             {
                 var movie = db.Movies.FirstOrDefault(m => m.MovieId == id);
                 var showdates = db.Showdates.Where(m => m.MovieId == id).ToList();
+                
                 var showtimes = db.Showtimes.Where(m => m.MovieId == id).ToList();
                 var seat = db.Seats.Where(m => m.MovieId == id).ToList();
 
-                ViewBag.SelectShowtimesInfo = new SelectShowtimesModel()
+                ViewBag.SelectSeatInfo = new SelectSeatModel()
                 {
                     Id = movie.MovieId,
+                    ShowtimeId = showtimes.Select(st => st.ShowtimeId).FirstOrDefault(),
+                    ShowdateId = showdates.Select(sd => sd.ShowdateId).FirstOrDefault(),
                     MovieName = movie.MovieName,
                     Content = movie.MovieContent,
                     Director = movie.MovieDirector,
@@ -42,41 +43,57 @@ namespace PROJECT.Models
                     MovieImage = movie.MovieImage,
                     ShowDates = showdates.Select(sd => sd.ShowDate1.HasValue ? sd.ShowDate1.Value.ToString("dd/MM/yyyy") : null).ToList(),
                     ShowTimes = showtimes.Select(st => st.StartTime.ToString()).ToList(),
-                    Seat = seat.Select(s => s.SeatNumb).ToList()
+                    Seat = seat.Select(s => new SeatInfo
+                    {
+                        SeatNumb = s.SeatNumb,
+                        Price = s.Price
+                    }).ToList()
                 };
                 return View();
             }
-            // using (var db = new FastticketContext())
-            // {
-            //     var movie = db.Movies.FirstOrDefault(m => m.MovieId == id);
-            //     var showdates = db.Showdates.Where(m => m.MovieId == id).ToList();
-            //     var showtimes = db.Showtimes.Where(m => m.MovieId == id).ToList();
-            //     var seat = db.Seats.Where(s => s.SeatId == id).ToString();
-
-            //     ViewBag.SelectShowtimesInfo = new SelectShowtimesModel()
-            //     {
-            //         Id = movie.MovieId,
-            //         MovieName = movie.MovieName,
-            //         Content = movie.MovieContent,
-            //         Director = movie.MovieDirector,
-            //         Actor = movie.MovieActor,
-            //         Genre = movie.MovieGenre,
-            //         ReleaseDate = movie.MovieReleaseDate.ToString(),
-            //         Duration = movie.MovieDuration,
-            //         MovieImage = movie.MovieImage,
-            //         ShowDates = showdates.Select(sd => sd.ShowDate1.HasValue ? sd.ShowDate1.Value.ToString("dd/MM/yyyy") : null).ToList(),
-            //         ShowTimes = showtimes.Select(st => st.ShowtimeStartTime.ToString()).ToList(),
-
-            //     };
-            
-            // }
         }
+
+        [HttpPost]
+        [Authorize(Roles = "User")]
+        public IActionResult ProcessTickets(string selectedSeats, int movieId, int showtimeId, int showdateId)
+        {
+            using (var db = new FastticketContext())
+            {
+                var seatNumbers = JsonConvert.DeserializeObject<List<string>>(selectedSeats);
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+
+                foreach (var seatNumb in seatNumbers)
+                {
+                    var seat = db.Seats.FirstOrDefault(s => s.SeatNumb == seatNumb && s.MovieId == movieId);
+                    if (seat != null)
+                    {
+                        var ticket = new Ticket
+                        {
+                            UserId = int.Parse(userId),
+                            MovieId = movieId,
+                            SeatId = seat.SeatId,
+                            ShowtimeId = showtimeId,
+                            ShowdateId = showdateId,
+                            TicketStatus = "Booked"
+                        };
+                        db.Tickets.Add(ticket);
+                        db.SaveChanges();
+                    }
+                }
+
+                db.SaveChanges(); 
+                return RedirectToAction("Ticket", new { id = db.Tickets.OrderByDescending(t => t.TicketId).First().TicketId });
+            }
+        }
+
 
         [Authorize(Roles = "User")]
         public IActionResult Ticket(int id)
         {
             using (var db = new FastticketContext())
             {
+
                 var ticket = db.Tickets.FirstOrDefault(t => t.TicketId == id);
                 var showtimes = db.Showtimes.FirstOrDefault(t => t.ShowtimeId == ticket.ShowtimeId);
                 var showdates = db.Showdates.FirstOrDefault(t => t.ShowdateId == ticket.ShowdateId);
