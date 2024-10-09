@@ -15,20 +15,27 @@
 </head>
 
 <body>
-  <div class="ticket-container">
+    @if(ViewBag.SuccessMessage != null){
+        <div class="alert alert-success">
+            <p>@ViewBag.SuccessMessage</p>
+        </div>
+    }
+    @foreach (var ticket in ViewBag.TicketsInfo)
+    {
+        <div class="ticket-container">
             <div class="ticket-info">
-                <p class="ticket-title">@ViewBag.TicketInfo.MovieName</p>
-                <p class="ticket-detail">@ViewBag.TicketInfo.ShowDates</p>
-                <p class="ticket-detail">@ViewBag.TicketInfo.Time</p>
-                <p class="ticket-detail">Ghế @ViewBag.TicketInfo.SeatName</p>
-                <p class="sum">Tổng Tiền: @ViewBag.TicketInfo.Price VND</p>
+                <p class="ticket-title">@ticket.MovieName</p>
+                <p class="ticket-detail">@ticket.ShowDates</p>
+                <p class="ticket-detail">@ticket.Time</p>
+                <p class="ticket-detail">Ghế @ticket.SeatName</p>
+                <p class="sum">Tổng Tiền: @ticket.Price VND</p>
             </div>
-            
+
             <div class="movie-image">
-                <img src="@ViewBag.TicketInfo.MovieImage" class="movie-img">
+                <img src="@ticket.MovieImage" class="movie-img">
             </div>
         </div>
-
+    }
 </body>
 
 </html>

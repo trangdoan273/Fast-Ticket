@@ -2,7 +2,10 @@
 new Swiper('.slide', {
     loop: true,
     spaceBetween: 30,
-  
+    autoplay: {
+      delay:3000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: '.slide .swiper-pagination',
       clickable: true,

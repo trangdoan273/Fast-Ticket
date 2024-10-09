@@ -61,6 +61,7 @@ namespace PROJECT.Models
             {
                 var seatNumbers = JsonConvert.DeserializeObject<List<string>>(selectedSeats);
                 var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                var ticketIds = new List<int>();
 
                 foreach (var seatNumb in seatNumbers)
                 {
@@ -78,34 +79,49 @@ namespace PROJECT.Models
                         };
                         db.Tickets.Add(ticket);
                         db.SaveChanges();
+
+                        ticketIds.Add(ticket.TicketId);
                     }
                 }
                 db.SaveChanges();
-                return RedirectToAction("Ticket", new { id = db.Tickets.OrderByDescending(t => t.TicketId).First().TicketId });
+                return RedirectToAction("Ticket", new { ids = JsonConvert.SerializeObject(ticketIds) });
             }
         }
         //Vé
         [Authorize(Roles = "User")]
-        public IActionResult Ticket(int id)
+        public IActionResult Ticket(string ids)
         {
             using (var db = new FastticketContext())
             {
-                var ticket = db.Tickets.FirstOrDefault(t => t.TicketId == id);
-                var showtimes = db.Showtimes.FirstOrDefault(t => t.ShowtimeId == ticket.ShowtimeId);
-                var showdates = db.Showdates.FirstOrDefault(t => t.ShowdateId == ticket.ShowdateId);
-                var movie = db.Movies.FirstOrDefault(t => t.MovieId == ticket.MovieId);
-                var seat = db.Seats.FirstOrDefault(t => t.SeatId == ticket.SeatId);
+                var ticketIds = JsonConvert.DeserializeObject<List<int>>(ids);
+                var ticketsInfo = new List<TicketInfoModel>();
 
-                ViewBag.TicketInfo = new TicketInfoModel()
+                foreach (var ticketId in ticketIds)
                 {
-                    Id = ticket.TicketId,
-                    MovieName = movie.MovieName,
-                    ShowDates = showdates.ShowDate1.HasValue ? showdates.ShowDate1.Value.ToString("dd/MM/yyyy") : null,
-                    Time = $"{showtimes.StartTime} ~ {showtimes.EndTime}",
-                    SeatName = seat.SeatNumb,
-                    Price = seat.Price.ToString(),
-                    MovieImage = movie.MovieImage
-                };
+                    var ticket = db.Tickets.FirstOrDefault(t => t.TicketId == ticketId);
+                    if (ticket != null)
+                    {
+                        var showtimes = db.Showtimes.FirstOrDefault(t => t.ShowtimeId == ticket.ShowtimeId);
+                        var showdates = db.Showdates.FirstOrDefault(t => t.ShowdateId == ticket.ShowdateId);
+                        var movie = db.Movies.FirstOrDefault(t => t.MovieId == ticket.MovieId);
+                        var seat = db.Seats.FirstOrDefault(t => t.SeatId == ticket.SeatId);
+
+                        var ticketInfo = new TicketInfoModel()
+                        {
+                            Id = ticket.TicketId,
+                            MovieName = movie.MovieName,
+                            ShowDates = showdates.ShowDate1.HasValue ? showdates.ShowDate1.Value.ToString("dd/MM/yyyy") : null,
+                            Time = $"{showtimes.StartTime} ~ {showtimes.EndTime}",
+                            SeatName = seat.SeatNumb,
+                            Price = seat.Price.ToString(),
+                            MovieImage = movie.MovieImage
+                        };
+
+                        ticketsInfo.Add(ticketInfo);
+                    }
+                }
+                ViewBag.TicketsInfo = ticketsInfo;
+                ViewBag.SuccessMessage = "Bạn đã mua vé thành công!";
                 return View();
             }
         }

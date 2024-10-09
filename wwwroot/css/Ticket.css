@@ -58,3 +58,12 @@ body{
     border-radius: 8px;
     width: 200px;
 }
+
+.alert{
+    background-color: #EFC26D;
+    text-align: center;
+    border: none;
+    font-size: 30px;
+    color: #A1331C;
+    font-weight: bold;
+}

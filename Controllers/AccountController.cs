@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using TICKETBOX.Models;
+using System.Net.Http;
 
 namespace TICKETBOX.Controllers
 {
