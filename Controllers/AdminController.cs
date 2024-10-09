@@ -22,6 +22,26 @@ namespace TICKETBOX.Controllers
             var movies = db.Movies.ToList();
             return View(movies);
         }
+        }        
+        //Chức năng xóa phim
+        public IActionResult DeleteMovie(int id)
+        {
+            using (var db = new FastticketContext())
+            {
+                var showdates = db.Showdates.Where(sd => sd.MovieId == id).ToList();
+                db.Showdates.RemoveRange(showdates);
+
+                var showtimes = db.Showtimes.Where(st => st.MovieId == id).ToList();
+                db.Showtimes.RemoveRange(showtimes);
+
+                var movie = db.Movies.FirstOrDefault(u => u.MovieId == id);
+                if (movie != null)
+                {
+                    db.Movies.Remove(movie);
+                    db.SaveChanges();
+                }
+                return RedirectToAction("HomeAdmin", "Admin");
+            }
         }
         //Quản lý
         public IActionResult Management(string roleFilter)
@@ -37,7 +57,7 @@ namespace TICKETBOX.Controllers
                 return View(userList);
             }
         }
-        //Chức năng xóa
+        //Chức năng xóa người dùng
         public IActionResult DeleteUser(int id)
         {
             using (var db = new FastticketContext())

@@ -38,3 +38,9 @@ new Swiper('.slide-movie', {
       prevEl: ".swiper-button-prev",
     },
   });
+  /*----------Xóa Phim----------*/
+  function confirmDeleteMovie(movieId) {
+    if (confirm("Bạn có chắc chắn muốn xóa phim này?")) {
+        window.location.href = `/Admin/DeleteMovie/${movieId}`;
+    }
+}

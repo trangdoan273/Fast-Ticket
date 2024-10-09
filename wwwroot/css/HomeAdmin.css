@@ -199,7 +199,7 @@ main .container .slide .btn-arrow:hover{
     background-color: #4267d6cc;
 }
 
-.delete--movie-btn{
+.delete-movie-btn{
     color: white;
     background-color: red;
     padding: 10px 20px;
