@@ -16,7 +16,7 @@ namespace PROJECT.Models
         {
             _logger = logger;
         }
-
+        //Chọn ghế
         [Authorize(Roles = "User")]
         public IActionResult SelectSeat(int id)
         {
@@ -24,7 +24,7 @@ namespace PROJECT.Models
             {
                 var movie = db.Movies.FirstOrDefault(m => m.MovieId == id);
                 var showdates = db.Showdates.Where(m => m.MovieId == id).ToList();
-                
+
                 var showtimes = db.Showtimes.Where(m => m.MovieId == id).ToList();
                 var seat = db.Seats.Where(m => m.MovieId == id).ToList();
 
@@ -52,7 +52,7 @@ namespace PROJECT.Models
                 return View();
             }
         }
-
+        //Lưu những thông tin đã chọn vào vé
         [HttpPost]
         [Authorize(Roles = "User")]
         public IActionResult ProcessTickets(string selectedSeats, int movieId, int showtimeId, int showdateId)
@@ -61,7 +61,6 @@ namespace PROJECT.Models
             {
                 var seatNumbers = JsonConvert.DeserializeObject<List<string>>(selectedSeats);
                 var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
 
                 foreach (var seatNumb in seatNumbers)
                 {
@@ -81,19 +80,16 @@ namespace PROJECT.Models
                         db.SaveChanges();
                     }
                 }
-
-                db.SaveChanges(); 
+                db.SaveChanges();
                 return RedirectToAction("Ticket", new { id = db.Tickets.OrderByDescending(t => t.TicketId).First().TicketId });
             }
         }
-
-
+        //Vé
         [Authorize(Roles = "User")]
         public IActionResult Ticket(int id)
         {
             using (var db = new FastticketContext())
             {
-
                 var ticket = db.Tickets.FirstOrDefault(t => t.TicketId == id);
                 var showtimes = db.Showtimes.FirstOrDefault(t => t.ShowtimeId == ticket.ShowtimeId);
                 var showdates = db.Showdates.FirstOrDefault(t => t.ShowdateId == ticket.ShowdateId);

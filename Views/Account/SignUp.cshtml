@@ -20,13 +20,18 @@
         <div class="form-container sign-up">
             <form asp-controller="Account" asp-action="SignUp" method="post">
                 <p>Đăng Ký</p>
+
                 <input type="text" placeholder="Tên đăng nhập" asp-for="UserName">
                 <span asp-validation-for="UserName" class="warning"></span>
+
                 <input type="email" placeholder="Email" asp-for="UserEmail">
                 <span asp-validation-for="UserEmail" class="warning"></span>
+
                 <input type="password" placeholder="Mật khẩu" asp-for="UserPassword">
                 <span asp-validation-for="UserPassword" class="warning"></span>
+
                 <button type="submit">Đăng ký</button>
+                
                 <span class="had-acc">Bạn đã có tài khoản?
                     <a asp-controller="Account" asp-action="SignIn" class="sign-in-link">Đăng
                         Nhập

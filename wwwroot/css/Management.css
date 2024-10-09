@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #0D111A;
+    height: 100vh;
+    width: 100%;
+}
+/*----------Quản lý----------*/
+.management-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.info-select{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+/*----------Nút Người Dùng----------*/
+.user-btn{
+    color: #EFC26D;
+    background-color: #A1331C;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+}
+
+.user-container{
+    margin: 10px 20px;
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 400px; 
+    max-height: 400px;
+    max-width: 800px;
+    overflow-x: auto;
+    overflow-y: auto;
+ }
+/*----------Label----------*/
+.user-list-label{
+    color:#EFC26D;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-top: 20px;
+    text-align: center;
+}
+/*----------Lọc----------*/
+.filter-container{
+    margin: 20px 0;
+}
+
+.filter-button{
+    background-color: #EFC26D;
+    color: #A1331C;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.filter-container label{
+    color:white;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+#roleFilter{
+    outline: none;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.filter-button:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+}
+
+.menu-container{
+    display: flex;
+    justify-content: space-between;
+}
+/*----------Nút Tạo Admin----------*/
+.create-container{
+    margin: 20px 0;
+}
+
+.create-admin-btn{
+    color: white;
+    background-color: #4268D6;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.create-admin-btn i{
+    margin-right: 10px;
+}
+
+.create-admin-btn:hover{
+    background-color: #4267d6cc;
+}
+/*----------Bảng----------*/
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.table thead th{
+    background-color: #EFC26D;
+    padding: 10px;
+    color: #A1331C;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #3a3a3a;
+    white-space: nowrap;
+}
+
+.table tbody td{
+    border: 1px solid #3a3a3a;
+    padding: 10px;
+    color: white;
+    white-space: nowrap;
+}
+/*----------Nút xóa----------*/
+.delete-btn{
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: red;
+}
+
+.delete-btn i{
+    margin-right: 5px;
+}
+
+.delete-btn:hover{
+    background-color: rgba(255, 0, 0, 0.67);
+}

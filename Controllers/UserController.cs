@@ -17,25 +17,22 @@ namespace TICKETBOX.UserController
         {
             _logger = logger;
         }
-
+        //Trang cá nhân người dùng
         public IActionResult UserProfile()
         {
             var userID = User.Identity.Name;
 
-
             using (var db = new FastticketContext())
             {
                 var user = db.Users.FirstOrDefault(u => u.UserName == userID);
-
-
                 if (user == null || user.Role == "Admin")
                 {
                     return RedirectToAction("Management", "Admin");
                 }
-
                 return View(user);
             }
         }
+        //Trang thông tin chi tiết
         [Authorize(Roles = "User")]
         public IActionResult UserDetailProfile(int id)
         {
@@ -47,6 +44,7 @@ namespace TICKETBOX.UserController
                 {
                     return RedirectToAction("AccessDenied", "Home");
                 }
+
                 var viewModel = new UpdateUserModel
                 {
                     UserId = user.UserId,
@@ -56,12 +54,11 @@ namespace TICKETBOX.UserController
                     DoB = user.DoB,
                     UserAddress = user.UserAddress,
                     UserEmail = user.UserEmail
-
                 };
-
                 return View(viewModel);
             }
         }
+        //Chức năng cập nhật thông tin người dùng
         [Authorize(Roles = "User")]
         [HttpPost]
         public IActionResult UpdateUser(UpdateUserModel viewModel)
@@ -89,7 +86,7 @@ namespace TICKETBOX.UserController
             }
             return RedirectToAction("UserDetailProfile", new { id = viewModel.UserId });
         }
-
+        //Đổi mật khẩu
         [Authorize(Roles = "User")]
         public IActionResult ChangePassword(int id)
         {
@@ -98,20 +95,18 @@ namespace TICKETBOX.UserController
             using (var db = new FastticketContext())
             {
                 var user = db.Users.FirstOrDefault(u => u.UserId == id);
-
                 if (user == null || user.UserName != currentUserId)
                 {
                     return RedirectToAction("AccessDenied", "Home");
                 }
             }
-
             var model = new ChangePasswordModel
             {
                 UserId = id
             };
-
             return View(model);
         }
+
         [Authorize(Roles = "User")]
         [HttpPost]
         public IActionResult ChangePassword(ChangePasswordModel model)
@@ -131,10 +126,8 @@ namespace TICKETBOX.UserController
                     }
                 }
             }
-
             return View(model);
         }
-
     }
 }
 

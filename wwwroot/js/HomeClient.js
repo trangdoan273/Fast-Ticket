@@ -1,3 +1,4 @@
+/*----------Poster----------*/
 new Swiper('.slide', {
     loop: true,
     spaceBetween: 30,
@@ -15,7 +16,7 @@ new Swiper('.slide', {
     },
   
   });
-
+/*----------Movie----------*/
 new Swiper('.slide-movie', {
     slidesPerView: 3,
     spaceBetween: 40,

@@ -33,55 +33,54 @@
 
         <div class="user-info-wrap">
             <form asp-action="UpdateUser" method="post">
-                 <input type="hidden" asp-for="UserId" />
+                <input type="hidden" asp-for="UserId" />
                 <div class="user-info-list">
                     <div class="user-info">
                         <div>
                             <p class="Name">Tên</p>
-                            
-                            <input type="text" id="Name" name="UserFullname" asp-for="UserFullname" >
+                            <input type="text" id="Name" name="UserFullname" asp-for="UserFullname">
                         </div>
+
                         <div>
                             <p class="Name">Điện thoại</p>
-
                             <input type="text" id="Phone" name="UserPhoneNumber" asp-for="UserPhoneNumber">
                         </div>
+
                         <div>
                             <p class="Sex">Giới tính</p>
-
-                            <p class="Sex" id="Sex" >
-                                <input type="text" id="Sex" name="UserSex" asp-for="UserSex">
+                            <input type="text" id="Sex" name="UserSex" asp-for="UserSex">
                             </p>
                         </div>
+
                         <div>
                             <p class="DoB">Ngày sinh</p>
-
                             <input type="date" id="DoB" name="DoB" asp-for="DoB">
                         </div>
                     </div>
+
                     <div class="user-address">
                         <div>
                             <p class="Address">Địa chỉ</p>
-
                             <input type="text" id="Address" name="UserAddress" asp-for="UserAddress">
                         </div>
+
                         <div>
                             <p class="Email">Email</p>
-
                             <input type="email" id="Email" name="UserEmail" asp-for="UserEmail">
                         </div>
                     </div>
                 </div>
-                    <div>
-                        <a href="@Url.Action("ChangePassword", "User", new { id = Model.UserId })"  class="change-pw-link">
+                <!-----------Nút----------->
+                <div>
+                    <a href="@Url.Action("ChangePassword", "User", new { id = Model.UserId })" class="change-pw-link">
                         <button type="button" class="change-pw-btn">Đổi mật khẩu</button>
-                        </a>
-                        
-                        <a  class="save-link">
-                        <button  type="submit"  class="save-btn">Lưu lại</button>
-                        </a>
-                    </div>
-            </form> 
+                    </a>
+
+                    <a class="save-link">
+                        <button type="submit" class="save-btn">Lưu lại</button>
+                    </a>
+                </div>
+            </form>
         </div>
     </div>
     </div>

@@ -14,10 +14,11 @@
 </head>
 
 <body>
+    <!-----------Header----------->
     <header>
         <div class="nav-menu">
             <div class="menu-logo">
-                <a href="#" class="logo">
+                <a href="@Url.Action("NavigateHome", "Home")" class="logo">
                     <img src="../assets/logo.png">
                 </a>
 
@@ -28,10 +29,12 @@
                     <li class="list-item"><a href="#">Cửa hàng</a></li>
                 </ul>
             </div>
+
             <div class="user-info">
                 <a href="/User/UserProfile">
                     <img src="../assets/avatar.jpg" class="avatar">
                 </a>
+
                 <a href="/User/UserProfile" id="userNameLink">
                     <p class="username">@User.Identity.Name</p>
                 </a>
@@ -42,9 +45,11 @@
             </div>
         </div>
     </header>
+    <!-----------Main----------->
     <main>
         @RenderBody()
     </main>
+    <!-----------Footer----------->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -53,9 +58,7 @@
 
             <div class="footer-content">
                 <p class="head">Chăm sóc khách hàng</p>
-
                 <p>Hotline: 0378659061</p>
-
                 <p>Email: doantrang273@gmail.com</p>
             </div>
 

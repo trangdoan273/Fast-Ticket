@@ -5,7 +5,7 @@ body{
     background-color:#0D111A;
     width: 100%;
 }
-
+/*----------Phim----------*/
 .movie-selection .movie-part .movie-head{
     padding: 20px;
     border: 1px solid #3a3a3a;
@@ -37,7 +37,7 @@ body{
     color: white;
     margin-bottom: 19px;
 }
-
+/*----------Nút đổi phim----------*/
 .movie-info .change-movie-link .change-movie-btn{
     color: #EFC26D;
     border: 1px solid #A1331C;
@@ -53,7 +53,7 @@ body{
     color:#EFC26D;
     background-color: #A1331C;
 }
-
+/*----------Ngày----------*/
 .movie-selection .movie-part .date-selection{
     padding:15px 0;
     border: 1px solid #3a3a3a;
@@ -65,7 +65,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 
 .date-selection .date-in-week .date{
     margin-right: 20px; 
@@ -89,9 +88,7 @@ body{
 .date-in-week .date button.active{
     color:#A1331C;
 }
-
-
-
+/*----------Giờ----------*/
 .movie-part .cinema-selection .cinema-info{
     padding:15px 0;
     border: 1px solid #3a3a3a;
@@ -122,9 +119,7 @@ body{
 .time-selection  .time-btn:hover{
     background-color: #A1331C;
 }
-
-
-
+/*----------Ghế----------*/
 .select-seat{
     margin: 20px 30px;
     color: #EFC26D;
@@ -134,37 +129,6 @@ body{
     font-size: 16px;
     font-weight: bold;
 }
-
-.payment{
-    margin-top: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.sum .sum-label{
-    font-size: 30px;
-    font-weight: bolder;
-    margin-left: 60px;
-}
-
-.pay-btn{
-    margin-right: 60px;
-    padding: 5px 20px;
-    color: #A1331C;
-    background-color: #EFC26D;
-    font-size: 20.77px;
-    border-radius: 8px;
-    border: none;
-    font-weight: bolder;
-    text-transform: uppercase;
-}
-
-.pay-btn:hover{
-    color: #EFC26D;
-    background-color: #A1331C;
-}
- 
 .seat-wrapper {
     display: flex;
 }
@@ -205,4 +169,36 @@ body{
     background-color: #A1331C; 
     color: #EFC26D;
 }
+
+/*----------Thanh toán----------*/
+.payment{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sum .sum-label{
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 60px;
+}
+
+.pay-btn{
+    margin-right: 60px;
+    padding: 5px 20px;
+    color: #A1331C;
+    background-color: #EFC26D;
+    font-size: 20.77px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.pay-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+}
+
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JUlZk5jV+vqR1kQ7YuTo1GeaU2312bbZ0VriV7HBr5k=",
+  "Hash": "WxdmkOZIpuFhLsBaadQQqvmJi3j+TM4CPxwJZGUZdsc=",
   "Source": "TICKETBOX",
   "BasePath": "_content/TICKETBOX",
   "Mode": "Default",
@@ -169,6 +169,25 @@
       "OriginalItemSpec": "wwwroot\\css\\ChangePassword.css"
     },
     {
+      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\CreateAdmin.css",
+      "SourceId": "TICKETBOX",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Trang\\TICKETBOX\\wwwroot\\",
+      "BasePath": "_content/TICKETBOX",
+      "RelativePath": "css/CreateAdmin.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\CreateAdmin.css"
+    },
+    {
       "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\HomeClient.css",
       "SourceId": "TICKETBOX",
       "SourceType": "Discovered",
@@ -205,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Index.css"
+    },
+    {
+      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\Management.css",
+      "SourceId": "TICKETBOX",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Trang\\TICKETBOX\\wwwroot\\",
+      "BasePath": "_content/TICKETBOX",
+      "RelativePath": "css/Management.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Management.css"
     },
     {
       "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\SelectSeat.css",
@@ -378,12 +416,12 @@
       "OriginalItemSpec": "wwwroot\\js\\HomeClient.js"
     },
     {
-      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\SelectSeat,js",
+      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\Management.js",
       "SourceId": "TICKETBOX",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Trang\\TICKETBOX\\wwwroot\\",
       "BasePath": "_content/TICKETBOX",
-      "RelativePath": "js/SelectSeat,js",
+      "RelativePath": "js/Management.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -394,7 +432,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\SelectSeat,js"
+      "OriginalItemSpec": "wwwroot\\js\\Management.js"
+    },
+    {
+      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\SelectSeat.js",
+      "SourceId": "TICKETBOX",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Trang\\TICKETBOX\\wwwroot\\",
+      "BasePath": "_content/TICKETBOX",
+      "RelativePath": "js/SelectSeat.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\SelectSeat.js"
     },
     {
       "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\site.js",

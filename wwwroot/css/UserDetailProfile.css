@@ -25,7 +25,7 @@ body{
     width: 400px;
     margin-top: 10px;
  }
-
+/*----------Nút Thông tin người dùng----------*/
  .general-info-link{
     margin-right: 20px;
     margin-left: 20px;
@@ -42,7 +42,12 @@ body{
     border: 1px solid #3a3a3a;
  }
 
- .detail-info-btn{
+.general-info-link .general-info-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+ } 
+/*----------Nút chi tiết người dùng----------*/
+.detail-info-btn{
     color: #EFC26D;
     background-color: #A1331C;
     width: 100%;
@@ -52,8 +57,8 @@ body{
     font-weight: bolder;
     border: 1px solid #3a3a3a;
  }
-
- .payment-history-btn{
+/*----------Nút lịch sử thanh toán----------*/
+.payment-history-btn{
     color: #A1331C;
     background-color: #EFC26D;
     width: 100%;
@@ -62,18 +67,13 @@ body{
     font-size: 24px;
     font-weight: bolder;
     border: 1px solid #3a3a3a;
- }
+}
 
- .general-info-link .general-info-btn:hover{
-    color: #EFC26D;
-    background-color: #A1331C;
- } 
-
- .payment-history-btn:hover{
+.payment-history-btn:hover{
     color: #EFC26D;
     background-color: #A1331C;
  }
-
+/*----------Thông tin người dùng----------*/
 .user-info-wrap{
     width: 70%;
     margin: 0 30px;
@@ -105,7 +105,7 @@ input{
     border: 1px solid transparent;
     border-radius: 8px;
 }
-
+/*----------Nút đổi mật khẩu----------*/
 .change-pw-link .change-pw-btn{
     font-size: 18px;
     font-weight: bold;
@@ -124,7 +124,7 @@ input{
     color:#EFC26D;
     background-color: #A1331C;
 }
-
+/*----------Nút Lưu lại----------*/
 .save-link .save-btn{
     font-size: 18px;
     font-weight: bold;

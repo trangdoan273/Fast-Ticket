@@ -24,14 +24,14 @@ body{
     max-width: 100%;
     min-height: 380px;
 }
-
+/*----------Label----------*/
 .container .label{
     font-size: 35px;
     font-weight: bolder;
     color:#A1331C;
     padding-bottom: 10px;
 }
-
+/*----------Span----------*/
 .container span{
     font-size: 15px;
     color: black;
@@ -39,25 +39,7 @@ body{
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
-.container .sign-in-social-icon{
-    padding: 5px;
-    background-color: #A1331C;
-    border: 1 solid transparent;
-    border-radius: 8px;
-}
-.container .sign-in-social-icon:hover{
-    background-color: #B82828;
-}
-.container .sign-in-social-icon .sign-in-icon{
-    color:#EFC26D;
-    font-size: 17px;
-}
-
-.container .sign-in-social-icon .sign-in-icon:hover{
-    color:#eee;
-
-}
-
+/*----------Đăng ký----------*/
 .container span .sign-up-link{
     color: #A1331C;
     font-weight: bold;
@@ -68,7 +50,7 @@ body{
 .container span .sign-up-link:hover{
     color: #eee;
 }
-
+/*----------Đăng nhập----------*/
 .container button{
     background-color: #A1331C;
     color: #EFC26D;
@@ -87,7 +69,7 @@ body{
     background-color: #B82828;
     color: #eee;
 }
-
+/*----------Form----------*/
 .container form{
     display: flex;
     align-items: center;
@@ -96,7 +78,7 @@ body{
     padding: 40px 40px;
     height: 100%;
 }
-
+/*----------Input----------*/
 .container input{
     background-color: #eee;
     border: none;

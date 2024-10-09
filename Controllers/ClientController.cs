@@ -10,7 +10,7 @@ namespace PROJECT.Controllers
         {
             _logger = logger;
         }
-
+        //Trang chủ của khách
         public IActionResult HomeClient()
         {
             using (var db = new FastticketContext())

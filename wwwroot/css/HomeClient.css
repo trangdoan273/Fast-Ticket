@@ -28,7 +28,7 @@ header .nav-menu{
 header .list-item{
     display: inline-block;
 }
-
+/*----------Link----------*/
 header .list-item a{
     color: #EFC26D;
     font-size: 17.79px;
@@ -39,7 +39,7 @@ header .list-item a{
 header .list-item a:hover{
     color: #A1331C;
 }
-
+/*----------Button----------*/
 header button{
     background-color: rgba(0, 0, 0, 0.67);
     color: #EFC26D;
@@ -65,7 +65,7 @@ main .container .slide .list-slider .item-slider img{
     display: block;
     cursor:pointer;
 }
-
+/*----------Dot----------*/
 main .container .slide .swiper-pagination-bullet{
     height: 13px;
     width: 13px;
@@ -76,7 +76,7 @@ main .container .slide .swiper-pagination-bullet{
 main .container .slide .swiper-pagination-bullet-active{
     opacity: 1;
 }
-
+/*----------Arrow----------*/
 main .container .slide .btn-arrow{
     color:#EFC26D;
     margin-top: -35px;
@@ -86,7 +86,7 @@ main .container .slide .btn-arrow{
 main .container .slide .btn-arrow:hover{
     opacity: 1;
 }
-
+/*----------Vé của tôi----------*/
 main .my-ticket{
     padding: 15px;
     background-color: #A1331C;
@@ -188,7 +188,7 @@ main .my-ticket .my-ticket-link:hover{
     font-size: 13.34px;
     font-weight: bold;
 }
-
+/*----------button----------*/
 .movie-list .buy-ticket-link .buy-ticket{
     width: 100%;
     color: #A1331C;
@@ -206,7 +206,7 @@ main .my-ticket .my-ticket-link:hover{
     background-color:#A1331C;
     cursor: pointer;
 }
-
+/*----------Thông tin phim----------*/
 .movie-list .movie-info-link .movie-info{
     color: white;
     background-color: #0D111A;
@@ -223,7 +223,7 @@ main .my-ticket .my-ticket-link:hover{
     border: 1px solid transparent;
     cursor: pointer;
 }
-
+/*----------Arrow----------*/
 .movie-container .slide-movie .swiper-btn{
     color: #EFC26D;
     opacity: 0.5;
@@ -240,7 +240,7 @@ main .my-ticket .my-ticket-link:hover{
 .movie-container .slide-movie .swiper-button-next{
     right: 0;
 }
-
+/*----------Dot----------*/
 .movie-container .slide-movie .swiper-pagination-bullet{
     bottom: 0;
     height: 13px;

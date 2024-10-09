@@ -1,0 +1,59 @@
+@model TICKETBOX.Models.Tables.User
+@{
+    ViewData["Title"] = "Tạo Admin";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/CreateAdmin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <p class="create-admin-label">Tạo Admin Mới</p>
+    <form asp-action="CreateAdmin" asp-controller="Admin" method="post">
+        <div>
+            <label>Tên đầy đủ:</label>
+            <input type="text" asp-for="FullName">
+        </div>
+
+        <div>
+            <label>Tên đăng nhập:</label>
+            <input type="text" asp-for="UserName">
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label>Email:</label>
+            <input type="email" asp-for="UserEmail">
+            <span asp-validation-for="UserEmail" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label>Mật khẩu:</label>
+            <input type="password" asp-for="UserPassword">
+            <span asp-validation-for="UserPassword" class="text-danger"></span>
+
+        </div>
+
+        <div>
+            <label>Số điện thoại:</label>
+            <input type="text" asp-for="UserPhoneNumber">
+        </div>
+
+        <div>
+            <label>Địa chỉ:</label>
+            <input type="text" asp-for="UserAddress">
+        </div>
+        
+        <div>
+            <button type="submit">Tạo Admin</button>
+        </div>
+    </form>
+</body>
+
+</html>

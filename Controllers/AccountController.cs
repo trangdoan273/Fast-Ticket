@@ -15,28 +15,29 @@ namespace TICKETBOX.Controllers
         {
             _logger = logger;
         }
-
+        //Đăng Nhập
         [HttpGet]
         public IActionResult SignIn()
         {
-
             ClaimsPrincipal claimUser = HttpContext.User;
             if (claimUser.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Index", "Home");
             }
+
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> SignIn(User user)
         {
-
+            //Cảnh báo
             if (string.IsNullOrEmpty(user.UserName))
             {
                 ModelState.AddModelError("UserName", "Tên đăng nhập không được để trống!");
                 return View();
             }
+
             if (string.IsNullOrEmpty(user.UserPassword))
             {
                 ModelState.AddModelError("UserPassword", "Mật khẩu không được để trống!");
@@ -52,11 +53,12 @@ namespace TICKETBOX.Controllers
             using (var db = new FastticketContext())
             {
                 var existUser = await db.Users.FirstOrDefaultAsync(u => u.UserName == user.UserName && u.UserPassword == user.UserPassword);
-                if (existUser == null)
+                if (existUser == null) //Kiểm tra người dùng tồn tại hay không
                 {
                     ModelState.AddModelError(string.Empty, "Tên đăng nhập hoặc mật khẩu không đúng!");
                     return View(user);
                 }
+
                 var dbUser = await db.Users.FirstOrDefaultAsync(u => u.UserName == user.UserName && u.UserPassword == user.UserPassword);
                 if (dbUser != null)
                 {
@@ -65,15 +67,15 @@ namespace TICKETBOX.Controllers
                         new Claim(ClaimTypes.Name, dbUser.UserName),
                         new Claim(ClaimTypes.Role, dbUser.Role)
                     };
-                    ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+                    ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme); //Chuyển thông tin đăng nhập vào ClaimsPrincipal
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity)); //Tạo cookie chứa thông tin xác thực người dùng
+
                     return RedirectToAction("Index", "Home");
                 }
                 return View(user);
             }
-
         }
-
+        //Đăng Ký
         [HttpGet]
         public IActionResult SignUp()
         {
@@ -83,7 +85,6 @@ namespace TICKETBOX.Controllers
         [HttpPost]
         public async Task<IActionResult> SignUp(SignUpModel formData)
         {
-
             using (var db = new FastticketContext())
             {
                 var existUser = await db.Users.FirstOrDefaultAsync(u => u.UserName == formData.UserName);

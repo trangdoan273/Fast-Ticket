@@ -29,6 +29,7 @@
                 <button class="payment-history-btn">Lịch sử giao dịch</button>
             </a>
         </div>
+        <!-----------Thông tin tài khoản----------->
         <div class="user-profile">
             <div class="big-avatar-image">
                 <img src="../assets/avatar-trang-4.jpg" alt="#" class="big-avatar">
@@ -38,9 +39,7 @@
 
             <div class="account-info">
                 <p class="user-name">Tên: @Model.UserName</p>
-
                 <p class="user-email">Email: @Model.UserEmail</p>
-
                 <p class="user-tel">Điện thoại: @Model.UserPhoneNumber</p>
                 
                 <a asp-controller="User" asp-action="UserDetailProfile" asp-route-id="@Model.UserId" class="change-link">

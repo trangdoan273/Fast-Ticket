@@ -1,4 +1,93 @@
+@model IEnumerable<TICKETBOX.Models.Tables.User>
 @{
-    Layout = "_Layout";
+    ViewData["Title"] = "Quản lý";
 }
-<p>dfajsdkfdshj</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="~/css/Management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="management-container">
+        <div class="info-select">
+            <a href="#" class="user-link">
+                <button class="user-btn">Người dùng</button>
+            </a>
+        </div>
+        <!-----------Bảng hiển thị đăng ký người dùng----------->
+        <div class="user-container">
+            <p class="user-list-label">Danh sách người dùng</p>
+
+            <div class="menu-container">
+                <div class="filter-container">
+                    <form method="get" asp-action="Management">
+                        <label for="roleFilter">Lọc theo vai trò:</label>
+
+                        <select name="roleFilter" id="roleFilter">
+                            <option value="">Tất cả</option>
+                            <option value="Admin">Admin</option>
+                            <option value="User">Người dùng</option>
+                        </select>
+
+                        <button type="submit" class="filter-button">
+                            <i class="fa-solid fa-filter"></i> Lọc
+                        </button>
+                    </form>
+                </div>
+
+                <div class="create-container">
+                    <button class="create-admin-btn" onclick="window.location.href='/Admin/CreateAdmin'">
+                        <i class="fa-solid fa-plus"></i>
+                        Tạo Admin Mới
+                    </button>
+                </div>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên người dùng</th>
+                        <th>Tên đăng nhập</th>
+                        <th>Email</th>
+                        <th>Vai trò</th>
+                        <th>Số điện thoại</th>
+                        <th>Địa chỉ</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var user in Model)
+                    {
+                        <tr>
+                            <td>@user.UserId</td>
+                            <td>@user.FullName</td>
+                            <td>@user.UserName</td>
+                            <td>@user.UserEmail</td>
+                            <td>@user.Role</td>
+                            <td>@user.UserPhoneNumber</td>
+                            <td>@user.UserAddress</td>
+                            <td>
+                                <button class="delete-btn" onclick="confirmDelete('@user.UserId', '@user.Role')">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Xóa
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../js/Management.js"></script>
+</body>
+
+</html>

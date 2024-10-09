@@ -1,3 +1,4 @@
+/*----------Giờ----------*/
 const timeButtons = document.querySelectorAll('.time-btn');
 timeButtons.forEach(button => {
     button.addEventListener('click', function() {
@@ -6,7 +7,7 @@ timeButtons.forEach(button => {
         console.log("Thời gian đã chọn: " + this.innerText);
     });
 });
-
+/*----------Giá ghế----------*/
 document.addEventListener("DOMContentLoaded", function () {
     const seats = document.querySelectorAll(".seat");
     let selectedSeats = []; 
@@ -34,8 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
-
+/*----------Ngày----------*/
 document.addEventListener('DOMContentLoaded', function () {
     const dateLinks = document.querySelectorAll('.date-link');
 

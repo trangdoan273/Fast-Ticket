@@ -13,15 +13,18 @@
 </head>
 
 <body>
+    <!-----------Movie----------->
     <div class="movie-selection">
         <div class="movie-part">
             <div class="movie-head">
                 <a href="#" class="movie-image">
                     <img src="@ViewBag.SelectSeatInfo.MovieImage" class="movie-img">
                 </a>
+
                 <div class="movie-info">
                     <p class="movie-name">@ViewBag.SelectSeatInfo.MovieName</p>
                     <p class="movie-description">@ViewBag.SelectSeatInfo.Content</p>
+
                     <div class="movie-detail">
                         <p class="movie-director">Đạo diễn: @ViewBag.SelectSeatInfo.Director</p>
                         <p class="movie-actor">Diễn viên: @ViewBag.SelectSeatInfo.Actor</p>
@@ -29,11 +32,13 @@
                         <p class="movie-showtimes">Khởi chiếu: @ViewBag.SelectSeatInfo.ReleaseDate | Thời lượng:
                             @ViewBag.SelectSeatInfo.Duration</p>
                     </div>
+
                     <a asp-controller="Home" asp-action="Index" class="change-movie-link">
                         <button class="change-movie-btn">Chọn phim khác</button>
                     </a>
                 </div>
             </div>
+            <!-----------Ngày----------->
             <div class="date-selection">
                 <ul class="date-in-week">
                     @foreach (var date in ViewBag.SelectSeatInfo.ShowDates)
@@ -42,9 +47,11 @@
                     }
                 </ul>
             </div>
+            <!-----------Giờ----------->
             <div class="cinema-selection">
                 <div class="cinema-info">
                     <p class="cinema-name">Chọn giờ chiếu</p>
+
                     <div class="time-selection">
                         @foreach (var time in ViewBag.SelectSeatInfo.ShowTimes)
                         {
@@ -53,15 +60,18 @@
                     </div>
                 </div>
             </div>
+            <!-----------Ghế----------->
             <div class="select-seat">
                 <p class="select-seat-label">Chọn ghế</p>
                 <p class="screen">MÀN HÌNH</p>
+
                 <div class="seat-wrapper">
                     @foreach (var seat in ViewBag.SelectSeatInfo.Seat)
                     {
                         <button class="seat" data-price="@seat.Price" id="seatClick">@seat.SeatNumb</button>
                     }
                 </div>
+                <!-----------Thanh toán----------->
                 <form asp-action="ProcessTickets" method="post">
                     <input type="hidden" id="selectedSeatsInput" name="selectedSeats" value="[]">
                     <input type="hidden" name="movieId" value="@ViewBag.SelectSeatInfo.Id">
@@ -72,6 +82,7 @@
                         <div class="sum">
                             <p class="sum-label">Thành Tiền: 0 VND</p>
                         </div>
+
                         <div class="pay">
                             <a href="#" class="pay-link" id="payButton">
                                 <button class="pay-btn" type="submit">Thanh Toán</button>

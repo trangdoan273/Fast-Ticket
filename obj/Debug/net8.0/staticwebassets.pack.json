@@ -29,12 +29,20 @@
       "PackagePath": "staticwebassets\\css\\ChangePassword.css"
     },
     {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\CreateAdmin.css",
+      "PackagePath": "staticwebassets\\css\\CreateAdmin.css"
+    },
+    {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\HomeClient.css",
       "PackagePath": "staticwebassets\\css\\HomeClient.css"
     },
     {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\Index.css",
       "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\Management.css",
+      "PackagePath": "staticwebassets\\css\\Management.css"
     },
     {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\SelectSeat.css",
@@ -73,8 +81,12 @@
       "PackagePath": "staticwebassets\\js\\HomeClient.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\SelectSeat,js",
-      "PackagePath": "staticwebassets\\js"
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\Management.js",
+      "PackagePath": "staticwebassets\\js\\Management.js"
+    },
+    {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\SelectSeat.js",
+      "PackagePath": "staticwebassets\\js\\SelectSeat.js"
     },
     {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\site.js",
