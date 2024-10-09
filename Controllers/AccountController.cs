@@ -23,9 +23,12 @@ namespace TICKETBOX.Controllers
             ClaimsPrincipal claimUser = HttpContext.User;
             if (claimUser.Identity.IsAuthenticated)
             {
+                var userRole = claimUser.FindFirstValue(ClaimTypes.Role);
+                if(userRole == "Admin"){
+                    return RedirectToAction("HomeAdmin", "Admin");
+                }
                 return RedirectToAction("Index", "Home");
             }
-
             return View();
         }
 
@@ -71,6 +74,9 @@ namespace TICKETBOX.Controllers
                     ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme); //Chuyển thông tin đăng nhập vào ClaimsPrincipal
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity)); //Tạo cookie chứa thông tin xác thực người dùng
 
+                    if(dbUser.Role == "Admin"){
+                        return RedirectToAction("HomeAdmin", "Admin");
+                    }
                     return RedirectToAction("Index", "Home");
                 }
                 return View(user);

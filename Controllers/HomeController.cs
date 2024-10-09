@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using TICKETBOX.Models.Tables;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TICKETBOX.Controllers;
 
@@ -17,6 +18,7 @@ public class HomeController : Controller
         _logger = logger;
     }
     //Trang chủ người dùng
+    [Authorize(Roles = "User")]
     public IActionResult Index()
     {
         using (var db = new FastticketContext())
@@ -31,7 +33,7 @@ public class HomeController : Controller
         var userRole = HttpContext.User.FindFirst(ClaimTypes.Role)?.Value;
         if (userRole == "Admin")
         {
-            return RedirectToAction("Management", "Admin");
+            return RedirectToAction("HomeAdmin", "Admin");
         }
         else
         {

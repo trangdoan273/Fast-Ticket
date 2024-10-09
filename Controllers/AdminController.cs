@@ -15,6 +15,14 @@ namespace TICKETBOX.Controllers
         {
             _logger = logger;
         }
+        //HomeAdmin
+        public IActionResult HomeAdmin(){
+            using (var db = new FastticketContext())
+        {
+            var movies = db.Movies.ToList();
+            return View(movies);
+        }
+        }
         //Quản lý
         public IActionResult Management(string roleFilter)
         {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WxdmkOZIpuFhLsBaadQQqvmJi3j+TM4CPxwJZGUZdsc=",
+  "Hash": "2KlFIiCnKtauxsRiv9vAlp7Rs+HdXsPQgqe0K1meDao=",
   "Source": "TICKETBOX",
   "BasePath": "_content/TICKETBOX",
   "Mode": "Default",
@@ -150,6 +150,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\Sói bảnh.jpg"
     },
     {
+      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\assets\\Taylor.jpg",
+      "SourceId": "TICKETBOX",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Trang\\TICKETBOX\\wwwroot\\",
+      "BasePath": "_content/TICKETBOX",
+      "RelativePath": "assets/Taylor.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\Taylor.jpg"
+    },
+    {
       "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\ChangePassword.css",
       "SourceId": "TICKETBOX",
       "SourceType": "Discovered",
@@ -186,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\CreateAdmin.css"
+    },
+    {
+      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\HomeAdmin.css",
+      "SourceId": "TICKETBOX",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Trang\\TICKETBOX\\wwwroot\\",
+      "BasePath": "_content/TICKETBOX",
+      "RelativePath": "css/HomeAdmin.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\HomeAdmin.css"
     },
     {
       "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\HomeClient.css",

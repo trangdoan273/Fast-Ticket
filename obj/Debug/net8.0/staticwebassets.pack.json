@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\assets\\Sói bảnh.jpg"
     },
     {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\assets\\Taylor.jpg",
+      "PackagePath": "staticwebassets\\assets\\Taylor.jpg"
+    },
+    {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\assets\\avatar-trang-4.jpg",
       "PackagePath": "staticwebassets\\assets\\avatar-trang-4.jpg"
     },
@@ -31,6 +35,10 @@
     {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\CreateAdmin.css",
       "PackagePath": "staticwebassets\\css\\CreateAdmin.css"
+    },
+    {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\HomeAdmin.css",
+      "PackagePath": "staticwebassets\\css\\HomeAdmin.css"
     },
     {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\HomeClient.css",
