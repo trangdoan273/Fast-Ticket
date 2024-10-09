@@ -45,47 +45,29 @@ main .container .slide .btn-arrow{
 main .container .slide .btn-arrow:hover{
     opacity: 1;
 }
-/*----------Vé của tôi----------*/
-main .my-ticket{
-    padding: 15px;
+/*----------Chức năng----------*/
+.create-link{
+    padding: 20px;
     background-color: #A1331C;
     background: radial-gradient(#A4352A,#7C2820, #3E1410);
-    text-decoration: none;
-
-}
-
-main .my-ticket .my-ticket-link{
-    color: white;
-    font-size: 17.79px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-}
-
-main .my-ticket .my-ticket-link:hover{
-    color:#EFC26D;
-    cursor: pointer;
-}
-/*----------Tạo  phim----------*/
-.button-create-movie{
-    margin-top: 50px;
     text-align: center;
 }
 
-.create-movie-btn{
-    padding: 10px 20px;
-    color: #A1331C;
-    background-color: #EFC26D;
-    border: none;
-    border-radius: 8px;
-    font-size: 17.79px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.create-movie-btn:hover{
+.create-movie-link{
     color: #EFC26D;
-    background-color: #A1331C;
+    font-size: 17.79px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.create-movie-link i{
+    margin-right: 5px;
+}
+
+.create-movie-link:hover{
+    color: white;
 }
 /*----------Movies----------*/
 .movie{
@@ -194,22 +176,46 @@ main .my-ticket .my-ticket-link:hover{
     background-color:#EFC26D;
     cursor: pointer;
 }
-/*----------Thông tin phim----------*/
-.movie-list .movie-info-link .movie-info{
-    color: white;
-    background-color: #0D111A;
-    border: 1px solid #EFC26D;
-    border-radius: 3.5px;
-    padding: 10px 15px;
-    font-size: 17.79px;
-
+/*----------Nút chức năng----------*/
+.edit-movie-link{
+    text-decoration: none;
 }
 
-.movie-list .movie-info-link .movie-info:hover{
-    color: #EFC26D;
-    background-color:#A1331C;
-    border: 1px solid transparent;
-    cursor: pointer;
+.edit-movie-btn{
+    color: white;
+    background-color: #4268D6;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3.5px;
+    font-size: 17.79px;
+    font-weight: bold;
+}
+
+.edit-movie-btn i{
+    margin-right: 5px;
+}
+
+.edit-movie-btn:hover{
+    background-color: #4267d6cc;
+}
+
+.delete--movie-btn{
+    color: white;
+    background-color: red;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3.5px;
+    font-size: 17.79px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.delete--movie-btn i{
+    margin-right: 5px;
+}
+
+.delete--movie-btn:hover{
+    background-color: rgba(255, 0, 0, 0.67);
 }
 /*----------Arrow----------*/
 .movie-container .slide-movie .swiper-btn{
