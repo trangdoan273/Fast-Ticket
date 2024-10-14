@@ -17,6 +17,12 @@
 <body>
     <div class="management-container">
         <div class="info-select">
+            <a href="#" class="general-link">
+                <button class="general-btn">Thông tin chung</button>
+            </a>
+            <a href="#" class="detail-link">
+                <button class="detail-btn">Chi tiết tài khoản</button>
+            </a>
             <a href="@Url.Action("Management", "Admin")" class="user-link">
                 <button class="user-btn">Người dùng</button>
             </a>
@@ -31,10 +37,10 @@
             <div class="menu-container">
                 <div class="change-container">
                     <form asp-action="ChangeAllTicketStatus" method="post">
-                    <button type="submit" class="change-status-btn">
-                        <i class="fa-solid fa-arrows-rotate"></i>
-                        Thay Đổi Trạng Thái Vé
-                    </button>
+                        <button type="submit" class="change-status-btn">
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                            Thay Đổi Trạng Thái Vé
+                        </button>
                     </form>
                 </div>
             </div>
