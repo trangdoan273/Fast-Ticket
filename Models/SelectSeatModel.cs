@@ -20,8 +20,9 @@ namespace TICKETBOX.Models
 
     public class SeatInfo
     {
-        public string SeatNumb { get; set; }
+        public string SeatName { get; set; }
         public decimal? Price { get; set; }
+        public bool IsBooked {get; set;}
     }
 
 }

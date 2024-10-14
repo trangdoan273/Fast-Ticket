@@ -170,6 +170,16 @@ body{
     color: #EFC26D;
 }
 
+.booked{
+    background-color: #ccc;
+    color: #ccc;
+    cursor: not-allowed;
+}
+.seat.booked:hover {
+    background-color: #ccc; 
+    color: #ccc;
+}
+
 /*----------Thanh toán----------*/
 .payment{
     margin-top: 70px;

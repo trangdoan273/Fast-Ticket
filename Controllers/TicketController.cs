@@ -24,9 +24,16 @@ namespace PROJECT.Models
             {
                 var movie = db.Movies.FirstOrDefault(m => m.MovieId == id);
                 var showdates = db.Showdates.Where(m => m.MovieId == id).ToList();
-
                 var showtimes = db.Showtimes.Where(m => m.MovieId == id).ToList();
-                var seat = db.Seats.Where(m => m.MovieId == id).ToList();
+                var seat = db.Seats
+                .Where(m => m.MovieId == id)
+                .Select(s => new
+                {
+                    SeatName = s.SeatNumb,
+                    Price = s.SeatNumb,
+                    IsBooked = db.Tickets.Any(t => t.SeatId == s.SeatId && t.MovieId == id && t.TicketStatus == "Booked")
+                })
+                .ToList();
 
                 ViewBag.SelectSeatInfo = new SelectSeatModel()
                 {
@@ -45,13 +52,15 @@ namespace PROJECT.Models
                     ShowTimes = showtimes.Select(st => st.StartTime.ToString()).ToList(),
                     Seat = seat.Select(s => new SeatInfo
                     {
-                        SeatNumb = s.SeatNumb,
-                        Price = s.Price
+                        SeatName = s.SeatName,
+                        Price = decimal.TryParse(s.Price, out decimal parsedPrice) ? (decimal?)parsedPrice : null,
+                        IsBooked = s.IsBooked
                     }).ToList()
                 };
                 return View();
             }
         }
+
         //Lưu những thông tin đã chọn vào vé
         [HttpPost]
         [Authorize(Roles = "User")]

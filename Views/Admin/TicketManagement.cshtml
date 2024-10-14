@@ -1,0 +1,70 @@
+@model IEnumerable<TICKETBOX.Models.Tables.Ticket>
+@{
+    ViewData["Title"] = "Quản lý vé";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="~/css/TicketManagement.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="management-container">
+        <div class="info-select">
+            <a href="@Url.Action("Management", "Admin")" class="user-link">
+                <button class="user-btn">Người dùng</button>
+            </a>
+            <a href="#" class="ticket-link">
+                <button class="ticket-btn">Vé</button>
+            </a>
+        </div>
+        <!-----------Bảng hiển thị vé đã mua---------->
+        <div class="ticket-container">
+            <p class="ticket-list-label">Danh sách vé</p>
+
+            <div class="menu-container">
+                <div class="change-container">
+                    <form asp-action="ChangeAllTicketStatus" method="post">
+                    <button type="submit" class="change-status-btn">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                        Thay Đổi Trạng Thái Vé
+                    </button>
+                    </form>
+                </div>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên phim</th>
+                        <th>Số ghế</th>
+                        <th>Trạng thái vé</th>
+                        <th>Tên người dùng</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var ticket in Model)
+                    {
+                        <tr>
+                            <td>@ticket.TicketId</td>
+                            <td>@ticket.Movie?.MovieName</td>
+                            <td>@ticket.Seat?.SeatNumb</td>
+                            <td>@ticket.TicketStatus</td>
+                            <td>@ticket.User?.FullName</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

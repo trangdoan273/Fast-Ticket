@@ -50,7 +50,7 @@
             <!-----------Giờ----------->
             <div class="cinema-selection">
                 <div class="cinema-info">
-                    <p class="cinema-name">Chọn giờ chiếu</p>
+                    <p class="cinema-name">Giờ chiếu</p>
 
                     <div class="time-selection">
                         @foreach (var time in ViewBag.SelectSeatInfo.ShowTimes)
@@ -65,10 +65,10 @@
                 <p class="select-seat-label">Chọn ghế</p>
                 <p class="screen">MÀN HÌNH</p>
 
-                <div class="seat-wrapper">
+                <div class="seat-wrapper"> 
                     @foreach (var seat in ViewBag.SelectSeatInfo.Seat)
                     {
-                        <button class="seat" data-price="@seat.Price" id="seatClick">@seat.SeatNumb</button>
+                        <button class="seat @if(seat.IsBooked){<text>booked</text>}" data-price="@seat.Price" id="seatClick" @if(seat.IsBooked){<text>disabled</text>}>@seat.SeatName</button>
                     }
                 </div>
                 <!-----------Thanh toán----------->

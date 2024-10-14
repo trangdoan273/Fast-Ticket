@@ -1,6 +1,6 @@
 @model IEnumerable<TICKETBOX.Models.Tables.User>
 @{
-    ViewData["Title"] = "Quản lý";
+    ViewData["Title"] = "Quản lý người dùng";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +19,9 @@
         <div class="info-select">
             <a href="#" class="user-link">
                 <button class="user-btn">Người dùng</button>
+            </a>
+             <a href="@Url.Action("TicketManagement", "Admin")" class="ticket-link">
+                <button class="ticket-btn">Vé</button>
             </a>
         </div>
         <!-----------Bảng hiển thị đăng ký người dùng----------->

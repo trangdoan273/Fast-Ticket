@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let totalPrice = 0;
 
     seats.forEach(seat => {
+        if(seat.classList.contains("booked")){
+            seat.disabled = true;
+            return;
+        }
+
         seat.addEventListener("click", function () {
             const seatNumber = this.textContent;
             const seatPrice = parseFloat(this.getAttribute('data-price'));

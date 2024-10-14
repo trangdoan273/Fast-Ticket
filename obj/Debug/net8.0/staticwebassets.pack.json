@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\css\\Ticket.css"
     },
     {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\TicketManagement.css",
+      "PackagePath": "staticwebassets\\css\\TicketManagement.css"
+    },
+    {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\UserDetailProfile.css",
       "PackagePath": "staticwebassets\\css\\UserDetailProfile.css"
     },

@@ -7,7 +7,7 @@ using TICKETBOX.Models.Tables;
 
 namespace TICKETBOX.Controllers
 {
-    [Authorize(Roles ="Admin")]
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         private readonly ILogger<AdminController> _logger;
@@ -16,13 +16,14 @@ namespace TICKETBOX.Controllers
             _logger = logger;
         }
         //HomeAdmin
-        public IActionResult HomeAdmin(){
-            using (var db = new FastticketContext())
+        public IActionResult HomeAdmin()
         {
-            var movies = db.Movies.ToList();
-            return View(movies);
+            using (var db = new FastticketContext())
+            {
+                var movies = db.Movies.ToList();
+                return View(movies);
+            }
         }
-        }        
         //Chức năng xóa phim
         public IActionResult DeleteMovie(int id)
         {
@@ -91,6 +92,31 @@ namespace TICKETBOX.Controllers
                 return RedirectToAction("Management");
             }
             return View(newAdmin);
+        }
+
+        public IActionResult TicketManagement()
+        {
+            using (var db = new FastticketContext())
+            {
+                var tickets = db.Tickets.Include(t => t.Movie).Include(t => t.Seat).Include(t => t.User).ToList();
+                return View(tickets);
+            }
+        }
+
+        [HttpPost]
+        public IActionResult ChangeAllTicketStatus()
+        {
+            using (var db = new FastticketContext())
+            {
+                var tickets = db.Tickets.ToList();
+                foreach (var ticket in tickets)
+                {
+                    // Thay đổi trạng thái vé ở đây
+                    ticket.TicketStatus = ticket.TicketStatus == "Booked" ? "Used" : "Used"; // Ví dụ trạng thái
+                }
+                db.SaveChanges();
+            }
+            return RedirectToAction("TicketManagement");
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2KlFIiCnKtauxsRiv9vAlp7Rs+HdXsPQgqe0K1meDao=",
+  "Hash": "8o8lGxaF2aoa1cf0klfJltRTGq1Hl7evoVIIRh0qtz8=",
   "Source": "TICKETBOX",
   "BasePath": "_content/TICKETBOX",
   "Mode": "Default",
@@ -376,6 +376,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Ticket.css"
+    },
+    {
+      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\TicketManagement.css",
+      "SourceId": "TICKETBOX",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Trang\\TICKETBOX\\wwwroot\\",
+      "BasePath": "_content/TICKETBOX",
+      "RelativePath": "css/TicketManagement.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\TicketManagement.css"
     },
     {
       "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\UserDetailProfile.css",

@@ -6,6 +6,7 @@ new Swiper('.slide', {
       delay:3000,
       disableOnInteraction: false,
     },
+
     pagination: {
       el: '.slide .swiper-pagination',
       clickable: true,
@@ -27,6 +28,7 @@ new Swiper('.slide-movie', {
     centerSlide:'true',
     fade: 'true',
     loopFillGroupWithBlank: true,
+    
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
