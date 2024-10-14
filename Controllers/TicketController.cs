@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 
 
-namespace PROJECT.Models
+namespace TICKETBOX.Models
 {
     public class TicketController : Controller
     {
