@@ -78,6 +78,7 @@ namespace TICKETBOX.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult CreateAdmin(User newAdmin)
         {
@@ -94,6 +95,7 @@ namespace TICKETBOX.Controllers
             return View(newAdmin);
         }
 
+        //Quản lý vé
         public IActionResult TicketManagement()
         {
             using (var db = new FastticketContext())
@@ -103,6 +105,7 @@ namespace TICKETBOX.Controllers
             }
         }
 
+        //Đổi trạng thái vé
         [HttpPost]
         public IActionResult ChangeAllTicketStatus()
         {
@@ -111,8 +114,7 @@ namespace TICKETBOX.Controllers
                 var tickets = db.Tickets.ToList();
                 foreach (var ticket in tickets)
                 {
-                    // Thay đổi trạng thái vé ở đây
-                    ticket.TicketStatus = ticket.TicketStatus == "Booked" ? "Used" : "Used"; // Ví dụ trạng thái
+                    ticket.TicketStatus = ticket.TicketStatus == "Booked" ? "Used" : "Used";
                 }
                 db.SaveChanges();
             }

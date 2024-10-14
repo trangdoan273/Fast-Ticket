@@ -87,6 +87,22 @@ body{
     color: #EFC26D;
     background-color: #A1331C;
 }
+
+.post-btn{
+    color: #A1331C;
+    background-color: #EFC26D;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+}
+
+.post-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+}
 /*----------Label----------*/
 .user-container{
     margin: 10px 20px;
