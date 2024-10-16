@@ -1,0 +1,87 @@
+@model IEnumerable<TICKETBOX.Models.Tables.Info>
+@{
+    ViewData["Title"] = "Quản lý bài đăng";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="management-container">
+        <div class="info-select">
+            <a href="#" class="general-link">
+                <button class="general-btn">Thông tin chung</button>
+            </a>
+            <a href="#" class="detail-link">
+                <button class="detail-btn">Chi tiết tài khoản</button>
+            </a>
+            <a href="@Url.Action("Management", "Admin")" class="user-link">
+                <button class="user-btn">Người dùng</button>
+            </a>
+            <a href="#" class="ticket-link">
+                <button class="ticket-btn">Vé</button>
+            </a>
+            <a href="@Url.Action("Post", "Admin")" class="post-link">
+                <button class="post-btn">Bài viết</button>
+            </a>
+        </div>
+        <!-----------Bảng hiển thị danh sách bài đăng----------->
+
+        <div class="info-container">
+            <p class="info-list-label">Danh sách bài đăng</p>
+            <div class="menu-container">
+                <div class="create-container">
+                    <button class="create-admin-btn" onclick="window.location.href='/Admin/CreatePost'">
+                        <i class="fa-solid fa-plus"></i>
+                        Tạo Bài Đăng Mới
+                    </button>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nội dung</th>
+                        <th>Ảnh</th>
+                        <th>Quản lý</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var info in Model)
+                    {
+                        <tr>
+                            <td>@info.InfoId</td>
+                            <td>@info.InfoTitle</td>
+                            <td><img src="@info.InfoImage" alt="Hình ảnh" style="max-width: 50px; max-height: 50px;" /></td>
+                            <td>
+                                <button class="edit-btn" onclick="window.location.href='/Admin/EditPost/@info.InfoId'">
+                                    <i class="fa-solid fa-edit"></i>
+                                    Sửa
+                                </button>
+                                <button class="view-btn" onclick="window.location.href='/Admin/ViewPost/@info.InfoId'">
+                                    <i class="fa-solid fa-eye"></i>
+                                    Xem
+                                </button>
+                                <button class="delete-btn" onclick="confirmDelete('@info.InfoId')">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Xóa
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../js/Post.js"></script>
+</body>
+
+</html>

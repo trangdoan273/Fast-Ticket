@@ -1,0 +1,48 @@
+@model TICKETBOX.Models.Tables.Info
+@{
+    ViewData["Title"] = "Sửa Bài Đăng";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/editpost.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <p class="edit-post-label">Sửa Bài Đăng</p>
+    <form asp-action="EditPost" asp-controller="Admin" method="post">
+        <input type="hidden" asp-for="InfoId" /> <!-- Ẩn trường ID -->
+
+        <div>
+            <label>Tiêu đề:</label>
+            <input type="text" asp-for="InfoTitle" />
+            <span asp-validation-for="InfoTitle" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label>Nội dung:</label>
+            <input type="text" asp-for="InfoContent" />
+            <span asp-validation-for="InfoContent" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label>Ảnh (URL):</label>
+            <input type="text" asp-for="InfoImage" />
+            <span asp-validation-for="InfoImage" class="text-danger"></span>
+        </div>
+
+        <div>
+            <button type="submit">Cập Nhật Bài Đăng</button>
+        </div>
+        <a href="@Url.Action("Post", "Admin")" class="back-link">
+            <button class="back-button">Quay lại danh sách bài đăng</button> <!-- Nút quay lại -->
+        </a>
+
+    </form>
+</body>
+
+</html>

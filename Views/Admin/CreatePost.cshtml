@@ -1,0 +1,41 @@
+@model TICKETBOX.Models.Tables.Info
+@{
+    ViewData["Title"] = "Tạo Post";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/createpost.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <p class="create-post-label">Tạo Bài Đăng Mới</p>
+    <form asp-action="CreatePost" asp-controller="Admin" method="post"> 
+        <div>
+            <label>Tiêu đề:</label>
+            <input type="text" asp-for="InfoTitle" required> 
+        </div>
+
+        <div>
+            <label>Nội dung:</label>
+            <input type="text" asp-for="InfoContent" required> 
+            <span asp-validation-for="InfoContent" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label>Ảnh (URL):</label>
+            <input type="text" asp-for="InfoImage" required/> 
+            <span asp-validation-for="InfoImage" class="text-danger"></span>
+        </div>
+        
+        <div>
+            <button type="submit">Tạo Bài Đăng</button>
+        </div>
+    </form>
+</body>
+
+</html>

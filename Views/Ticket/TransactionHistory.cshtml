@@ -1,0 +1,59 @@
+@{
+    ViewData["Title"] = "Lịch sử giao dịch";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/lsgd.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="user-profile-container">
+        <div class="user-select">
+            <a href="/User/UserProfile" class="general-info-link">
+                <button class="general-info-btn">Thông tin chung</button>
+            </a>
+            <a href="/User/UserDetailProfile" class="general-info-link">
+                <button class="detail-info-btn">Chi tiết tài khoản</button>
+            </a>
+            <a asp-controller="Ticket" asp-action="TransactionHistory" class="general-info-link">
+                <button class="payment-history-btn">Lịch sử giao dịch</button>
+            </a>
+        </div>
+        
+        <div class="transaction-history">
+            <h2>Lịch sử giao dịch</h2>
+            <table class="transaction-table">
+                <thead>
+                    <tr>
+                        <th>Hình ảnh</th>
+                        <th>Phim</th>
+                        <th>Ngày giờ chiếu</th>
+                        <th>Ghế</th>
+                        <th>Giá</th>
+                    </tr>
+                </thead>
+                <tbody>
+    @foreach (var ticket in ViewBag.TicketsInfo)
+    {
+        <tr>
+            <td><img src="@ticket.MovieImage" alt="Movie Image" width="100" /></td>
+            <td>@ticket.MovieName</td>
+            <td>@ticket.ShowDates<br />@ticket.Time</td>
+            <td>@ticket.SeatName</td>
+            <td>@ticket.Price VND</td>
+        </tr>
+    }
+</tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

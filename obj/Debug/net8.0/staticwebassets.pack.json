@@ -1,335 +1,371 @@
 {
   "Files": [
     {
-      "Id": "D:\\Trang\\TICKETBOX\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TICKETBOX.bundle.scp.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TICKETBOX.bundle.scp.css",
       "PackagePath": "staticwebassets\\TICKETBOX.bundle.scp.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\assets\\Sói bảnh.jpg",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\assets\\Sói bảnh.jpg",
       "PackagePath": "staticwebassets\\assets\\Sói bảnh.jpg"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\assets\\Taylor.jpg",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\assets\\Taylor.jpg",
       "PackagePath": "staticwebassets\\assets\\Taylor.jpg"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\assets\\avatar-trang-4.jpg",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\assets\\avatar-trang-4.jpg",
       "PackagePath": "staticwebassets\\assets\\avatar-trang-4.jpg"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\assets\\avatar.jpg",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\assets\\avatar.jpg",
       "PackagePath": "staticwebassets\\assets\\avatar.jpg"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\assets\\logo(2).png",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\assets\\logo(2).png",
       "PackagePath": "staticwebassets\\assets\\logo(2).png"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\assets\\logo.png",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\assets\\logo.png",
       "PackagePath": "staticwebassets\\assets\\logo.png"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\ChangePassword.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\ChangePassword.css",
       "PackagePath": "staticwebassets\\css\\ChangePassword.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\CreateAdmin.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\CreateAdmin.css",
       "PackagePath": "staticwebassets\\css\\CreateAdmin.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\HomeAdmin.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\HomeAdmin.css",
       "PackagePath": "staticwebassets\\css\\HomeAdmin.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\HomeClient.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\HomeClient.css",
       "PackagePath": "staticwebassets\\css\\HomeClient.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\Index.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\Index.css",
       "PackagePath": "staticwebassets\\css\\Index.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\Management.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\Management.css",
       "PackagePath": "staticwebassets\\css\\Management.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\SelectSeat.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\SelectSeat.css",
       "PackagePath": "staticwebassets\\css\\SelectSeat.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\SignIn.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\SignIn.css",
       "PackagePath": "staticwebassets\\css\\SignIn.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\SignUp.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\SignUp.css",
       "PackagePath": "staticwebassets\\css\\SignUp.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\Ticket.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\Ticket.css",
       "PackagePath": "staticwebassets\\css\\Ticket.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\TicketManagement.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\TicketManagement.css",
       "PackagePath": "staticwebassets\\css\\TicketManagement.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\UserDetailProfile.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\UserDetailProfile.css",
       "PackagePath": "staticwebassets\\css\\UserDetailProfile.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\UserProfile.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\UserProfile.css",
       "PackagePath": "staticwebassets\\css\\UserProfile.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\createpost.css",
+      "PackagePath": "staticwebassets\\css\\createpost.css"
+    },
+    {
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\editpost.css",
+      "PackagePath": "staticwebassets\\css\\editpost.css"
+    },
+    {
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\lsgd.css",
+      "PackagePath": "staticwebassets\\css\\lsgd.css"
+    },
+    {
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\post.css",
+      "PackagePath": "staticwebassets\\css\\post.css"
+    },
+    {
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\rap.css",
+      "PackagePath": "staticwebassets\\css\\rap.css"
+    },
+    {
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\store.css",
+      "PackagePath": "staticwebassets\\css\\store.css"
+    },
+    {
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\ttin.css",
+      "PackagePath": "staticwebassets\\css\\ttin.css"
+    },
+    {
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\viewpost.css",
+      "PackagePath": "staticwebassets\\css\\viewpost.css"
+    },
+    {
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\HomeClient.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\js\\HomeClient.js",
       "PackagePath": "staticwebassets\\js\\HomeClient.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\Management.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\js\\Management.js",
       "PackagePath": "staticwebassets\\js\\Management.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\SelectSeat.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\js\\Post.js",
+      "PackagePath": "staticwebassets\\js\\Post.js"
+    },
+    {
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\js\\SelectSeat.js",
       "PackagePath": "staticwebassets\\js\\SelectSeat.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

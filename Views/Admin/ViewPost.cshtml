@@ -1,0 +1,29 @@
+@model TICKETBOX.Models.Tables.Info
+@{
+    ViewData["Title"] = "Xem Bài Đăng";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/viewpost.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>@Model.InfoTitle</h1> <!-- Tiêu đề bài đăng -->
+        <div class="image-section">
+            <img src="@Model.InfoImage" alt="Hình ảnh bài đăng" />
+        </div>
+        <div class="info-section">
+            <p>@Model.InfoContent</p> <!-- Nội dung bài đăng -->
+            <a href="@Url.Action("Post", "Admin")" class="back-link">Quay lại danh sách bài đăng</a> <!-- Nút quay lại -->
+        </div>
+    </div>
+</body>
+
+</html>
+

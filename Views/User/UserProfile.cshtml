@@ -24,10 +24,10 @@
             <a asp-controller="User" asp-action="UserDetailProfile" asp-route-id="@Model.UserId" class="general-info-link">
                 <button class="detail-info-btn">Chi tiết tài khoản</button>
             </a>
-
-            <a href="#" class="general-info-link">
+            <a asp-controller="Ticket" asp-action="TransactionHistory" class="general-info-link">
                 <button class="payment-history-btn">Lịch sử giao dịch</button>
             </a>
+
         </div>
         <!-----------Thông tin tài khoản----------->
         <div class="user-profile">

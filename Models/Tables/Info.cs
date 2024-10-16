@@ -13,3 +13,4 @@ public partial class Info
 
     public string? InfoImage { get; set; }
 }
+

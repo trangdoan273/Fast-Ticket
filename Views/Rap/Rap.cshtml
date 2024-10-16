@@ -1,0 +1,31 @@
+@model TICKETBOX.Models.Tables.Cinema
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Đường dẫn tới file layout
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/rap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>@Model.CinemaName</title>
+</head>
+<body>
+    <div class="ticket-info">
+        <h1 class="title">@Model.CinemaName</h1>
+        <div class="content">
+            <img src="@Model.CinemaImage" alt="@Model.CinemaName" class="cinema-image">
+            <div class="details">
+                <h2>@Model.CinemaName</h2>
+                <p>• Địa điểm: @Model.CinemaAddress</p>
+                <p>• Số điện thoại: @Model.CinemaPhoneNumber</p>
+                <p>• Email: @Model.CinemaEmail</p>
+                <p>• Số lượng ghế: @Model.SeatCount</p>
+                <p>• Số phòng chiếu: @Model.RoomCount</p>
+                <p>• Loại hình chiếu: @Model.ScreeningType</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

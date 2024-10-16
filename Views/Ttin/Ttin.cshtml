@@ -1,0 +1,36 @@
+@model List<TICKETBOX.Models.Tables.Info>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Đường dẫn tới file layout
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/ttin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Thông Tin</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Thông tin</h1>
+        <div class="grid">
+            @foreach (var info in Model)
+            {
+                <div class="card">
+                     <a href="/Ttin/Ttin1/@info.InfoId">
+                        <img src="@info.InfoImage" alt="@info.InfoTitle" />
+                    </a>
+                    <h2>@info.InfoTitle</h2>
+                    <p>@info.InfoContent</p>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+
+</html>

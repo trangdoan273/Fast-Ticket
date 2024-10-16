@@ -9,87 +9,123 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TICKETBOX
 build_property.RootNamespace = TICKETBOX
-build_property.ProjectDir = D:\Trang\TICKETBOX\
+build_property.ProjectDir = C:\Users\84946\Fast-Ticket\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Trang\TICKETBOX
+build_property.MSBuildProjectDirectory = C:\Users\84946\Fast-Ticket
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Trang/TICKETBOX/Views/Account/SignIn.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/Account/SignIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduSW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/Account/SignUp.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/Account/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/Admin/CreateAdmin.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/Admin/CreateAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/Admin/HomeAdmin.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/Admin/CreatePost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlUG9zdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/84946/Fast-Ticket/Views/Admin/EditPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFBvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/84946/Fast-Ticket/Views/Admin/HomeAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSG9tZUFkbWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/Admin/Management.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/Admin/Management.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/Admin/TicketManagement.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/Admin/Post.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUG9zdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/84946/Fast-Ticket/Views/Admin/TicketManagement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGlja2V0TWFuYWdlbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/Client/HomeClient.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/Admin/ViewPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1Bvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/84946/Fast-Ticket/Views/Client/HomeClient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEhvbWVDbGllbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/Home/Index.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/Home/Privacy.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/Shared/Error.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/Rap/Rap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFwXFJhcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/84946/Fast-Ticket/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/Ticket/SelectSeat.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/Store/Store.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVcU3RvcmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/84946/Fast-Ticket/Views/Ticket/SelectSeat.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XFNlbGVjdFNlYXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/Ticket/Ticket.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/Ticket/Ticket.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XFRpY2tldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/User/ChangePassword.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/Ticket/TransactionHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XFRyYW5zYWN0aW9uSGlzdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/84946/Fast-Ticket/Views/Ttin/Ttin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHRpblxUdGluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/84946/Fast-Ticket/Views/Ttin/Ttin1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHRpblxUdGluMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/84946/Fast-Ticket/Views/User/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/User/UserDetailProfile.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/User/UserDetailProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyRGV0YWlsUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/User/UserProfile.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/User/UserProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/_ViewImports.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/_ViewStart.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Trang/TICKETBOX/Views/Shared/_Layout.cshtml]
+[C:/Users/84946/Fast-Ticket/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-l31d7c1km0
