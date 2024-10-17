@@ -14,12 +14,12 @@ body{
     height: 100vh;
     width: 100%;
 }
- .admin1-container{
+ .user-profile-container{
     display: flex;
     color: #EFC26D;
  }
 
-.admin1-container .user-select{
+.user-profile-container .user-select{
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -75,7 +75,7 @@ body{
     background-color: #A1331C;
  }
 /*----------Thông tin người dùng----------*/
-.admin1{
+.user-profile{
     margin: 10px 20px;
     width: 70%;
     padding: 10px;
@@ -95,7 +95,7 @@ body{
  border-radius: 50%;
 }
 
-.admin1 .account-info-label{
+.user-profile .account-info-label{
     font-size: 20px;
     font-weight: bold;
 }
