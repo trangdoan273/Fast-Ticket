@@ -1,0 +1,483 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #0D111A;
+    height: 100vh;
+    width: 100%;
+}
+
+/*----------Header----------*/
+header .nav-menu{
+    width: 100%;
+    background-color: #0D111A;
+    padding: 15px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .list-item{
+    display: inline-block;
+}
+
+header .list-item a{
+    color: #EFC26D;
+    font-size: 17.79px;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+header .list-item a:hover{
+    color: #A1331C;
+}
+
+header button{
+    background-color: rgba(0, 0, 0, 0.67);
+    color: #EFC26D;
+    border: 1px solid #A1331C;
+    border-radius: 3.5px;
+    padding: 10px 20px;
+    font-size: 17.79px;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+header button:hover{
+    cursor: pointer;
+    color: #A1331C;
+    background: #EFC26D;
+}
+
+/*----------Main----------*/
+main .container .slide .list-slider .item-slider img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    cursor:pointer;
+}
+
+main .container .slide .swiper-pagination-bullet{
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #EFC26D;
+}
+
+main .container .slide .swiper-pagination-bullet-active{
+    opacity: 1;
+}
+
+main .container .slide .btn-arrow{
+    color:#EFC26D;
+    margin-top: -35px;
+    opacity: 0.5;
+}
+
+main .container .slide .btn-arrow:hover{
+    opacity: 1;
+}
+
+main .my-ticket{
+    padding: 15px;
+    background-color: #A1331C;
+    background: radial-gradient(#A4352A,#7C2820, #3E1410);
+}
+
+main .my-ticket .my-ticket-link{
+    color: white;
+    font-size: 17.79px;
+    font-weight: bold;
+    text-align: center;
+}
+
+main .my-ticket .my-ticket-link:hover{
+    color:#EFC26D;
+    cursor: pointer;
+}
+/*----------Movies----------*/
+.movie{
+    margin: 60px;
+}
+.movie-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1120px;
+    padding:40px;
+}
+
+.movie-container .slide-movie{
+    margin: 40px 40px;
+}
+
+.movie-container .movie-image-link .movie-img{
+    border-radius: 8px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.movie-wrapper .movie-list .movie-content{
+    display: flex;
+    padding: 10px 0 10px 0;
+}
+
+.movie-wrapper .movie-content .movie-label{
+    color: white;
+    font-size: 13.34px;
+    font-weight: bold;
+    padding:5px 10px;
+    background-color: #A1331C;
+    border-radius: 3.5px;
+    margin-right: 10px;
+}
+
+.movie-wrapper .movie-content .movie-language{
+    color: white;
+    font-size: 13.34px;
+    font-weight: lighter;
+    padding:5px;
+    background-color: #0D111A;
+    border: 1px solid #EFC26D;
+    border-radius: 3.5px;
+    margin-right: 10px;
+}
+
+.movie-wrapper .movie-content .movie-format{
+    color:#A1331C;
+    font-size: 13.34px;
+    font-weight: bold;
+    padding:5px 10px;
+    background-color:#EFC26D;
+    border-radius: 3.5px;
+}
+
+.movie-wrapper .movie-list .movie-title{
+    padding-bottom: 10px;
+}
+
+.movie-list .movie-title .movie-title-link {
+    color: white;
+    cursor: pointer;
+}
+
+.movie-list .movie-title .movie-title-link:hover {
+    color:#EFC26D
+}
+
+.movie-title .movie-title-link .movie-name{
+    font-size: 22.77px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-title .movie-title-link .movie-type{
+    font-size: 13.34px;
+    font-weight: bold;
+}
+
+.movie-list .buy-ticket-link .buy-ticket{
+    width: 100%;
+    color: #A1331C;
+    background-color: #EFC26D;
+    border: 1px solid transparent;
+    border-radius: 3.5px;
+    padding: 10px 50px;
+    font-size: 20.77px;
+    font-weight: bolder;
+    margin-right: 35px;
+}
+
+.movie-list .buy-ticket-link .buy-ticket:hover{
+    color: #EFC26D;
+    background-color:#A1331C;
+    cursor: pointer;
+}
+
+.movie-list .movie-info-link .movie-info{
+    color: white;
+    background-color: #0D111A;
+    border: 1px solid #EFC26D;
+    border-radius: 3.5px;
+    padding: 10px 15px;
+    font-size: 17.79px;
+
+}
+
+.movie-list .movie-info-link .movie-info:hover{
+    color: #EFC26D;
+    background-color:#A1331C;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.movie-container .slide-movie .swiper-btn{
+    color: #EFC26D;
+    opacity: 0.5;
+}
+
+.movie-container .slide-movie .swiper-btn:hover{
+    opacity: 1;
+}
+
+.movie-container .slide-movie .swiper-button-prev{
+    left: 0;
+}
+
+.movie-container .slide-movie .swiper-button-next{
+    right: 0;
+}
+
+.movie-container .slide-movie .swiper-pagination-bullet{
+    bottom: 0;
+    height: 13px;
+    width: 13px;
+    background-color:#EFC26D;
+    opacity: 0.5;
+}
+
+.movie-container .slide-movie .swiper-pagination-bullet-active{
+    opacity: 1;
+}
+
+/*----------Footer----------*/
+footer{
+    background-color:black;
+    width: 100%;
+    bottom: 0;
+    padding: 20px 4%;
+    position: relative;
+}
+
+footer>.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-content .head{
+    font-size: 22.77px;
+    font-weight: bolder;
+    color: white;
+    margin-bottom: 15px;
+}
+
+footer .footer-content p{
+    color: white;
+    font-size: 13.34px;
+    line-height: 20px;
+}
+
+footer .footer-content .footer-social-icon{
+    text-align: center;
+}
+
+footer .footer-content .footer-icon{
+    display: inline-block;
+}
+
+footer .footer-content .footer-icon a i{
+    color: #A1331C;
+    font-size: 25px;
+    padding: 0 5px;
+}
+
+footer .footer-content .footer-icon a i:hover{
+    color:#EFC26D;
+}
+
+
+body{
+    background-color: #0D111A;
+    height: 100vh;
+    width: 100%;
+}
+ .admin-profile-container{
+    display: flex;
+    color: #EFC26D;
+ }
+ 
+ .admin-profile-container .admin-select{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 10px;
+ }
+
+ .general-info-link{
+    margin-right: 20px;
+    margin-left: 20px;
+ }
+
+.general-info-link .general-info-btn{
+    color: #A1331C;
+    background-color: #EFC26D;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+ }
+
+ .detail-info-btn{
+    color: #EFC26D;
+    background-color: #A1331C;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+ }
+
+ .payment-history-btn{
+    color: #A1331C;
+    background-color: #EFC26D;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+ }
+
+ .general-info-link .general-info-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+ } 
+
+ .payment-history-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+ }
+
+.admin-info-wrap{
+    width: 70%;
+    margin: 0 30px;
+}
+
+.admin-info-wrap p{
+    margin-top: 10px;
+} 
+
+.admin-info-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+p{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.admin-address{
+    margin-right: 20px;
+}
+
+input{
+    width: 400px;
+    outline: none;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+.change-pw-link .change-pw-btn{
+    font-size: 18px;
+    font-weight: bold;
+    color: #A1331C;
+    background-color: #EFC26D;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.change-pw-link .change-pw-btn:hover{
+    color:#EFC26D;
+    background-color: #A1331C;
+}
+
+.save-link .save-btn{
+    font-size: 18px;
+    font-weight: bold;
+    color: #A1331C;
+    background-color: #EFC26D;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+
+.save-link .save-btn:hover{
+    color:#EFC26D;
+    background-color: #A1331C;
+} 
+.image-upload {
+            position: relative;
+            width: 250px; /* Chiều rộng của ảnh */
+            height: 300px; /* Chiều cao của ảnh */
+            margin: 20px;
+            text-align: center;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Màu nền trong suốt */
+            color: white;
+            font-size: 20px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .image-upload:hover .overlay {
+            opacity: 1; /* Hiện chữ khi hover */
+        }
+        .movie-img {
+            width: 100%;
+            height: 100%;
+        }
+        .form-group {
+    display: flex;
+    align-items: center; /* Vertically align items */
+}
+
+.form-group p {
+    margin-right: 10px; /* Adjust spacing between the elements */
+}

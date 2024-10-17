@@ -14,12 +14,12 @@ body{
     height: 100vh;
     width: 100%;
 }
- .user-profile-container{
+ .admin1-container{
     display: flex;
     color: #EFC26D;
  }
  
- .user-profile-container .user-select{
+ .admin1-container .user-select{
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -142,7 +142,3 @@ input{
     color:#EFC26D;
     background-color: #A1331C;
 } 
-
-.save-link{
-    text-decoration: none;
-}
