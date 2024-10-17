@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TICKETBOX")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52c6c20904acd77cafe129ca68870725832a42e2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63fb5b87ce36168d45cc6ecbca636aa14a6084d7")]
 [assembly: System.Reflection.AssemblyProductAttribute("TICKETBOX")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TICKETBOX")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

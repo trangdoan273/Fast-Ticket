@@ -1,0 +1,144 @@
+@model TICKETBOX.Models.Tables.Movie
+@{
+    ViewData["Title"] = "Chi Tiết Thông Tin";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="~/css/CreateMovie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="admin-profile-container">
+        <div class="image-upload" id="image-upload">
+            <img src="https://png.pngtree.com/png-vector/20210910/ourlarge/pngtree-unit-icon-of-upload-suitable-for-web-application-etc-png-image_3918840.jpg"
+                class="movie-img" alt="Icon tải ảnh">
+            <div class="overlay">Tải Ảnh Lên</div>
+            <input type="file" id="file-input" accept="image/*" style="display:none;">
+            <img id="preview" alt="Ảnh xem trước" style="display:none;">
+        </div>
+        <div class="admin-info-wrap">
+            <form asp-action="Updateadmin" method="post">
+                <input type="hidden" />
+                <div class="admin-info-list">
+                    <div class="admin-info">
+                        <div>
+                            <p>Tên phim</p>
+                            <input type="text" id="MovieName" name="movieName" value="@Model.MovieName">
+                        </div>
+                        <div>
+                            <p class="Name">Nội dung</p>
+
+                            <input type="text" id="" name="movieContent" value="@Model.MovieContent">
+                        </div>
+                        <div class="form-group">
+                            <p>Phân loại</p>
+                            <select id="label" name="movieLabel" class="form-select">
+                                <option value="">Choose...
+                                </option>
+                                <option value="T18" selected="@(Model.MovieLabel == "T18")">T18</option>
+                                <option value="T16" selected="@(Model.MovieLabel == "T16")">T16
+                                </option>
+                                <option value="T13" selected="@(Model.MovieLabel == "T13")">T13</option>
+                                <option value="P" selected="@(Model.MovieLabel == "P")">P
+                                </option>
+                            </select>
+
+                        </div>
+                        <div class="form-group">
+                            <p>Định dạng</p>
+
+                            <select id="label" name="movieFormat" class="form-select" value="@Model.MovieFormat">
+                                <option selected="">Choose...</option>
+                                <option value="2D" selected="@(Model.MovieFormat == "2D")">2D
+                                </option>
+                            </select>
+                        </div>
+                        <div>
+                            <p>Thời lượng</p>
+
+                            <input type="text" id="Address" name="duration" value="@Model.Duration">
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Đạo diễn</p>
+
+                            <input type="text" id="Address" name="movieDirector" value="@Model.MovieDirector">
+                        </div>
+                        <div>
+                            <p class="Email">Diễn viên</p>
+
+                            <input type="email" id="text" name="movieActor" value="@Model.MovieActor">
+                            <div class="form-group">
+                                <p>Thể loại</p>
+                                <select name="movieGenre" id="label" class="form-select">
+                                    <option value="">Choose...</option>
+                                    <option value="Drama" selected="@(Model.MovieGenre == "Drama")">Drama</option>
+                                    <option value="Thriller" selected="@(Model.MovieGenre == "Thriller")">Thriller
+                                    </option>
+                                    <option value="Action" selected="@(Model.MovieGenre == "Action")">Action</option>
+                                    <option value="Animation" selected="@(Model.MovieGenre == "Animation")">Animation
+                                    </option>
+                                    <option value="Horror" selected="@(Model.MovieGenre == "Horror")">Horror</option>
+                                    <option value="Healing" selected="@(Model.MovieGenre == "Healing")">Healing</option>
+                                    <option value="Musical" selected="@(Model.MovieGenre == "Musical")">Musical</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div>
+                            <p>Ngày chiếu</p>
+                            <div>
+                                    <input type="date" id="releaseDate" name="releaseDate" asp-for="ReleaseDate">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p>Ngôn ngữ</p>
+                            <select name="language" id="label" class="form-select" value="@Model.Language">
+                                <option selected="">Choose...</option>
+                                <option value="Phụ đề" selected="@(Model.Language == "Phụ đề")">Phụ đề
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="#" class="save-link">
+                        <button type="submit" class="save-btn">Sửa</button>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script>
+        const fileInput = document.getElementById('file-input');
+        const imageUpload = document.getElementById('image-upload');
+        const preview = document.getElementById('preview');
+
+        // Mở hộp thoại chọn tệp khi nhấp vào ảnh
+        imageUpload.addEventListener('click', function () {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', function () {
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>

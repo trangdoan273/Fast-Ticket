@@ -26,16 +26,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/84946/Fast-Ticket/Views/Admin/Admin1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW4xLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/84946/Fast-Ticket/Views/Admin/ChangePasswordAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2hhbmdlUGFzc3dvcmRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/84946/Fast-Ticket/Views/Admin/CreateAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/84946/Fast-Ticket/Views/Admin/CreateMovie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlTW92aWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/84946/Fast-Ticket/Views/Admin/CreatePost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlUG9zdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/84946/Fast-Ticket/Views/Admin/DetailAdmin1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlsQWRtaW4xLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/84946/Fast-Ticket/Views/Admin/EditPost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFBvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/84946/Fast-Ticket/Views/Admin/FixMovie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRml4TW92aWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/84946/Fast-Ticket/Views/Admin/HomeAdmin.cshtml]

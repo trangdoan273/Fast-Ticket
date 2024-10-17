@@ -29,12 +29,28 @@
       "PackagePath": "staticwebassets\\assets\\logo.png"
     },
     {
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\Admin1.css",
+      "PackagePath": "staticwebassets\\css\\Admin1.css"
+    },
+    {
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\AdminDetailProfile1.css",
+      "PackagePath": "staticwebassets\\css\\AdminDetailProfile1.css"
+    },
+    {
       "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\ChangePassword.css",
       "PackagePath": "staticwebassets\\css\\ChangePassword.css"
     },
     {
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\ChangePasswordAdmin.css",
+      "PackagePath": "staticwebassets\\css\\ChangePasswordAdmin.css"
+    },
+    {
       "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\CreateAdmin.css",
       "PackagePath": "staticwebassets\\css\\CreateAdmin.css"
+    },
+    {
+      "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\CreateMovie.css",
+      "PackagePath": "staticwebassets\\css\\CreateMovie.css"
     },
     {
       "Id": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\HomeAdmin.css",

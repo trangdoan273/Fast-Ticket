@@ -1,0 +1,82 @@
+@model TICKETBOX.Models.UpdateUserModel
+@{
+    ViewData["Title"] = "Chi Tiết Thông Tin";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="~/css/UserDetailProfile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="admin1-container">
+        <div class="user-select">
+            <a href="/User/UserDetailProfile" class="general-info-link">
+                <button class="detail-info-btn">Chi tiết tài khoản</button>
+            </a>
+        </div>
+
+        <div class="user-info-wrap">
+            <form asp-action="DetailAdmin1" method="post">
+                <input type="hidden" asp-for="UserId" />
+                <div class="user-info-list">
+                    <div class="user-info">
+                        <div>
+                            <p class="Name">Tên</p>
+                            <input type="text" id="Name" name="UserFullname" asp-for="UserFullname">
+                        </div>
+
+                        <div>
+                            <p class="Name">Điện thoại</p>
+                            <input type="text" id="Phone" name="UserPhoneNumber" asp-for="UserPhoneNumber">
+                        </div>
+
+                        <div>
+                            <p class="Sex">Giới tính</p>
+                            <input type="text" id="Sex" name="UserSex" asp-for="UserSex">
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="DoB">Ngày sinh</p>
+                            <input type="date" id="DoB" name="DoB" asp-for="DoB">
+                        </div>
+                    </div>
+
+                    <div class="user-address">
+                        <div>
+                            <p class="Address">Địa chỉ</p>
+                            <input type="text" id="Address" name="UserAddress" asp-for="UserAddress">
+                        </div>
+
+                        <div>
+                            <p class="Email">Email</p>
+                            <input type="email" id="Email" name="UserEmail" asp-for="UserEmail">
+                        </div>
+                    </div>
+                </div>
+                <!-----------Nút----------->
+                <div>
+                    <a href="/Admin/ChangePasswordAdmin" class="change-pw-link">
+                        <button type="button" class="change-pw-btn">Đổi mật khẩu</button>
+                    </a>
+
+                    <a class="save-link">
+                        <button type="submit" class="save-btn">Lưu lại</button>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
