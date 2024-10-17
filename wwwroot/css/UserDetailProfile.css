@@ -14,6 +14,17 @@ body{
     height: 100vh;
     width: 100%;
 }
+ .user-profile-container{
+    display: flex;
+    color: #EFC26D;
+ }
+ 
+ .user-profile-container .user-select{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 10px;
+ }
  .admin1-container{
     display: flex;
     color: #EFC26D;
