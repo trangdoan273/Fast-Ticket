@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Mysqlx.Crud;
 using Org.BouncyCastle.Asn1.Iana;
+using TICKETBOX.Models;
 using TICKETBOX.Models.Tables;
 
 
@@ -218,5 +220,155 @@ public IActionResult EditPost(Info updatedInfo)
     }
     return View(updatedInfo); // Trả lại model để hiển thị lỗi nếu có
 }
+    public IActionResult Admin1()
+{
+    var userID = User.Identity.Name;
+    var user =  new User() ;
+            using (var db = new FastticketContext())
+            {
+                user = db.Users.FirstOrDefault(u => u.UserName == userID);
+                if (user == null || user.Role == "Admin")
+                {
+                    return View(user);
+                }
+               
+            }
+            return View(user); 
+}
+
+    public IActionResult DetailAdmin1(int id)
+{
+    using (var db = new FastticketContext())
+    {
+        var user = db.Users.FirstOrDefault(u => u.UserId ==1);
+        
+        if (user == null)
+        {
+            return NotFound(); // Trả về 404 nếu không tìm thấy người dùng
+        }
+
+        var viewModel = new UpdateUserModel()
+        {
+            UserId = user.UserId,
+            UserFullname = user.FullName,
+            UserPhoneNumber = user.UserPhoneNumber,
+            UserSex = user.Sex,
+            DoB = user.DoB,
+            UserAddress = user.UserAddress,
+            UserEmail = user.UserEmail
+        };
+
+        return View(viewModel); // Trả về view với thông tin người dùng
     }
+}
+[HttpPost]
+public IActionResult DetailAdmin1(UpdateUserModel model)
+{
+    if (ModelState.IsValid)
+    {
+        using (var db = new FastticketContext())
+        {
+            var user = db.Users.FirstOrDefault(u => u.UserId == model.UserId);
+            
+            if (user == null)
+            {
+                return NotFound(); // Trả về 404 nếu không tìm thấy người dùng
+            }
+
+            // Cập nhật thông tin người dùng
+            user.FullName = model.UserFullname;
+            user.UserPhoneNumber = model.UserPhoneNumber;
+            user.Sex = model.UserSex;
+            user.DoB = model.DoB;
+            user.UserAddress = model.UserAddress;
+            user.UserEmail = model.UserEmail;
+
+            db.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
+        }
+
+        return RedirectToAction("DetailAdmin1"); // Chuyển hướng đến danh sách người dùng hoặc trang khác
+    }
+
+    return View(model); // Nếu model không hợp lệ, trả về view với dữ liệu đã nhập
+}
+
+       public IActionResult ChangePasswordAdmin()
+{
+    var currentUserId = User.Identity.Name;
+
+            using (var db = new FastticketContext())
+            {
+                var user = db.Users.FirstOrDefault(u => u.UserId == 1);
+                if (user == null || user.UserName != currentUserId)
+                {
+                    return RedirectToAction("AccessDenied", "Home");
+                }
+            }
+            var model = new ChangePasswordModel
+            {
+                UserId = 1
+            };
+            return View(model);
+}
+[HttpPost]
+        public IActionResult ChangePasswordAdmin(ChangePasswordModel model)
+        {
+            var userID = User.Identity.Name;
+            if (ModelState.IsValid)
+            {
+                using (var db = new FastticketContext())
+                {
+                    var user = db.Users.FirstOrDefault(u => u.UserId == model.UserId);
+                    if (user != null && user.Role == "Admin")
+                    {
+                        user.UserPassword = model.NewPassword;
+                        db.SaveChanges();
+
+                        return RedirectToAction("DetailAdmin1", new { id = model.UserId });
+                    }
+                }
+            }
+            return View(model);
+        }
+ [HttpPost]
+    public IActionResult CreateMovie(Movie movie)
+    {
+        if (ModelState.IsValid)
+        {
+            using (var db = new FastticketContext())
+            {
+                db.Movies.Add(movie); // Thêm movie vào db
+                db.SaveChanges(); // Lưu thay đổi
+            }
+            return RedirectToAction("CreateMovie"); // Chuyển hướng đến danh sách hoặc trang khác sau khi lưu
+        }
+
+        return View(movie); // Nếu model không hợp lệ, trả về view với dữ liệu đã nhập
+    }
+ public IActionResult FixMovie( int id)
+{
+
+    using (var db = new FastticketContext())
+{
+    // Giả sử bạn có ID bộ phim được truyền vào từ tham số
+    int movieId = id/* ID của bộ phim được truyền vào */;
+    
+    // Tìm bộ phim theo ID
+    var movie = db.Movies.FirstOrDefault(m => m.MovieId == movieId);
+    
+    // Kiểm tra xem bộ phim có tồn tại hay không
+    if (movie == null)
+    {
+        return NotFound(); // Trả về 404 nếu không tìm thấy bộ phim
+    }
+    
+    return View(movie); // Trả về view với dữ liệu bộ phim
+}
+}
+public IActionResult CreateMovie()
+    {
+        
+        return View(); // Nếu model không hợp lệ, trả về view với dữ liệu đã nhập
+    }
+}
 }
