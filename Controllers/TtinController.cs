@@ -15,13 +15,13 @@ namespace TICKETBOX.Controllers
             }
         }
 
-        // Action cho trang chi tiết Ttin1
-        public IActionResult Ttin1(int id)
+        // Action cho trang chi tiết Ttinchitiet
+        public IActionResult Ttinchitiet(int id)
         {
             using (var db = new FastticketContext())
             {
                 var info = db.Infos.FirstOrDefault(i => i.InfoId == id);
-                return View(info); // Truyền dữ liệu sang view Ttin1.cshtml
+                return View(info); // Truyền dữ liệu sang view Ttinchitiet.cshtml
             }
         }
     }

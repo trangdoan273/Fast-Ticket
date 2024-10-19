@@ -22,7 +22,7 @@
             @foreach (var info in Model)
             {
                 <div class="card">
-                    <a href="/Ttin/Ttin1/@info.InfoId">
+                    <a href="/Ttin/Ttinchitiet/@info.InfoId">
                         <img src="@info.InfoImage" alt="@info.InfoTitle" />
                     </a>
                     <h2>@info.InfoTitle</h2>
@@ -36,7 +36,7 @@
                             @info.InfoContent
                         }
                     </p>
-                    <a href="/Ttin/Ttin1/@info.InfoId" class="btn btn-primary">Xem thêm</a>
+                    <a href="/Ttin/Ttinchitiet/@info.InfoId" class="btn btn-primary">Xem thêm</a>
                 </div>
             }
         </div>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2QnCrGbDUBXJtYgPSvQIlK8vNu9WcciZWZx+l/DPvgc=",
+  "Hash": "5KC5ayXxrDtXZLShlelot10XpGvvQxgGEtZxbOKMDxc=",
   "Source": "TICKETBOX",
   "BasePath": "_content/TICKETBOX",
   "Mode": "Default",
@@ -604,6 +604,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\ttin.css"
+    },
+    {
+      "Identity": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\ttin1.css",
+      "SourceId": "TICKETBOX",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\",
+      "BasePath": "_content/TICKETBOX",
+      "RelativePath": "css/ttin1.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ttin1.css"
     },
     {
       "Identity": "C:\\Users\\84946\\Fast-Ticket\\wwwroot\\css\\UserDetailProfile.css",
