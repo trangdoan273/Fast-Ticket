@@ -18,11 +18,9 @@
 <body>
     <div class="admin-profile-container">
         <div class="image-upload" id="image-upload">
-            <img src="https://png.pngtree.com/png-vector/20210910/ourlarge/pngtree-unit-icon-of-upload-suitable-for-web-application-etc-png-image_3918840.jpg"
-                class="movie-img" alt="Icon tải ảnh">
+            <img src="@Model.MoviePoster" class="movie-img" alt="Ảnh phim" id="preview">
             <div class="overlay">Tải Ảnh Lên</div>
             <input type="file" id="file-input" accept="image/*" style="display:none;">
-            <img id="preview" alt="Ảnh xem trước" style="display:none;">
         </div>
         <div class="admin-info-wrap">
             <form asp-action="Updateadmin" method="post">
@@ -97,7 +95,7 @@
                         <div>
                             <p>Ngày chiếu</p>
                             <div>
-                                    <input type="date" id="releaseDate" name="releaseDate" asp-for="ReleaseDate">
+                                <input type="date" id="releaseDate" name="releaseDate" asp-for="ReleaseDate">
                             </div>
                         </div>
                         <div class="form-group">
