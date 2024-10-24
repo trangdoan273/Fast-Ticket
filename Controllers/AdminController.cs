@@ -218,5 +218,6 @@ public IActionResult EditPost(Info updatedInfo)
     }
     return View(updatedInfo); // Trả lại model để hiển thị lỗi nếu có
 }
+
     }
 }
