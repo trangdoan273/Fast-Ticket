@@ -23,7 +23,7 @@
             <input type="file" id="file-input" accept="image/*" style="display:none;">
         </div>
         <div class="admin-info-wrap">
-            <form asp-action="Updateadmin" method="post">
+            <form asp-action="HomeAdmin" method="post">
                 <input type="hidden" />
                 <div class="admin-info-list">
                     <div class="admin-info">
@@ -74,7 +74,7 @@
                         <div>
                             <p class="Email">Diễn viên</p>
 
-                            <input type="email" id="text" name="movieActor" value="@Model.MovieActor">
+                            <input type="text" id="text" name="movieActor" value="@Model.MovieActor">
                             <div class="form-group">
                                 <p>Thể loại</p>
                                 <select name="movieGenre" id="label" class="form-select">
