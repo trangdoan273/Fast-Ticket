@@ -22,7 +22,7 @@
                 <button class="general-info-btn">Thông tin chung</button>
             </a>
 
-            <a href="/User/UserDetailProfile" class="general-info-link">
+            <a asp-controller="User" asp-action="UserDetailProfile" asp-route-id="@Model.UserId"  class="general-info-link">
                 <button class="detail-info-btn">Chi tiết tài khoản</button>
             </a>
 
