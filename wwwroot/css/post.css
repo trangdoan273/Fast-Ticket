@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #0D111A;
+    height: 100vh;
+    width: 100%;
+}
+/*----------Quản lý----------*/
+.management-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.info-select{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+/*----------Nút----------*/
+.user-btn{
+    color: #A1331C;
+    background-color: #EFC26D;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+}
+
+.user-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+}
+
+.general-btn{
+    color: #A1331C;
+    background-color: #EFC26D;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+}
+
+.general-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+}
+
+.detail-btn{
+    color: #A1331C;
+    background-color: #EFC26D;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+}
+
+.detail-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+}
+
+.ticket-btn{
+    color: #A1331C;
+    background-color: #EFC26D;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+}
+
+.ticket-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+}
+
+.post-btn{
+    color: #EFC26D;
+    background-color: #A1331C;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+}
+/*----------Label----------*/
+
+.info-container{
+    margin: 10px 20px;
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 400px; 
+    max-height: 400px;
+    max-width: 800px;
+    overflow-x: auto;
+    overflow-y: auto;
+ }
+
+.info-list-label{
+    color:#EFC26D;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-top: 20px;
+    text-align: center;
+}
+/*----------Nút Tạo Admin----------*/
+.create-container{
+    margin: 20px 0;
+}
+
+.create-admin-btn{
+    color: white;
+    background-color: #4268D6;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.create-admin-btn i{
+    margin-right: 10px;
+}
+
+.create-admin-btn:hover{
+    background-color: #4267d6cc;
+}
+/*----------Bảng----------*/
+.table {
+    width: 100%; /* Giữ bảng chiếm 100% chiều rộng của container */
+    max-width: 100%; /* Chiều rộng tối đa không vượt quá 100% */
+    border-collapse: collapse;
+    font-size: 15px;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+}
+
+.table thead th,
+.table tbody td {
+    border: 1px solid #3a3a3a;
+    padding: 10px;
+    color: white;
+    overflow: hidden; /* Ẩn phần nội dung vượt ra ngoài */
+    text-overflow: ellipsis; /* Hiển thị ... cho nội dung bị cắt ngắn */
+    white-space: nowrap; /* Không cho nội dung xuống dòng */
+}
+
+
+/*----------Nút xóa----------*/
+.delete-btn{
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: red;
+}
+
+.delete-btn i{
+    margin-right: 5px;
+}
+
+.delete-btn:hover{
+    background-color: rgba(255, 0, 0, 0.67);
+}
+/*----------Nút xem----------*/
+.view-btn{
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: red;
+}
+
+.view-btn i{
+    margin-right: 5px;
+}
+
+.view-btn:hover{
+    background-color: rgba(255, 0, 0, 0.67);
+}
+/*----------Nút xóa----------*/
+.edit-btn{
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: red;
+}
+
+.edit-btn i{
+    margin-right: 5px;
+}
+
+.edit-btn:hover{
+    background-color: rgba(255, 0, 0, 0.67);
+}

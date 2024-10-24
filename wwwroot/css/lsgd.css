@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #0D111A;
+    height: 100vh;
+    width: 100%;
+}
+ .user-profile-container{
+    display: flex;
+    color: #EFC26D;
+ }
+ 
+ .user-profile-container .user-select{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 10px;
+ }
+/*----------Nút Thông tin người dùng----------*/
+ .general-info-link{
+    margin-right: 20px;
+    margin-left: 20px;
+ }
+
+.general-info-link .general-info-btn{
+    color: #A1331C;
+    background-color: #EFC26D;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+ }
+
+.general-info-link .general-info-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+ } 
+/*----------Nút chi tiết người dùng----------*/
+.detail-info-btn{
+    color: #A1331C;
+    background-color: #EFC26D;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+}
+/*----------Nút lịch sử thanh toán----------*/
+.payment-history-btn{
+    color: #EFC26D;
+    background-color: #A1331C;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+ }
+
+.payment-history-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+ }
+/*----------Thông tin vé----------*/
+.transaction-table {
+    border-collapse: separate; /* Tách biệt các ô */
+    border-spacing: 10px; /* Khoảng cách giữa các ô */
+    width: 100%; /* Đảm bảo bảng chiếm toàn bộ chiều rộng */
+}
+
+.transaction-table th, 
+.transaction-table td {
+    padding: 10px; /* Khoảng cách bên trong các ô */
+    background-color: #1E1E1E; /* Màu nền cho các ô */
+    border-radius: 8px; /* Bo góc cho các ô */
+}
+
+.transaction-table th {
+    color: #EFC26D; /* Màu chữ cho tiêu đề */
+}
+
+.transaction-table td {
+    color: white; /* Màu chữ cho nội dung */
+}

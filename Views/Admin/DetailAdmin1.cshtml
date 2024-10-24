@@ -16,23 +16,15 @@
 </head>
 
 <body>
-    <div class="user-profile-container">
+    <div class="admin1-container">
         <div class="user-select">
-            <a href="/User/UserProfile" class="general-info-link">
-                <button class="general-info-btn">Thông tin chung</button>
-            </a>
-
             <a href="/User/UserDetailProfile" class="general-info-link">
                 <button class="detail-info-btn">Chi tiết tài khoản</button>
-            </a>
-
-            <a asp-controller="Ticket" asp-action="TransactionHistory" class="general-info-link">
-                <button class="payment-history-btn">Lịch sử giao dịch</button>
             </a>
         </div>
 
         <div class="user-info-wrap">
-            <form asp-action="UpdateUser" method="post">
+            <form asp-action="DetailAdmin1" method="post">
                 <input type="hidden" asp-for="UserId" />
                 <div class="user-info-list">
                     <div class="user-info">
@@ -72,7 +64,7 @@
                 </div>
                 <!-----------Nút----------->
                 <div>
-                    <a href="@Url.Action("ChangePassword", "User", new { id = Model.UserId })" class="change-pw-link">
+                    <a href="/Admin/ChangePasswordAdmin" class="change-pw-link">
                         <button type="button" class="change-pw-btn">Đổi mật khẩu</button>
                     </a>
 

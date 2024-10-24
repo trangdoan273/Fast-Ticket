@@ -1,0 +1,31 @@
+@model List<TICKETBOX.Models.Tables.Concession>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Đường dẫn tới file layout
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/store.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Cửa hàng</title>
+</head>
+<body>
+    <div class="container">
+        <div class="product-list">
+            @foreach (var concession in Model)
+            {
+                <div class="product">
+                    <img src="@concession.ConcessionImage" alt="@concession.ConcessionName" />
+                    <h3>@concession.ConcessionName</h3>
+                    <p>@concession.ConcessionPrice VND</p>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>

@@ -29,12 +29,28 @@
       "PackagePath": "staticwebassets\\assets\\logo.png"
     },
     {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\Admin1.css",
+      "PackagePath": "staticwebassets\\css\\Admin1.css"
+    },
+    {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\AdminDetailProfile1.css",
+      "PackagePath": "staticwebassets\\css\\AdminDetailProfile1.css"
+    },
+    {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\ChangePassword.css",
       "PackagePath": "staticwebassets\\css\\ChangePassword.css"
     },
     {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\ChangePasswordAdmin.css",
+      "PackagePath": "staticwebassets\\css\\ChangePasswordAdmin.css"
+    },
+    {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\CreateAdmin.css",
       "PackagePath": "staticwebassets\\css\\CreateAdmin.css"
+    },
+    {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\CreateMovie.css",
+      "PackagePath": "staticwebassets\\css\\CreateMovie.css"
     },
     {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\HomeAdmin.css",
@@ -81,8 +97,44 @@
       "PackagePath": "staticwebassets\\css\\UserProfile.css"
     },
     {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\createpost.css",
+      "PackagePath": "staticwebassets\\css\\createpost.css"
+    },
+    {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\editpost.css",
+      "PackagePath": "staticwebassets\\css\\editpost.css"
+    },
+    {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\lsgd.css",
+      "PackagePath": "staticwebassets\\css\\lsgd.css"
+    },
+    {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\post.css",
+      "PackagePath": "staticwebassets\\css\\post.css"
+    },
+    {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\rap.css",
+      "PackagePath": "staticwebassets\\css\\rap.css"
+    },
+    {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\store.css",
+      "PackagePath": "staticwebassets\\css\\store.css"
+    },
+    {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\ttin.css",
+      "PackagePath": "staticwebassets\\css\\ttin.css"
+    },
+    {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\ttin1.css",
+      "PackagePath": "staticwebassets\\css\\ttin1.css"
+    },
+    {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\viewpost.css",
+      "PackagePath": "staticwebassets\\css\\viewpost.css"
     },
     {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\favicon.ico",
@@ -95,6 +147,10 @@
     {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\Management.js",
       "PackagePath": "staticwebassets\\js\\Management.js"
+    },
+    {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\Post.js",
+      "PackagePath": "staticwebassets\\js\\Post.js"
     },
     {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\js\\SelectSeat.js",

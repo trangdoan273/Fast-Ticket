@@ -9,28 +9,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
-    <link rel="stylesheet" href="~/css/UserProfile.css">
+    <link rel="stylesheet" href="~/css/Admin1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
-    <div class="user-profile-container">
-        <div class="user-select">
+    <div class="admin1-container">
+        <div class="admin-select">
             <a href="#" class="general-info-link">
                 <button class="general-info-btn">Thông tin chung</button>
             </a>
-
-            <a asp-controller="User" asp-action="UserDetailProfile" asp-route-id="@Model.UserId" class="general-info-link">
-                <button class="detail-info-btn">Chi tiết tài khoản</button>
-            </a>
-            <a asp-controller="Ticket" asp-action="TransactionHistory" class="general-info-link">
-                <button class="payment-history-btn">Lịch sử giao dịch</button>
-            </a>
-
         </div>
         <!-----------Thông tin tài khoản----------->
-        <div class="user-profile">
+        <div class="admin1">
             <div class="big-avatar-image">
                 <img src="../assets/avatar-trang-4.jpg" alt="#" class="big-avatar">
             </div>
@@ -42,8 +34,8 @@
                 <p class="user-email">Email: @Model.UserEmail</p>
                 <p class="user-tel">Điện thoại: @Model.UserPhoneNumber</p>
                 
-                <a asp-controller="User" asp-action="UserDetailProfile" asp-route-id="@Model.UserId" class="change-link">
-                    <button class="change-btn">Thay đổi</button>
+                <a class="change-link">
+                    <button onclick="window.location.href='/Admin/DetailAdmin1'" class="change-btn">Thay đổi</button>
                 </a>
             </div>
         </div>

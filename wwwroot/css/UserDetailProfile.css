@@ -25,6 +25,17 @@ body{
     width: 400px;
     margin-top: 10px;
  }
+ .admin1-container{
+    display: flex;
+    color: #EFC26D;
+ }
+ 
+ .admin1-container .user-select{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 10px;
+ }
 /*----------Nút Thông tin người dùng----------*/
  .general-info-link{
     margin-right: 20px;
@@ -142,7 +153,3 @@ input{
     color:#EFC26D;
     background-color: #A1331C;
 } 
-
-.save-link{
-    text-decoration: none;
-}

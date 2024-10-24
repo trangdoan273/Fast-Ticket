@@ -26,8 +26,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Trang/TICKETBOX/Views/Admin/Admin1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW4xLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Trang/TICKETBOX/Views/Admin/ChangePasswordAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2hhbmdlUGFzc3dvcmRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Trang/TICKETBOX/Views/Admin/CreateAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Trang/TICKETBOX/Views/Admin/CreateMovie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlTW92aWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Trang/TICKETBOX/Views/Admin/CreatePost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlUG9zdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Trang/TICKETBOX/Views/Admin/DetailAdmin1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlsQWRtaW4xLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Trang/TICKETBOX/Views/Admin/EditPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFBvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Trang/TICKETBOX/Views/Admin/FixMovie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRml4TW92aWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Trang/TICKETBOX/Views/Admin/HomeAdmin.cshtml]
@@ -38,8 +66,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Trang/TICKETBOX/Views/Admin/Post.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUG9zdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Trang/TICKETBOX/Views/Admin/TicketManagement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGlja2V0TWFuYWdlbWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Trang/TICKETBOX/Views/Admin/ViewPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1Bvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Trang/TICKETBOX/Views/Client/HomeClient.cshtml]
@@ -54,6 +90,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Trang/TICKETBOX/Views/Rap/Rap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFwXFJhcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Trang/TICKETBOX/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,12 +102,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Trang/TICKETBOX/Views/Store/Store.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVcU3RvcmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Trang/TICKETBOX/Views/Ticket/SelectSeat.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XFNlbGVjdFNlYXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Trang/TICKETBOX/Views/Ticket/Ticket.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XFRpY2tldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Trang/TICKETBOX/Views/Ticket/TransactionHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XFRyYW5zYWN0aW9uSGlzdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Trang/TICKETBOX/Views/Ttin/Ttin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHRpblxUdGluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Trang/TICKETBOX/Views/Ttin/Ttinchitiet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHRpblxUdGluY2hpdGlldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Trang/TICKETBOX/Views/User/ChangePassword.cshtml]

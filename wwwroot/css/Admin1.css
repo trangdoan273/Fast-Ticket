@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #0D111A;
+    height: 100vh;
+    width: 100%;
+}
+ .admin1-container{
+    display: flex;
+    color: #EFC26D;
+    padding: 10px;
+ }
+
+.admin1-container .user-select{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 10px;
+ }
+/*----------Nút thông tin người dùng----------*/
+.general-info-link{
+    margin-right: 20px;
+    margin-left: 20px;
+
+ }
+
+ .general-info-link .general-info-btn{
+    color: #EFC26D;
+    background-color: #A1331C;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+ }
+/*----------Nút chi tiết thông tin người dùng----------*/
+.detail-info-btn{
+    color: #A1331C;
+    background-color: #EFC26D;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+ }
+
+.detail-info-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+}
+/*----------Nút lịch sử thanh toán----------*/
+.payment-history-btn{
+    color: #A1331C;
+    background-color: #EFC26D;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
+ }
+
+.payment-history-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+ }
+/*----------Thông tin người dùng----------*/
+.admin{
+    margin: 10px 20px;
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+.big-avatar-image{
+    padding: 60px;
+ }
+
+.big-avatar-image .big-avatar{
+ border-radius: 50%;
+}
+
+.admin1 .account-info-label{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.account-info{
+    font-size: 18px;
+}
+/*----------Nút Thay đổi----------*/
+.change-link .change-btn{
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 10px;
+    border: 1px solid transparent;
+    font-weight: bold;
+    color: #A1331C;
+    background-color: #EFC26D;
+    border-radius: 8px;
+}
+
+.change-link .change-btn:hover{
+    color: #EFC26D;
+    background-color: #A1331C;
+}
+.admin1 {
+    border: 1px solid white; /* Khung kẻ trắng */
+    border-radius: 8px;
+    padding: 20px;
+    width: 70%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: transparent; /* Nền trong suốt */
+    box-shadow: none; /* Không có bóng */
+}
+
+.big-avatar-image {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.big-avatar {
+    width: 100px; /* Điều chỉnh kích thước nếu cần */
+    border-radius: 50%; /* Hình tròn */
+}
+
+.account-info-label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white; /* Màu chữ nếu cần */
+}
+
+.account-info p {
+    margin: 5px 0;
+    font-size: 18px;
+    color: white; /* Màu chữ nếu cần */
+}
+
+.change-btn {
+    color: #EFC26D;
+    background-color: #A1331C;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.change-btn:hover {
+    background-color: #A12B15; /* Thay đổi màu khi hover */
+}

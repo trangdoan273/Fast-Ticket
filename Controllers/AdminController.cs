@@ -120,5 +120,103 @@ namespace TICKETBOX.Controllers
             }
             return RedirectToAction("TicketManagement");
         }
+        [HttpGet]
+       public IActionResult Post()
+        {
+            using (var db = new FastticketContext())
+            {
+                var infoList = db.Infos.ToList();
+                return View(infoList);
+            }
+        }
+        //Tạo post
+        [HttpGet]
+        public IActionResult CreatePost()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreatePost(Info newInfo)
+    {
+    if (ModelState.IsValid)
+    {
+        using (var db = new FastticketContext())
+        {
+            db.Infos.Add(newInfo);
+            db.SaveChanges();
+        }
+        return RedirectToAction("Post", "Admin"); // Chuyển hướng về trang danh sách bài đăng
+    }
+    return View(newInfo); // Trả lại model để hiển thị lỗi nếu có
+}
+        //Chức năng xóa post
+        public IActionResult DeletePost(int id)
+        {
+            using (var db = new FastticketContext())
+            {
+                var info = db.Infos.FirstOrDefault(u => u.InfoId == id);
+                if ( info != null)
+                {
+                    db.Infos.Remove(info);
+                    db.SaveChanges();
+                }
+                return RedirectToAction("Post", "Admin");
+            }
+        }
+        //xem post
+        public IActionResult ViewPost(int id)
+        {
+            using (var db = new FastticketContext())
+        {
+        var post = db.Infos.FirstOrDefault(p => p.InfoId == id);
+        if (post == null)
+        {
+            return NotFound();
+        }
+        return View(post); // Trả về view để xem bài đăng
+        }
+    }
+    // sửa post
+// Sửa bài đăng (GET)
+[HttpGet]
+public IActionResult EditPost(int id)
+{
+    using (var db = new FastticketContext())
+    {
+        var post = db.Infos.FirstOrDefault(p => p.InfoId == id);
+        if (post == null)
+        {
+            return NotFound(); // Trả về 404 nếu không tìm thấy bài đăng
+        }
+        return View(post); // Trả về view để sửa bài đăng
+    }
+}
+
+// Sửa bài đăng (POST)
+[HttpPost]
+public IActionResult EditPost(Info updatedInfo)
+{
+    if (ModelState.IsValid)
+    {
+        using (var db = new FastticketContext())
+        {
+            var existingPost = db.Infos.FirstOrDefault(p => p.InfoId == updatedInfo.InfoId);
+            if (existingPost == null)
+            {
+                return NotFound(); // Trả về 404 nếu không tìm thấy bài đăng
+            }
+
+            // Cập nhật thông tin bài đăng
+            existingPost.InfoTitle = updatedInfo.InfoTitle;
+            existingPost.InfoContent = updatedInfo.InfoContent;
+            existingPost.InfoImage = updatedInfo.InfoImage;
+
+            db.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
+        }
+        return RedirectToAction("Post", "Admin"); // Chuyển hướng về trang danh sách bài đăng
+    }
+    return View(updatedInfo); // Trả lại model để hiển thị lỗi nếu có
+}
     }
 }
