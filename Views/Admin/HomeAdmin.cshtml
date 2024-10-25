@@ -51,7 +51,7 @@
                         {
                             <div class="movie-list swiper-slide">
                                 <div class="movie-image">
-                                    <a href="#" class="movie-image-link">
+                                    <a asp-controller="Home" asp-action="Movies" asp-route-id="@movie.MovieId" class="movie-image-link">
                                         <img src="@movie.MovieImage" class="movie-img">
                                     </a>
                                 </div>
@@ -63,7 +63,7 @@
                                 </div>
 
                                 <div class="movie-title">
-                                    <a href="#" class="movie-title-link">
+                                    <a asp-controller="Home" asp-action="Movies" asp-route-id="@movie.MovieId" class="movie-title-link">
                                         <p class="movie-name" title="@movie.MovieName">@movie.MovieName</p>
                                         <p class="movie-type">Thể loại: @movie.MovieGenre</p>
                                     </a>

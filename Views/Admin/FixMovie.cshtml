@@ -16,15 +16,16 @@
 </head>
 
 <body>
+    <form asp-action="FixMovie" method="post">
     <div class="admin-profile-container">
         <div class="image-upload" id="image-upload">
-            <img src="@Model.MoviePoster" class="movie-img" alt="Ảnh phim" id="preview">
+            <img src="@Model.MovieImage" class="movie-img" alt="Ảnh phim" id="preview">
             <div class="overlay">Tải Ảnh Lên</div>
-            <input type="file" id="file-input" accept="image/*" style="display:none;">
+            <input type="file" id="file-input" name="MovieImage" value="@Model.MovieImage" asp-for="MovieImage" accept="image/*" style="display:none;">
         </div>
         <div class="admin-info-wrap">
-            <form asp-action="HomeAdmin" method="post">
-                <input type="hidden" />
+            
+                <input type="hidden" asp-for="MovieId" name="MovieId" />
                 <div class="admin-info-list">
                     <div class="admin-info">
                         <div>
@@ -109,14 +110,15 @@
                     </div>
                 </div>
                 <div>
-                    <a href="#" class="save-link">
+                    <a href="" class="save-link">
                         <button type="submit" class="save-btn">Sửa</button>
                     </a>
                 </div>
-            </form>
+            
         </div>
     </div>
     </div>
+    </form>
     <script>
         const fileInput = document.getElementById('file-input');
         const imageUpload = document.getElementById('image-upload');
