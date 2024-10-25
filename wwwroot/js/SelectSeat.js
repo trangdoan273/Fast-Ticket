@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         seat.addEventListener("click", function () {
             const seatNumber = this.textContent;
-            const seatPrice = parseFloat(this.getAttribute('data-price')) || 0;
+            const seatPrice = parseFloat(this.getAttribute('data-price'));
 
             if (this.classList.contains("selected")) {
 
@@ -34,13 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 totalPrice += seatPrice; 
             }
 
-            document.querySelector('.sum-label').textContent = `Thành Tiền: ${totalPrice.toLocaleString()} VND`;
+            document.querySelector('.sum-label').textContent = `Thành Tiền: ${totalPrice} VND`;
 
             document.getElementById('selectedSeatsInput').value = JSON.stringify(selectedSeats);
         });
     });
 });
-/*----------Ngày----------*/a
+/*----------Ngày----------*/
 document.addEventListener('DOMContentLoaded', function () {
     const dateLinks = document.querySelectorAll('.date-link');
 

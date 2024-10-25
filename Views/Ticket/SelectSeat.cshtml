@@ -70,6 +70,7 @@
                     {
                         <button class="seat @if(seat.IsBooked){<text>booked</text>}" data-price="@seat.Price" id="seatClick" @if(seat.IsBooked){<text>disabled</text>}>@seat.SeatName</button>
                     }
+
                 </div>
                 <!-----------Thanh toán----------->
                 <form asp-action="ProcessTickets" method="post">

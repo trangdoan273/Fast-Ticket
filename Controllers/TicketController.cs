@@ -30,7 +30,7 @@ namespace TICKETBOX.Models
                 .Select(s => new
                 {
                     SeatName = s.SeatNumb,
-                    Price = s.SeatNumb,
+                    Price = s.Price,
                     IsBooked = db.Tickets.Any(t => t.SeatId == s.SeatId && t.MovieId == id && t.TicketStatus == "Booked")
                 })
                 .ToList();
@@ -53,7 +53,7 @@ namespace TICKETBOX.Models
                     Seat = seat.Select(s => new SeatInfo
                     {
                         SeatName = s.SeatName,
-                        Price = decimal.TryParse(s.Price, out decimal parsedPrice) ? (decimal?)parsedPrice : null,
+                        Price = s.Price, 
                         IsBooked = s.IsBooked
                     }).ToList()
                 };
@@ -104,7 +104,7 @@ namespace TICKETBOX.Models
             {
                 var ticketIds = JsonConvert.DeserializeObject<List<int>>(ids);
                 var ticketsInfo = new List<TicketInfoModel>();
-
+                
                 foreach (var ticketId in ticketIds)
                 {
                     var ticket = db.Tickets.FirstOrDefault(t => t.TicketId == ticketId);
@@ -135,57 +135,57 @@ namespace TICKETBOX.Models
             }
         }
         // Lịch sử giao dịch
-[Authorize(Roles = "User")]
-public IActionResult TransactionHistory(int page = 1, int pageSize = 10)
-{
-    using (var db = new FastticketContext())
-    {
-        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Lấy UserId của người dùng hiện tại
-        var ticketsInfo = new List<TicketInfoModel>();
-
-        var tickets = db.Tickets
-            .Where(t => t.UserId == int.Parse(userId)) // Lấy tất cả các vé đã mua
-            .ToList();
-
-        // Lấy thông tin vé
-        foreach (var ticket in tickets)
+        [Authorize(Roles = "User")]
+        public IActionResult TransactionHistory(int page = 1, int pageSize = 10)
         {
-            var showtimes = db.Showtimes.FirstOrDefault(t => t.ShowtimeId == ticket.ShowtimeId);
-            var showdates = db.Showdates.FirstOrDefault(t => t.ShowdateId == ticket.ShowdateId);
-            var movie = db.Movies.FirstOrDefault(t => t.MovieId == ticket.MovieId);
-            var seat = db.Seats.FirstOrDefault(t => t.SeatId == ticket.SeatId);
-
-            if (movie != null && seat != null && showtimes != null && showdates != null)
+            using (var db = new FastticketContext())
             {
-                var ticketInfo = new TicketInfoModel()
-                {
-                    Id = ticket.TicketId,
-                    MovieName = movie.MovieName,
-                    ShowDates = showdates.ShowDate1.HasValue ? showdates.ShowDate1.Value.ToString("dd/MM/yyyy") : null,
-                    Time = $"{showtimes.StartTime} ~ {showtimes.EndTime}",
-                    SeatName = seat.SeatNumb,
-                    Price = seat.Price.ToString(),
-                    MovieImage = movie.MovieImage
-                };
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Lấy UserId của người dùng hiện tại
+                var ticketsInfo = new List<TicketInfoModel>();
 
-                ticketsInfo.Add(ticketInfo);
+                var tickets = db.Tickets
+                    .Where(t => t.UserId == int.Parse(userId)) // Lấy tất cả các vé đã mua
+                    .ToList();
+
+                // Lấy thông tin vé
+                foreach (var ticket in tickets)
+                {
+                    var showtimes = db.Showtimes.FirstOrDefault(t => t.ShowtimeId == ticket.ShowtimeId);
+                    var showdates = db.Showdates.FirstOrDefault(t => t.ShowdateId == ticket.ShowdateId);
+                    var movie = db.Movies.FirstOrDefault(t => t.MovieId == ticket.MovieId);
+                    var seat = db.Seats.FirstOrDefault(t => t.SeatId == ticket.SeatId);
+
+                    if (movie != null && seat != null && showtimes != null && showdates != null)
+                    {
+                        var ticketInfo = new TicketInfoModel()
+                        {
+                            Id = ticket.TicketId,
+                            MovieName = movie.MovieName,
+                            ShowDates = showdates.ShowDate1.HasValue ? showdates.ShowDate1.Value.ToString("dd/MM/yyyy") : null,
+                            Time = $"{showtimes.StartTime} ~ {showtimes.EndTime}",
+                            SeatName = seat.SeatNumb,
+                            Price = seat.Price.ToString(),
+                            MovieImage = movie.MovieImage
+                        };
+
+                        ticketsInfo.Add(ticketInfo);
+                    }
+                }
+
+                // Phân trang
+                int totalTickets = ticketsInfo.Count; // Tổng số vé
+                int totalPages = (int)Math.Ceiling(totalTickets / (double)pageSize); // Tổng số trang
+
+                var pagedTicketsInfo = ticketsInfo.Skip((page - 1) * pageSize).Take(pageSize).ToList(); // Lấy vé theo trang
+
+                // Thiết lập ViewBag cho view
+                ViewBag.TicketsInfo = pagedTicketsInfo;
+                ViewBag.CurrentPage = page;
+                ViewBag.TotalPages = totalPages;
+
+                return View();
             }
         }
-
-        // Phân trang
-        int totalTickets = ticketsInfo.Count; // Tổng số vé
-        int totalPages = (int)Math.Ceiling(totalTickets / (double)pageSize); // Tổng số trang
-
-        var pagedTicketsInfo = ticketsInfo.Skip((page - 1) * pageSize).Take(pageSize).ToList(); // Lấy vé theo trang
-
-        // Thiết lập ViewBag cho view
-        ViewBag.TicketsInfo = pagedTicketsInfo;
-        ViewBag.CurrentPage = page;
-        ViewBag.TotalPages = totalPages;
-
-        return View();
-    }
-}
 
 
 
