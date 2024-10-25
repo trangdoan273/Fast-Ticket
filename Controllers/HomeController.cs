@@ -40,6 +40,28 @@ public class HomeController : Controller
             return RedirectToAction("Index", "Home");
         }
     }
+    //Thông tin phim
+    public IActionResult Movies(int id){
+       using (var db = new FastticketContext()){
+        var movies = db.Movies.FirstOrDefault(m => m.MovieId == id);
+
+        ViewBag.MovieInfo = new MovieModel(){
+            Id = movies.MovieId,
+            MovieName = movies.MovieName,
+            Content = movies.MovieContent,
+            Type = movies.MovieLabel,
+            Format = movies.MovieFormat,
+            Director = movies.MovieDirector,
+            Actor = movies.MovieActor,
+            Genre = movies.MovieGenre,
+            ReleaseDate = movies.ReleaseDate.HasValue ? movies.ReleaseDate.Value.ToString("dd/MM/yyyy") : null,
+            Duration = movies.Duration,
+            Language = movies.Language,
+            MovieImage = movies.MovieImage
+        };
+        return View();
+       }
+    }
     public IActionResult Privacy()
     {
         return View();

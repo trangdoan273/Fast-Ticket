@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PI54B75IAnITg3hommvKOwq9Wz5nEA0a0Xsti4AptV8=",
+  "Hash": "WusKSfbycNaM2RjQ4KSLcX/irpG35lCVKcF+IlWdItA=",
   "Source": "TICKETBOX",
   "BasePath": "_content/TICKETBOX",
   "Mode": "Default",
@@ -414,6 +414,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Management.css"
+    },
+    {
+      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\Movies.css",
+      "SourceId": "TICKETBOX",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Trang\\TICKETBOX\\wwwroot\\",
+      "BasePath": "_content/TICKETBOX",
+      "RelativePath": "css/Movies.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Movies.css"
     },
     {
       "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\post.css",

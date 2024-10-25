@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #0D111A;
+    height: 100vh;
+    width: 100%;
+}
+
+.movie-container{
+    display: flex;
+    padding: 50px;
+    justify-content: left;
+    margin: 20px;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-img {
+    width: 300px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.buy-btn {
+    padding: 10px 15px;
+    border-radius: 3.5px;
+    color: #A1331C;
+    background-color: #EFC26D;
+    font-weight: bolder;
+    font-size: 20.77px;
+    border: transparent;
+}
+
+.buy-btn:hover {
+    color: #EFC26D;
+    background-color: #A1331C;
+}
+
+.buy-btn i{
+    margin-right: 5px;
+}
+
+.info-container{
+    margin-left: 70px;
+}
+
+.movie-label {
+    color: #EFC26D;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.info-detail {
+    color: white;
+    font-size: 17.79px;
+}
+
+.type-detail {
+    padding: 5px 10px;
+    background-color: #A1331C;
+    border-radius: 3.5px;
+    font-weight: bold;
+}
+
+.format-detail{
+    padding: 5px;
+    color: #A1331C;
+    background-color: #EFC26D;
+    border-radius: 3.5px;
+    font-weight: bold;
+}

@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "Thông tin phim";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Movies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="movie-container">
+        <div class="img-container">
+            <div class="movie-image">
+                <img src="@ViewBag.MovieInfo.MovieImage" class="movie-img">
+            </div>
+            <div class="buy-ticket-button">
+                <a asp-controller="Ticket" asp-action="SelectSeat" asp-route-id="@ViewBag.MovieInfo.Id" class="buy-btn-link">
+                    <button class="buy-btn"><i class="fa-solid fa-ticket"></i>MUA VÉ</button>
+                </a>
+            </div>
+        </div>
+        <div class="info-container">
+            <p class="movie-label">@ViewBag.MovieInfo.MovieName</p>
+            <div class="info-detail">
+                <p class="content">@ViewBag.MovieInfo.Content</p>
+                <p class="type">Phân loại: <span class="type-detail">@ViewBag.MovieInfo.Type</span></p>
+                <p class="format">Định dạng: <span class="format-detail">@ViewBag.MovieInfo.Format</span></p>
+                <p class="director">Đạo diễn: @ViewBag.MovieInfo.Director</p>
+                <p class="actor">Diễn viên: @ViewBag.MovieInfo.Actor</p>
+                <p class="genre">Thể loại: @ViewBag.MovieInfo.Genre</p>
+                <p class="release">Khởi chiếu: @ViewBag.MovieInfo.ReleaseDate</p>
+                <p class="duration">Thời lượng: @ViewBag.MovieInfo.Duration</p>
+                <p class="language">Ngôn ngữ: @ViewBag.MovieInfo.Language</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
