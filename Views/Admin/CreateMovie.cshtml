@@ -16,12 +16,12 @@
 </head>
 
 <body>
-    <form asp-action="CreateMovie" method="post">
+    <form asp-action="CreateMovie" method="post" enctype="multipart/form-data">
    <div class="admin-profile-container">
         <div class="image-upload" id="image-upload">
-            <img src="">
+            <img id="preview" alt="Ảnh xem trước" style="display:none;">
             <div class="overlay">Tải Ảnh Lên</div>
-            <input type="file" id="file-input" name="MovieImage" accept="image/*" style="display:none;">
+            <input type="file" id="file-input" name="MovieImage" accept="image/*" style="display:none;" required>
             <img id="preview" alt="Ảnh xem trước" style="display:none;">
         </div>
         <div class="admin-info-wrap">

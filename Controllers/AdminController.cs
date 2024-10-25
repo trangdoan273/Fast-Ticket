@@ -329,10 +329,21 @@ namespace TICKETBOX.Controllers
             return View(model);
         }
         [HttpPost]
-        public IActionResult CreateMovie(Movie movie)
+        public IActionResult CreateMovie(Movie movie, IFormFile MovieImage)
         {
             if (ModelState.IsValid)
             {
+                if (MovieImage != null && MovieImage.Length > 0)
+                {
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets", MovieImage.FileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        MovieImage.CopyTo(stream);
+                    }
+
+                    movie.MovieImage = $"/assets/{MovieImage.FileName}";
+                }
                 using (var db = new FastticketContext())
                 {
                     db.Movies.Add(movie); // Thêm movie vào db
@@ -363,8 +374,10 @@ namespace TICKETBOX.Controllers
                 return View(movie); // Trả về view với dữ liệu bộ phim
             }
         }
+
         public IActionResult CreateMovie()
-        {return View(); // Nếu model không hợp lệ, trả về view với dữ liệu đã nhập
-    }
+        {
+            return View(); // Nếu model không hợp lệ, trả về view với dữ liệu đã nhập
         }
     }
+}
