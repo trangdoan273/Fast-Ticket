@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -221,31 +222,31 @@ namespace TICKETBOX.Controllers
         public IActionResult Admin1()
         {
             var userID = User.Identity.Name;
-            var user = new User();
             using (var db = new FastticketContext())
             {
-                user = db.Users.FirstOrDefault(u => u.UserName == userID);
-                if (user == null || user.Role == "Admin")
+                var user = db.Users.FirstOrDefault(u => u.UserName == userID);
+                if (user == null || user.Role == "User")
                 {
-                    return View(user);
+                    return RedirectToAction("Index", "Home");
                 }
-
+                return View(user);
             }
-            return View(user);
+
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult DetailAdmin1(int id)
         {
+            var userID = User.Identity.Name;
             using (var db = new FastticketContext())
             {
-                var user = db.Users.FirstOrDefault(u => u.UserId == 1);
-
-                if (user == null)
+                var user = db.Users.FirstOrDefault(u => u.UserId == id);
+                if (user == null || user.Role != "Admin")
                 {
-                    return NotFound(); // Trả về 404 nếu không tìm thấy người dùng
+                    return RedirectToAction("AccessDenied", "Home");
                 }
 
-                var viewModel = new UpdateUserModel()
+                var viewModel = new UpdateUserModel
                 {
                     UserId = user.UserId,
                     UserFullname = user.FullName,
@@ -255,39 +256,8 @@ namespace TICKETBOX.Controllers
                     UserAddress = user.UserAddress,
                     UserEmail = user.UserEmail
                 };
-
-                return View(viewModel); // Trả về view với thông tin người dùng
+                return View(viewModel);
             }
-        }
-        [HttpPost]
-        public IActionResult DetailAdmin1(UpdateUserModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                using (var db = new FastticketContext())
-                {
-                    var user = db.Users.FirstOrDefault(u => u.UserId == model.UserId);
-
-                    if (user == null)
-                    {
-                        return NotFound(); // Trả về 404 nếu không tìm thấy người dùng
-                    }
-
-                    // Cập nhật thông tin người dùng
-                    user.FullName = model.UserFullname;
-                    user.UserPhoneNumber = model.UserPhoneNumber;
-                    user.Sex = model.UserSex;
-                    user.DoB = model.DoB;
-                    user.UserAddress = model.UserAddress;
-                    user.UserEmail = model.UserEmail;
-
-                    db.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
-                }
-
-                return RedirectToAction("DetailAdmin1"); // Chuyển hướng đến danh sách người dùng hoặc trang khác
-            }
-
-            return View(model); // Nếu model không hợp lệ, trả về view với dữ liệu đã nhập
         }
 
         public IActionResult ChangePasswordAdmin()

@@ -25,7 +25,7 @@ namespace TICKETBOX.UserController
                 var user = db.Users.FirstOrDefault(u => u.UserName == userID);
                 if (user == null || user.Role == "Admin")
                 {
-                    return RedirectToAction("Management", "Admin");
+                    return RedirectToAction("Admin1", "Admin");
                 }
                 return View(user);
             }

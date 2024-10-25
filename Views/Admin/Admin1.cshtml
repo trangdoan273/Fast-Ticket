@@ -20,6 +20,18 @@
             <a href="#" class="general-info-link">
                 <button class="general-info-btn">Thông tin chung</button>
             </a>
+            <a asp-controller="Admin" asp-action="DetailAdmin1" asp-route-id="@Model.UserId" class="detail-link">
+                <button class="detail-btn">Chi tiết tài khoản</button>
+            </a>
+            <a href="@Url.Action("Management", "Admin")" class="user-link">
+                <button class="user-btn">Người dùng</button>
+            </a>
+            <a href="@Url.Action("TicketManagement", "Admin")" class="ticket-link">
+                <button class="ticket-btn">Vé</button>
+            </a>
+             <a href="@Url.Action("Post", "Admin")" class="post-link">
+                <button class="post-btn">Bài viết</button>
+            </a>
         </div>
         <!-----------Thông tin tài khoản----------->
         <div class="admin1">
@@ -33,7 +45,7 @@
                 <p class="user-name">Tên: @Model.UserName</p>
                 <p class="user-email">Email: @Model.UserEmail</p>
                 <p class="user-tel">Điện thoại: @Model.UserPhoneNumber</p>
-                
+
                 <a class="change-link">
                     <button onclick="window.location.href='/Admin/DetailAdmin1'" class="change-btn">Thay đổi</button>
                 </a>
@@ -41,6 +53,6 @@
         </div>
     </div>
 
-    </body>
+</body>
 
 </html>

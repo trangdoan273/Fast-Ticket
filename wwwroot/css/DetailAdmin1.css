@@ -14,20 +14,30 @@ body{
     height: 100vh;
     width: 100%;
 }
- .admin1-container{
+ .user-profile-container{
     display: flex;
     color: #EFC26D;
-    padding: 10px;
  }
-
-.admin1-container .user-select{
+ 
+ .user-profile-container .user-select{
     display: flex;
     flex-direction: column;
     width: 400px;
     margin-top: 10px;
  }
-/*----------Nút thông tin người dùng----------*/
-.admin-select {
+ .admin1-container{
+    display: flex;
+    color: #EFC26D;
+ }
+ 
+ .admin1-container .user-select{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 10px;
+ }
+/*----------Nút Thông tin người dùng----------*/
+.user-select{
     display: flex;
     flex-direction: column;
     display: flex;
@@ -37,18 +47,7 @@ body{
     margin-left: 20px;
 }
 
-.general-info-link .general-info-btn{
-    color: #EFC26D;
-    background-color: #A1331C;
-    width: 100%;
-    padding: 20px;
-    border-radius: 8px;
-    font-size: 24px;
-    font-weight: bolder;
-    border: 1px solid #3a3a3a;
- }
-
-.detail-btn{
+.general-info-btn{
     color: #A1331C;
     background-color: #EFC26D;
     width: 100%;
@@ -57,11 +56,23 @@ body{
     font-size: 24px;
     font-weight: bolder;
     border: 1px solid #3a3a3a;
-}
+ }
 
-.detail-btn:hover{
+.general-info-btn:hover{
     color: #EFC26D;
     background-color: #A1331C;
+ } 
+
+
+.detail-btn{
+    color: #EFC26D;
+    background-color: #A1331C;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px solid #3a3a3a;
 }
 
 .user-btn{
@@ -111,10 +122,10 @@ body{
     color: #EFC26D;
     background-color: #A1331C;
  }
-/*----------Nút chi tiết thông tin người dùng----------*/
+/*----------Nút chi tiết người dùng----------*/
 .detail-info-btn{
-    color: #A1331C;
-    background-color: #EFC26D;
+    color: #EFC26D;
+    background-color: #A1331C;
     width: 100%;
     padding: 20px;
     border-radius: 8px;
@@ -122,11 +133,6 @@ body{
     font-weight: bolder;
     border: 1px solid #3a3a3a;
  }
-
-.detail-info-btn:hover{
-    color: #EFC26D;
-    background-color: #A1331C;
-}
 /*----------Nút lịch sử thanh toán----------*/
 .payment-history-btn{
     color: #A1331C;
@@ -137,102 +143,78 @@ body{
     font-size: 24px;
     font-weight: bolder;
     border: 1px solid #3a3a3a;
- }
+}
 
 .payment-history-btn:hover{
     color: #EFC26D;
     background-color: #A1331C;
  }
 /*----------Thông tin người dùng----------*/
-.admin{
-    margin: 10px 20px;
+.user-info-wrap{
     width: 70%;
-    padding: 10px;
-    border: 1px solid #3a3a3a;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
- }
-
-.big-avatar-image{
-    padding: 60px;
- }
-
-.big-avatar-image .big-avatar{
- border-radius: 50%;
+    margin: 0 30px;
 }
 
-.admin1 .account-info-label{
+.user-info-wrap p{
+    margin-top: 10px;
+} 
+
+.user-info-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+p{
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.account-info{
-    font-size: 18px;
+.user-address{
+    margin-left: 20px;
 }
-/*----------Nút Thay đổi----------*/
-.change-link .change-btn{
-    font-size: 20px;
-    padding: 5px 10px;
-    margin: 10px;
+
+input{
+    width: 400px;
+    outline: none;
+    height: 50px;
     border: 1px solid transparent;
+    border-radius: 8px;
+}
+/*----------Nút đổi mật khẩu----------*/
+.change-pw-link .change-pw-btn{
+    font-size: 18px;
     font-weight: bold;
     color: #A1331C;
     background-color: #EFC26D;
+    padding: 5px 10px;
+    border: 1px solid transparent;
     border-radius: 8px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-right: 50px;
+    margin-bottom: 30px;
 }
 
-.change-link .change-btn:hover{
-    color: #EFC26D;
+.change-pw-link .change-pw-btn:hover{
+    color:#EFC26D;
     background-color: #A1331C;
 }
-.admin1 {
-    border: 1px solid #3a3a3a; /* Khung kẻ trắng */
-    border-radius: 8px;
-    padding: 20px;
-    width: 70%;
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: transparent; /* Nền trong suốt */
-    box-shadow: none; /* Không có bóng */
-}
-
-.big-avatar-image {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.big-avatar {
-    width: 100px; /* Điều chỉnh kích thước nếu cần */
-    border-radius: 50%; /* Hình tròn */
-}
-
-.account-info-label {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
-    color: white; /* Màu chữ nếu cần */
-}
-
-.account-info p {
-    margin: 5px 0;
+/*----------Nút Lưu lại----------*/
+.save-link .save-btn{
     font-size: 18px;
-    color: white; /* Màu chữ nếu cần */
+    font-weight: bold;
+    color: #A1331C;
+    background-color: #EFC26D;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-right: 50px;
 }
 
-.change-btn {
-    color: #EFC26D;
+.save-link .save-btn:hover{
+    color:#EFC26D;
     background-color: #A1331C;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.change-btn:hover {
-    background-color: #A12B15; /* Thay đổi màu khi hover */
-}
+} 
