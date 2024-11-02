@@ -18,7 +18,7 @@
         <input type="hidden" asp-for="InfoId" /> <!-- Ẩn trường ID -->
         <div class="image-upload" id="image-upload">
             <label>Ảnh:</label>
-            <img src="@Model.InfoImage" alt="Preview Iamge" id="preview" style="display: @(Model.InfoImage != null ? "block" : "none")">
+            <img src="@Model.InfoImage" alt="Preview Image" id="preview" style="display: @(Model.InfoImage != null ? "block" : "none")">
             <div class="overlay">Tải Ảnh Lên</div>
             <input type="file" id="file-input" name="InfoImage" accept="image/*" style="display: none;">
             <span asp-validation-for="InfoImage" class="text-danger"></span>

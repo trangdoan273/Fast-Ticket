@@ -403,7 +403,7 @@ namespace TICKETBOX.Controllers
                 existingMovie.Language = movie.Language;
 
                 if (MovieImage != null && MovieImage.Length > 0)
-                {
+                {  
                     var filePath = Path.Combine("wwwroot/assets", MovieImage.FileName);
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
@@ -416,26 +416,7 @@ namespace TICKETBOX.Controllers
                 return RedirectToAction("FixMovie", new { id = existingMovie.MovieId });
             }
         }
-        // public IActionResult FixMovie(int id)
-        // {
-
-        //     using (var db = new FastticketContext())
-        //     {
-        //         // Giả sử bạn có ID bộ phim được truyền vào từ tham số
-        //         int movieId = id/* ID của bộ phim được truyền vào */;
-
-        //         // Tìm bộ phim theo ID
-        //         var movie = db.Movies.FirstOrDefault(m => m.MovieId == movieId);
-
-        //         // Kiểm tra xem bộ phim có tồn tại hay không
-        //         if (movie == null)
-        //         {
-        //             return NotFound(); // Trả về 404 nếu không tìm thấy bộ phim
-        //         }
-
-        //         return View(movie); // Trả về view với dữ liệu bộ phim
-        //     }
-        // }
+       
         public IActionResult CreateMovie()
         {
 
