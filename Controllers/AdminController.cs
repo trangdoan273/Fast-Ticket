@@ -155,19 +155,6 @@ namespace TICKETBOX.Controllers
             }
             return View(info);
         }
-        // public IActionResult CreatePost(Info newInfo)
-        // {
-        //     if (ModelState.IsValid)
-        //     {
-        //         using (var db = new FastticketContext())
-        //         {
-        //             db.Infos.Add(newInfo);
-        //             db.SaveChanges();
-        //         }
-        //         return RedirectToAction("Post", "Admin"); // Chuyển hướng về trang danh sách bài đăng
-        //     }
-        //     return View(newInfo); // Trả lại model để hiển thị lỗi nếu có
-        // }
         //Chức năng xóa post
         public IActionResult DeletePost(int id)
         {
@@ -232,30 +219,7 @@ namespace TICKETBOX.Controllers
                 return RedirectToAction("ViewPost", new{id = existingPost.InfoId});
             }
         }
-        // public IActionResult EditPost(Info updatedInfo)
-        // {
-        //     if (ModelState.IsValid)
-        //     {
-        //         using (var db = new FastticketContext())
-        //         {
-        //             var existingPost = db.Infos.FirstOrDefault(p => p.InfoId == updatedInfo.InfoId);
-        //             if (existingPost == null)
-        //             {
-        //                 return NotFound(); // Trả về 404 nếu không tìm thấy bài đăng
-        //             }
-
-        //             // Cập nhật thông tin bài đăng
-        //             existingPost.InfoTitle = updatedInfo.InfoTitle;
-        //             existingPost.InfoContent = updatedInfo.InfoContent;
-        //             existingPost.InfoImage = updatedInfo.InfoImage;
-
-        //             db.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
-        //         }
-        //         return RedirectToAction("Post", "Admin"); // Chuyển hướng về trang danh sách bài đăng
-        //     }
-        //     return View(updatedInfo); // Trả lại model để hiển thị lỗi nếu có
-        // }
-        public IActionResult Admin1()
+                public IActionResult Admin1()
         {
             var userID = User.Identity.Name;
             using (var db = new FastticketContext())
