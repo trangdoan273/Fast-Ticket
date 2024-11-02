@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -205,28 +206,29 @@ namespace TICKETBOX.Controllers
 
         // Sửa bài đăng (POST)
         [HttpPost]
-        public IActionResult EditPost(Info updatedInfo)
+        public IActionResult EditPost(Info updateInfo, IFormFile InfoImage)
         {
-            if (ModelState.IsValid)
+            using (var db = new FastticketContext())
             {
-                using (var db = new FastticketContext())
+                var existingPost = db.Infos.FirstOrDefault(p => p.InfoId == updateInfo.InfoId);
+                if (existingPost == null)
                 {
-                    var existingPost = db.Infos.FirstOrDefault(p => p.InfoId == updatedInfo.InfoId);
-                    if (existingPost == null)
-                    {
-                        return NotFound(); // Trả về 404 nếu không tìm thấy bài đăng
-                    }
-
-                    // Cập nhật thông tin bài đăng
-                    existingPost.InfoTitle = updatedInfo.InfoTitle;
-                    existingPost.InfoContent = updatedInfo.InfoContent;
-                    existingPost.InfoImage = updatedInfo.InfoImage;
-
-                    db.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
+                    return NotFound();
                 }
-                return RedirectToAction("Post", "Admin"); // Chuyển hướng về trang danh sách bài đăng
+                existingPost.InfoTitle = updateInfo.InfoTitle;
+                existingPost.InfoContent = updateInfo.InfoContent;
+                if (InfoImage != null && InfoImage.Length > 0)
+                {
+                    var filePath = Path.Combine("wwwroot/assets", InfoImage.FileName);
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        InfoImage.CopyTo(stream);
+                    }
+                    existingPost.InfoImage = "/assets/" + InfoImage.FileName;
+                }
+                db.SaveChanges();
+                return RedirectToAction("ViewPost", new { id = existingPost.InfoId });
             }
-            return View(updatedInfo); // Trả lại model để hiển thị lỗi nếu có
         }
         public IActionResult Admin1()
         {
@@ -300,13 +302,13 @@ namespace TICKETBOX.Controllers
             return View(model); // Nếu model không hợp lệ, trả về view với dữ liệu đã nhập
         }
 
-        public IActionResult ChangePasswordAdmin()
+        public IActionResult ChangePasswordAdmin(int id)
         {
             var currentUserId = User.Identity.Name;
 
             using (var db = new FastticketContext())
             {
-                var user = db.Users.FirstOrDefault(u => u.UserId == 1);
+                var user = db.Users.FirstOrDefault(u => u.UserId == id);
                 if (user == null || user.UserName != currentUserId)
                 {
                     return RedirectToAction("AccessDenied", "Home");
@@ -314,10 +316,11 @@ namespace TICKETBOX.Controllers
             }
             var model = new ChangePasswordModel
             {
-                UserId = 1
+                UserId = id
             };
             return View(model);
         }
+
         [HttpPost]
         public IActionResult ChangePasswordAdmin(ChangePasswordModel model)
         {
@@ -364,26 +367,75 @@ namespace TICKETBOX.Controllers
 
             return View(movie); // Nếu model không hợp lệ, trả về view với dữ liệu đã nhập
         }
+
         public IActionResult FixMovie(int id)
         {
-
             using (var db = new FastticketContext())
             {
-                // Giả sử bạn có ID bộ phim được truyền vào từ tham số
-                int movieId = id/* ID của bộ phim được truyền vào */;
-
-                // Tìm bộ phim theo ID
-                var movie = db.Movies.FirstOrDefault(m => m.MovieId == movieId);
-
-                // Kiểm tra xem bộ phim có tồn tại hay không
+                var movie = db.Movies.FirstOrDefault(m => m.MovieId == id);
                 if (movie == null)
                 {
-                    return NotFound(); // Trả về 404 nếu không tìm thấy bộ phim
+                    return NotFound();
                 }
-
-                return View(movie); // Trả về view với dữ liệu bộ phim
+                return View(movie);
             }
         }
+
+        [HttpPost]
+        public IActionResult FixMovie(Movie movie, IFormFile MovieImage)
+        {
+            using (var db = new FastticketContext())
+            {
+                var existingMovie = db.Movies.FirstOrDefault(m => m.MovieId == movie.MovieId);
+                if (existingMovie == null)
+                {
+                    return NotFound();
+                }
+                existingMovie.MovieName = movie.MovieName;
+                existingMovie.MovieContent = movie.MovieContent;
+                existingMovie.MovieGenre = movie.MovieGenre;
+                existingMovie.MovieLabel = movie.MovieLabel;
+                existingMovie.MovieFormat = movie.MovieFormat;
+                existingMovie.MovieDirector = movie.MovieDirector;
+                existingMovie.MovieActor = movie.MovieActor;
+                existingMovie.ReleaseDate = movie.ReleaseDate;
+                existingMovie.Duration = movie.Duration;
+                existingMovie.Language = movie.Language;
+
+                if (MovieImage != null && MovieImage.Length > 0)
+                {
+                    var filePath = Path.Combine("wwwroot/assets", MovieImage.FileName);
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        MovieImage.CopyTo(stream);
+                    }
+                    existingMovie.MovieImage = "/assets/" + MovieImage.FileName;
+                }
+                db.SaveChanges();
+
+                return RedirectToAction("FixMovie", new { id = existingMovie.MovieId });
+            }
+        }
+        // public IActionResult FixMovie(int id)
+        // {
+
+        //     using (var db = new FastticketContext())
+        //     {
+        //         // Giả sử bạn có ID bộ phim được truyền vào từ tham số
+        //         int movieId = id/* ID của bộ phim được truyền vào */;
+
+        //         // Tìm bộ phim theo ID
+        //         var movie = db.Movies.FirstOrDefault(m => m.MovieId == movieId);
+
+        //         // Kiểm tra xem bộ phim có tồn tại hay không
+        //         if (movie == null)
+        //         {
+        //             return NotFound(); // Trả về 404 nếu không tìm thấy bộ phim
+        //         }
+
+        //         return View(movie); // Trả về view với dữ liệu bộ phim
+        //     }
+        // }
         public IActionResult CreateMovie()
         {
 

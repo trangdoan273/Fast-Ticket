@@ -25,8 +25,7 @@
                     accept="image/*" style="display:none;">
             </div>
             <div class="admin-info-wrap">
-                <form asp-action="FixMovie" method="post">
-                    <input type="hidden" />
+                    <input type="hidden" asp-for="MovieId" name="MovieId"/>
                     <div class="admin-info-list">
                         <div class="admin-info">
                             <div>
@@ -120,7 +119,7 @@
                             <button type="submit" class="save-btn">Sửa</button>
                         </a>
                     </div>
-                </form>
+          
             </div>
         </div>
         </div>

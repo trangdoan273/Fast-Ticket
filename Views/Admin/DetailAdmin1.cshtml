@@ -76,7 +76,7 @@
                 </div>
                 <!-----------Nút----------->
                 <div>
-                    <a href="/Admin/ChangePasswordAdmin" class="change-pw-link">
+                    <a asp-controller="Admin" asp-action="ChangePasswordAdmin" asp-route-id="@Model.UserId" class="change-pw-link">
                         <button type="button" class="change-pw-btn">Đổi mật khẩu</button>
                     </a>
 
