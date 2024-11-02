@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\TICKETBOX.bundle.scp.css"
     },
     {
-      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\assets\\Sói bảnh.jpg",
-      "PackagePath": "staticwebassets\\assets\\Sói bảnh.jpg"
-    },
-    {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\assets\\avatar-trang-4.jpg",
       "PackagePath": "staticwebassets\\assets\\avatar-trang-4.jpg"
     },
@@ -47,6 +43,10 @@
     {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\CreateMovie.css",
       "PackagePath": "staticwebassets\\css\\CreateMovie.css"
+    },
+    {
+      "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\DetailAdmin1.css",
+      "PackagePath": "staticwebassets\\css\\DetailAdmin1.css"
     },
     {
       "Id": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\HomeAdmin.css",

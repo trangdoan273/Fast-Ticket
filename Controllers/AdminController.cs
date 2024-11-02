@@ -138,19 +138,36 @@ namespace TICKETBOX.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreatePost(Info newInfo)
-        {
-            if (ModelState.IsValid)
-            {
-                using (var db = new FastticketContext())
-                {
-                    db.Infos.Add(newInfo);
+        public IActionResult CreatePost(Info info, IFormFile InfoImage){
+            if(ModelState.IsValid){
+                if(InfoImage != null && InfoImage.Length > 0){
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets", InfoImage.FileName);
+                    using (var stream = new FileStream(filePath, FileMode.Create)){
+                        InfoImage.CopyTo(stream);
+                    }
+                    info.InfoImage = $"/assets/{InfoImage.FileName}";
+                }
+                using (var db = new FastticketContext()){
+                    db.Infos.Add(info);
                     db.SaveChanges();
                 }
-                return RedirectToAction("Post", "Admin"); // Chuyển hướng về trang danh sách bài đăng
+                return RedirectToAction("Post");
             }
-            return View(newInfo); // Trả lại model để hiển thị lỗi nếu có
+            return View(info);
         }
+        // public IActionResult CreatePost(Info newInfo)
+        // {
+        //     if (ModelState.IsValid)
+        //     {
+        //         using (var db = new FastticketContext())
+        //         {
+        //             db.Infos.Add(newInfo);
+        //             db.SaveChanges();
+        //         }
+        //         return RedirectToAction("Post", "Admin"); // Chuyển hướng về trang danh sách bài đăng
+        //     }
+        //     return View(newInfo); // Trả lại model để hiển thị lỗi nếu có
+        // }
         //Chức năng xóa post
         public IActionResult DeletePost(int id)
         {
@@ -196,29 +213,48 @@ namespace TICKETBOX.Controllers
 
         // Sửa bài đăng (POST)
         [HttpPost]
-        public IActionResult EditPost(Info updatedInfo)
-        {
-            if (ModelState.IsValid)
-            {
-                using (var db = new FastticketContext())
-                {
-                    var existingPost = db.Infos.FirstOrDefault(p => p.InfoId == updatedInfo.InfoId);
-                    if (existingPost == null)
-                    {
-                        return NotFound(); // Trả về 404 nếu không tìm thấy bài đăng
-                    }
-
-                    // Cập nhật thông tin bài đăng
-                    existingPost.InfoTitle = updatedInfo.InfoTitle;
-                    existingPost.InfoContent = updatedInfo.InfoContent;
-                    existingPost.InfoImage = updatedInfo.InfoImage;
-
-                    db.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
+        public IActionResult EditPost(Info updatedInfo, IFormFile InforImage){
+            using(var db = new FastticketContext()){
+                var existingPost = db.Infos.FirstOrDefault(e => e.InfoId == updatedInfo.InfoId);
+                if(existingPost == null){
+                    return NotFound();
                 }
-                return RedirectToAction("Post", "Admin"); // Chuyển hướng về trang danh sách bài đăng
+                existingPost.InfoTitle  = updatedInfo.InfoTitle;
+                existingPost.InfoContent = updatedInfo.InfoContent;
+                if(InforImage != null && InforImage.Length > 0){
+                    var filePath = Path.Combine("wwwroot/assets", InforImage.FileName);
+                    using (var stream = new FileStream(filePath, FileMode.Create)){
+                        InforImage.CopyTo(stream);
+                    }
+                    existingPost.InfoImage = "/assets/" + InforImage.FileName;
+                }
+                db.SaveChanges();
+                return RedirectToAction("ViewPost", new{id = existingPost.InfoId});
             }
-            return View(updatedInfo); // Trả lại model để hiển thị lỗi nếu có
         }
+        // public IActionResult EditPost(Info updatedInfo)
+        // {
+        //     if (ModelState.IsValid)
+        //     {
+        //         using (var db = new FastticketContext())
+        //         {
+        //             var existingPost = db.Infos.FirstOrDefault(p => p.InfoId == updatedInfo.InfoId);
+        //             if (existingPost == null)
+        //             {
+        //                 return NotFound(); // Trả về 404 nếu không tìm thấy bài đăng
+        //             }
+
+        //             // Cập nhật thông tin bài đăng
+        //             existingPost.InfoTitle = updatedInfo.InfoTitle;
+        //             existingPost.InfoContent = updatedInfo.InfoContent;
+        //             existingPost.InfoImage = updatedInfo.InfoImage;
+
+        //             db.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
+        //         }
+        //         return RedirectToAction("Post", "Admin"); // Chuyển hướng về trang danh sách bài đăng
+        //     }
+        //     return View(updatedInfo); // Trả lại model để hiển thị lỗi nếu có
+        // }
         public IActionResult Admin1()
         {
             var userID = User.Identity.Name;

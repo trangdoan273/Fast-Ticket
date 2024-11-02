@@ -14,28 +14,49 @@
 
 <body>
     <p class="create-post-label">Tạo Bài Đăng Mới</p>
-    <form asp-action="CreatePost" asp-controller="Admin" method="post"> 
+    <form asp-action="CreatePost" asp-controller="Admin" method="post" enctype="multipart/form-data"> 
+    <div class="image-upload" id="image-upload">
+        <img id="preview" style="display: none;">
+        <label>Ảnh:</label>
+        <div class="overlay">Tải Ảnh Lên</div>
+        <input type="file" id="file-input" name="InfoImage" accept="image/*" style="display: none;" required>
+        <img id="preview" style="display: none;">
+    </div>
         <div>
             <label>Tiêu đề:</label>
             <input type="text" asp-for="InfoTitle" required> 
         </div>
 
         <div>
-            <label>Nội dung:</label>
-            <input type="text" asp-for="InfoContent" required> 
-            <span asp-validation-for="InfoContent" class="text-danger"></span>
-        </div>
-
-        <div>
-            <label>Ảnh (URL):</label>
-            <input type="text" asp-for="InfoImage" required/> 
-            <span asp-validation-for="InfoImage" class="text-danger"></span>
+            <label for="InfoContent" style="display: block; font-size: 20px; font-weight: bold; margin-bottom: 8px;">Nội dung:</label>
+            <textarea asp-for="InfoContent" name="InfoContent" required rows="5" style="width: 700px; height: 200px; padding: 10px; border-radius: 8px; border: 1px solid#ccc;"></textarea>
         </div>
         
         <div>
             <button type="submit">Tạo Bài Đăng</button>
         </div>
     </form>
+    <script>
+        const fileInput = document.getElementById('file-input');
+        const imageUpload = document.getElementById('image-upload');
+        const preview = document.getElementById('preview');
+
+        imageUpload.addEventListener('click', function(){
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', function(){
+            const file = fileInput.files[0];
+            if(file){
+                const reader = new FileReader();
+                reader.onload = function(e){
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 
 </html>

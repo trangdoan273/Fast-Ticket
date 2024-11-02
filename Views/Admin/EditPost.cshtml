@@ -14,8 +14,15 @@
 
 <body>
     <p class="edit-post-label">Sửa Bài Đăng</p>
-    <form asp-action="EditPost" asp-controller="Admin" method="post">
+    <form asp-action="EditPost" asp-controller="Admin" method="post" enctype="multipart/form-data">
         <input type="hidden" asp-for="InfoId" /> <!-- Ẩn trường ID -->
+        <div class="image-upload" id="image-upload">
+            <label>Ảnh:</label>
+            <img src="@Model.InfoImage" alt="Preview Iamge" id="preview" style="display: @(Model.InfoImage != null ? "block" : "none")">
+            <div class="overlay">Tải Ảnh Lên</div>
+            <input type="file" id="file-input" name="InfoImage" accept="image/*" style="display: none;">
+            <span asp-validation-for="InfoImage" class="text-danger"></span>
+        </div>
 
         <div>
             <label>Tiêu đề:</label>
@@ -25,14 +32,8 @@
 
         <div>
             <label>Nội dung:</label>
-            <input type="text" asp-for="InfoContent" />
+            <textarea asp-for="InfoContent" rows="5" style="width: 700px; height: 200px; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
             <span asp-validation-for="InfoContent" class="text-danger"></span>
-        </div>
-
-        <div>
-            <label>Ảnh (URL):</label>
-            <input type="text" asp-for="InfoImage" />
-            <span asp-validation-for="InfoImage" class="text-danger"></span>
         </div>
 
         <div>
@@ -43,6 +44,27 @@
         </a>
 
     </form>
+    <script>
+        const fileInput = document.getElementById('file-input');
+        const imageUpload = document.getElementById('image-upload');
+        const preview = document.getElementById('preview');
+
+        imageUpload.addEventListener('click', function(){
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', function(){
+            const file = fileInput.files[0];
+            if(file){
+                const reader = new FileReader();
+                reader.onload = function(e){
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 
 </html>

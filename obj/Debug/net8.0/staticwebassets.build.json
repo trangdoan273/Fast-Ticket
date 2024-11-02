@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IUjeHJeuSJI6P4Wrfq7pX4iFoyURfsvAfMu04p9VHlQ=",
+  "Hash": "zV6S+QazQGkenskgP+7q8OZ0BuLcuR6ER85Djq4NfqM=",
   "Source": "TICKETBOX",
   "BasePath": "_content/TICKETBOX",
   "Mode": "Default",
@@ -129,25 +129,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\logo(2).png"
-    },
-    {
-      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\assets\\Sói bảnh.jpg",
-      "SourceId": "TICKETBOX",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Trang\\TICKETBOX\\wwwroot\\",
-      "BasePath": "_content/TICKETBOX",
-      "RelativePath": "assets/Sói bảnh.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\Sói bảnh.jpg"
     },
     {
       "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\Admin1.css",
@@ -281,6 +262,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\createpost.css"
+    },
+    {
+      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\DetailAdmin1.css",
+      "SourceId": "TICKETBOX",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Trang\\TICKETBOX\\wwwroot\\",
+      "BasePath": "_content/TICKETBOX",
+      "RelativePath": "css/DetailAdmin1.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\DetailAdmin1.css"
     },
     {
       "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\editpost.css",
