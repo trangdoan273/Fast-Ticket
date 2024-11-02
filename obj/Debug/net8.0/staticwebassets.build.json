@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zV6S+QazQGkenskgP+7q8OZ0BuLcuR6ER85Djq4NfqM=",
+  "Hash": "wn/5Qxwfmuf7fVq9pqxzFYVtd7LOeWBDA72sB7pq7W4=",
   "Source": "TICKETBOX",
   "BasePath": "_content/TICKETBOX",
   "Mode": "Default",
@@ -93,6 +93,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\avatar.jpg"
     },
     {
+      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\assets\\lay-danh-2-1.jpg",
+      "SourceId": "TICKETBOX",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Trang\\TICKETBOX\\wwwroot\\",
+      "BasePath": "_content/TICKETBOX",
+      "RelativePath": "assets/lay-danh-2-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\lay-danh-2-1.jpg"
+    },
+    {
       "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\assets\\logo.png",
       "SourceId": "TICKETBOX",
       "SourceType": "Discovered",
@@ -129,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\logo(2).png"
+    },
+    {
+      "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\assets\\Screenshot 2024-11-02 235832.png",
+      "SourceId": "TICKETBOX",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Trang\\TICKETBOX\\wwwroot\\",
+      "BasePath": "_content/TICKETBOX",
+      "RelativePath": "assets/Screenshot 2024-11-02 235832.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\Screenshot 2024-11-02 235832.png"
     },
     {
       "Identity": "D:\\Trang\\TICKETBOX\\wwwroot\\css\\Admin1.css",

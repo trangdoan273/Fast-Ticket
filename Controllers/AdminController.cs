@@ -138,22 +138,18 @@ namespace TICKETBOX.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreatePost(Info info, IFormFile InfoImage){
-            if(ModelState.IsValid){
-                if(InfoImage != null && InfoImage.Length > 0){
-                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets", InfoImage.FileName);
-                    using (var stream = new FileStream(filePath, FileMode.Create)){
-                        InfoImage.CopyTo(stream);
-                    }
-                    info.InfoImage = $"/assets/{InfoImage.FileName}";
-                }
-                using (var db = new FastticketContext()){
-                    db.Infos.Add(info);
+        public IActionResult CreatePost(Info newInfo)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var db = new FastticketContext())
+                {
+                    db.Infos.Add(newInfo);
                     db.SaveChanges();
                 }
-                return RedirectToAction("Post");
+                return RedirectToAction("Post", "Admin"); // Chuyển hướng về trang danh sách bài đăng
             }
-            return View(info);
+            return View(newInfo); // Trả lại model để hiển thị lỗi nếu có
         }
         //Chức năng xóa post
         public IActionResult DeletePost(int id)
@@ -200,53 +196,57 @@ namespace TICKETBOX.Controllers
 
         // Sửa bài đăng (POST)
         [HttpPost]
-        public IActionResult EditPost(Info updatedInfo, IFormFile InforImage){
-            using(var db = new FastticketContext()){
-                var existingPost = db.Infos.FirstOrDefault(e => e.InfoId == updatedInfo.InfoId);
-                if(existingPost == null){
-                    return NotFound();
-                }
-                existingPost.InfoTitle  = updatedInfo.InfoTitle;
-                existingPost.InfoContent = updatedInfo.InfoContent;
-                if(InforImage != null && InforImage.Length > 0){
-                    var filePath = Path.Combine("wwwroot/assets", InforImage.FileName);
-                    using (var stream = new FileStream(filePath, FileMode.Create)){
-                        InforImage.CopyTo(stream);
+        public IActionResult EditPost(Info updatedInfo)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var db = new FastticketContext())
+                {
+                    var existingPost = db.Infos.FirstOrDefault(p => p.InfoId == updatedInfo.InfoId);
+                    if (existingPost == null)
+                    {
+                        return NotFound(); // Trả về 404 nếu không tìm thấy bài đăng
                     }
-                    existingPost.InfoImage = "/assets/" + InforImage.FileName;
+
+                    // Cập nhật thông tin bài đăng
+                    existingPost.InfoTitle = updatedInfo.InfoTitle;
+                    existingPost.InfoContent = updatedInfo.InfoContent;
+                    existingPost.InfoImage = updatedInfo.InfoImage;
+
+                    db.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
                 }
-                db.SaveChanges();
-                return RedirectToAction("ViewPost", new{id = existingPost.InfoId});
+                return RedirectToAction("Post", "Admin"); // Chuyển hướng về trang danh sách bài đăng
             }
+            return View(updatedInfo); // Trả lại model để hiển thị lỗi nếu có
         }
-                public IActionResult Admin1()
+        public IActionResult Admin1()
         {
             var userID = User.Identity.Name;
+            var user = new User();
             using (var db = new FastticketContext())
             {
-                var user = db.Users.FirstOrDefault(u => u.UserName == userID);
+                user = db.Users.FirstOrDefault(u => u.UserName == userID);
                 if (user == null || user.Role == "User")
                 {
                     return RedirectToAction("Index", "Home");
                 }
-                return View(user);
-            }
 
+            }
+            return View(user);
         }
 
-        [Authorize(Roles = "Admin")]
         public IActionResult DetailAdmin1(int id)
         {
-            var userID = User.Identity.Name;
             using (var db = new FastticketContext())
             {
-                var user = db.Users.FirstOrDefault(u => u.UserId == id);
-                if (user == null || user.Role != "Admin")
+                var user = db.Users.FirstOrDefault(u => u.UserId == 1);
+
+                if (user == null)
                 {
-                    return RedirectToAction("AccessDenied", "Home");
+                    return NotFound(); // Trả về 404 nếu không tìm thấy người dùng
                 }
 
-                var viewModel = new UpdateUserModel
+                var viewModel = new UpdateUserModel()
                 {
                     UserId = user.UserId,
                     UserFullname = user.FullName,
@@ -256,8 +256,39 @@ namespace TICKETBOX.Controllers
                     UserAddress = user.UserAddress,
                     UserEmail = user.UserEmail
                 };
-                return View(viewModel);
+
+                return View(viewModel); // Trả về view với thông tin người dùng
             }
+        }
+        [HttpPost]
+        public IActionResult DetailAdmin1(UpdateUserModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var db = new FastticketContext())
+                {
+                    var user = db.Users.FirstOrDefault(u => u.UserId == model.UserId);
+
+                    if (user == null)
+                    {
+                        return NotFound(); // Trả về 404 nếu không tìm thấy người dùng
+                    }
+
+                    // Cập nhật thông tin người dùng
+                    user.FullName = model.UserFullname;
+                    user.UserPhoneNumber = model.UserPhoneNumber;
+                    user.Sex = model.UserSex;
+                    user.DoB = model.DoB;
+                    user.UserAddress = model.UserAddress;
+                    user.UserEmail = model.UserEmail;
+
+                    db.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
+                }
+
+                return RedirectToAction("DetailAdmin1"); // Chuyển hướng đến danh sách người dùng hoặc trang khác
+            }
+
+            return View(model); // Nếu model không hợp lệ, trả về view với dữ liệu đã nhập
         }
 
         public IActionResult ChangePasswordAdmin()
@@ -344,9 +375,9 @@ namespace TICKETBOX.Controllers
                 return View(movie); // Trả về view với dữ liệu bộ phim
             }
         }
-
         public IActionResult CreateMovie()
         {
+
             return View(); // Nếu model không hợp lệ, trả về view với dữ liệu đã nhập
         }
     }
