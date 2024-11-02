@@ -138,18 +138,27 @@ namespace TICKETBOX.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreatePost(Info newInfo)
+        public IActionResult CreatePost(Info info, IFormFile InfoImage)
         {
             if (ModelState.IsValid)
             {
+                if (InfoImage != null && InfoImage.Length > 0)
+                {
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets", InfoImage.FileName);
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        InfoImage.CopyTo(stream);
+                    }
+                    info.InfoImage = $"/assets/{InfoImage.FileName}";
+                }
                 using (var db = new FastticketContext())
                 {
-                    db.Infos.Add(newInfo);
+                    db.Infos.Add(info);
                     db.SaveChanges();
                 }
-                return RedirectToAction("Post", "Admin"); // Chuyển hướng về trang danh sách bài đăng
+                return RedirectToAction("Post");
             }
-            return View(newInfo); // Trả lại model để hiển thị lỗi nếu có
+            return View(info);
         }
         //Chức năng xóa post
         public IActionResult DeletePost(int id)
@@ -235,18 +244,18 @@ namespace TICKETBOX.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult DetailAdmin1(int id)
         {
+            var userID = User.Identity.Name;
             using (var db = new FastticketContext())
             {
-                var user = db.Users.FirstOrDefault(u => u.UserId == 1);
-
-                if (user == null)
+                var user = db.Users.FirstOrDefault(u => u.UserId == id);
+                if (user == null || user.Role != "Admin")
                 {
-                    return NotFound(); // Trả về 404 nếu không tìm thấy người dùng
+                    return RedirectToAction("AccessDenied", "Home");
                 }
-
-                var viewModel = new UpdateUserModel()
+                var viewModel = new UpdateUserModel
                 {
                     UserId = user.UserId,
                     UserFullname = user.FullName,
